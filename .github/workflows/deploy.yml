@@ -45,7 +45,7 @@ jobs:
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
         with:
-          source: dist/*
+          source: demo-new/*
           target: ${{ secrets.PROJECTDIR }}
 
       - name: Replace old demo
