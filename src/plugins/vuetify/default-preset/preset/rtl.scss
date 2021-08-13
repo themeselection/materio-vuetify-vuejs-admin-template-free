@@ -1,0 +1,12 @@
+.v-application {
+  &.v-application--is-rtl {
+    // gramification
+    .triangle-card {
+      .triangle-bg {
+        transform: rotateY(180deg);
+        left: 0;
+        right: unset;
+      }
+    }
+  }
+}

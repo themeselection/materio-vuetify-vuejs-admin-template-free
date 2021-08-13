@@ -1,0 +1,201 @@
+// Variable Overrides
+@import '~vuetify/src/styles/styles.sass';
+@import '../variables.scss';
+
+@include theme--child('apexcharts-canvas .apexcharts-text') using ($material) {
+  fill: map-deep-get($material, 'text', 'white');
+}
+@include theme--child('apexcharts-canvas .apexcharts-tooltip-text') using ($material) {
+  fill: map-deep-get($material, 'text', 'secondary');
+}
+@include theme--child('apexcharts-canvas .apexcharts-datalabel-label') using ($material) {
+  fill: map-deep-get($material, 'text', 'secondary');
+}
+@include theme--child('apexcharts-canvas .apexcharts-datalabel') using ($material) {
+  fill: map-deep-get($material, 'text', 'secondary');
+}
+
+@include theme--child('apexcharts-canvas .apexcharts-bar-area') using ($material) {
+  stroke: map-deep-get($material, 'cards');
+}
+
+.apexcharts-canvas {
+  .apexcharts-series {
+    path {
+      filter: none;
+    }
+  }
+  .apexcharts-xcrosshairs.apexcharts-active {
+    opacity: 0;
+  }
+  line[stroke='transparent'] {
+    display: none;
+  }
+  .apexcharts-tooltip {
+    background: map-deep-get($shades, 'white');
+    border-color: map-deep-get($material-light, 'dividers');
+    .apexcharts-tooltip-title {
+      background: map-deep-get($shades, 'white') !important;
+      border-color: map-deep-get($material-light, 'dividers') !important;
+      font-weight: 600;
+    }
+    &.apexcharts-theme-dark {
+      .apexcharts-tooltip-text-label,
+      .apexcharts-tooltip-text-value {
+        color: map-deep-get($shades, 'white');
+      }
+    }
+  }
+  .apexcharts-xaxistooltip,
+  .apexcharts-yaxistooltip {
+    background: map-deep-get($material-light, 'background');
+    border-color: map-deep-get($material-light, 'dividers');
+    &:after,
+    &:before {
+      border-bottom-color: map-deep-get($material-light, 'background');
+    }
+  }
+
+  .apexcharts-text,
+  .apexcharts-tooltip-text,
+  .apexcharts-datalabel-label,
+  .apexcharts-datalabel {
+    font-family: $body-font-family !important;
+    // fill: map-deep-get($material-light, 'text', 'secondary');
+    font-weight: 400;
+    filter: none;
+  }
+
+  .apexcharts-pie-label {
+    fill: white;
+    filter: none;
+  }
+
+  .apexcharts-pie {
+    .apexcharts-pie-series .apexcharts-pie-area {
+      stroke-width: 0;
+    }
+    .apexcharts-datalabel-label,
+    .apexcharts-datalabel-value {
+      font-size: 1.5rem;
+    }
+  }
+
+  .apexcharts-marker {
+    box-shadow: none;
+  }
+  .apexcharts-legend-series {
+    & + .apexcharts-legend-series {
+      margin-top: 0.625rem;
+    }
+    .apexcharts-legend-text {
+      @include ltr() {
+        margin-left: 0.5rem;
+      }
+      @include rtl() {
+        margin-right: 0.5rem;
+      }
+      color: map-deep-get($material-light, 'text', 'secondary') !important;
+      font-size: 1rem !important;
+    }
+  }
+  .apexcharts-xcrosshairs,
+  .apexcharts-ycrosshairs,
+  .apexcharts-gridline {
+    stroke: map-deep-get($material-light, 'dividers');
+  }
+}
+.apexcharts-legend.position-bottom {
+  bottom: 3rem;
+}
+
+.v-application.theme--dark {
+  .apexcharts-canvas {
+    .apexcharts-xaxis-tick,
+    line {
+      stroke: map-deep-get($material-dark, 'dividers');
+    }
+    .apexcharts-heatmap {
+      .apexcharts-heatmap-rect {
+        stroke: map-deep-get($material-dark, 'dividers');
+      }
+    }
+    .apexcharts-radialbar {
+      .apexcharts-radialbar-track .apexcharts-radialbar-area {
+        stroke: map-deep-get($material-dark, 'background');
+      }
+    }
+    .apexcharts-radar-series {
+      polygon {
+        fill: map-deep-get($material-dark, 'background');
+        stroke: map-deep-get($material-dark, 'dividers');
+      }
+    }
+    .apexcharts-datalabels-group {
+      .apexcharts-datalabel-value {
+        fill: map-deep-get($shades, 'white');
+      }
+    }
+    .apexcharts-tooltip {
+      background: map-deep-get($material-dark, 'cards');
+      border-color: map-deep-get($material-dark, 'dividers');
+      .apexcharts-tooltip-title {
+        background: map-deep-get($material-dark, 'cards') !important;
+        border-color: map-deep-get($material-dark, 'dividers') !important;
+        color: map-deep-get($shades, 'white');
+      }
+      .apexcharts-tooltip-text-label,
+      .apexcharts-tooltip-text-value {
+        color: map-deep-get($shades, 'white');
+      }
+    }
+    .apexcharts-xaxistooltip,
+    .apexcharts-yaxistooltip {
+      background: map-deep-get($material-dark, 'background');
+      border-color: map-deep-get($material-dark, 'dividers');
+      &:after,
+      &:before {
+        border-bottom-color: map-deep-get($material-dark, 'dividers');
+      }
+      .apexcharts-xaxistooltip-text,
+      .apexcharts-yaxistooltip-text {
+        color: map-deep-get($shades, 'white');
+      }
+    }
+    .apexcharts-xaxistooltip {
+      .apexcharts-xaxistooltip-text {
+        color: map-deep-get($shades, 'white');
+      }
+    }
+    .apexcharts-yaxis-label,
+    .apexcharts-xaxis-label,
+    .apexcharts-tooltip-text,
+    .apexcharts-datalabel-label {
+      fill: map-deep-get($material-dark, 'text-color');
+    }
+    .apexcharts-marker {
+      // stroke: map-deep-get($material-dark, 'dividers');
+    }
+    .apexcharts-legend-series {
+      .apexcharts-legend-text {
+        color: map-deep-get($material-dark, 'text-color') !important;
+      }
+    }
+    .apexcharts-xcrosshairs,
+    .apexcharts-ycrosshairs,
+    .apexcharts-gridline {
+      stroke: map-deep-get($material-dark, 'dividers');
+    }
+  }
+}
+
+@include theme--child(apexcharts-canvas) using ($material) {
+  .apexcharts-text {
+    &.apexcharts-datalabel-value {
+      fill: map-deep-get($material, 'text', 'primary') !important;
+    }
+    &.apexcharts-datalabel-label {
+      fill: map-deep-get($material, 'text', 'secondary') !important;
+    }
+  }
+}

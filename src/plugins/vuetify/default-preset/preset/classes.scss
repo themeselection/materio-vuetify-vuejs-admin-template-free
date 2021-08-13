@@ -1,0 +1,155 @@
+@import './mixins';
+@import '~vuetify/src/styles/styles.sass';
+
+// ————————————————————————————————————
+//* ——— Color
+// ————————————————————————————————————
+
+.bg-gradient-primary {
+  background: linear-gradient(98deg, #c48eff, var(--v-primary-base) 94%);
+}
+
+@include theme--child(bg-card) using ($material) {
+  background-color: map-deep-get($material, 'cards');
+}
+
+@include theme--child(bg-body) using ($material) {
+  background-color: map-deep-get($material, 'background');
+}
+
+// ————————————————————————————————————
+//* ——— Grid
+// ————————————————————————————————————
+
+// Card match height
+.row.match-height {
+  .v-card {
+    height: 100%;
+  }
+}
+
+// Removes large space when form is used with validation
+.multi-col-validation {
+  &.v-form {
+    .v-text-field__details {
+      margin-bottom: 0 !important;
+      min-height: unset;
+
+      .v-messages:not([role='alert']) {
+        min-height: unset;
+        .v-messages__wrapper {
+          min-height: unset;
+        }
+      }
+    }
+  }
+}
+
+// ————————————————————————————————————
+//* ——— Typography
+// ————————————————————————————————————
+
+//
+//* ——— Font Sizes ——————————————————
+//
+
+// According to TailwindCSS
+.text-xs {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
+}
+
+.text-sm {
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+}
+
+.text-base {
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+}
+
+.text-lg {
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+}
+
+.text-xl {
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
+}
+
+.text-2xl {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+}
+
+.text-3xl {
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
+}
+
+.text-4xl {
+  font-size: 2.25rem !important;
+  line-height: 2.5rem !important;
+}
+
+.text-5xl {
+  font-size: 3rem !important;
+  line-height: 1 !important;
+}
+
+//
+//* ——— Font Size ——————————————————
+//
+
+.font-weight-semibold {
+  font-weight: 600 !important;
+}
+
+// ————————————————————————————————————
+//* ——— Misc
+// ————————————————————————————————————
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+// ————————————————————————————————————
+//* ——— Table
+// ————————————————————————————————————
+.table-rounded {
+  &.v-data-table {
+    thead {
+      tr {
+        th {
+          border-top: 0;
+        }
+        th {
+          &:first-child {
+            border-top-left-radius: 6px;
+          }
+          &:last-child {
+            border-top-right-radius: 6px;
+          }
+        }
+      }
+    }
+  }
+}

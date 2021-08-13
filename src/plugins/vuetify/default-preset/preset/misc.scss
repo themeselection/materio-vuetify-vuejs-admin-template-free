@@ -1,0 +1,48 @@
+#misc {
+  overflow: hidden;
+
+  .page-title {
+    margin-top: 5.25rem;
+  }
+
+  .misc-character {
+    margin-bottom: 3.313rem;
+    margin-top: 5rem;
+  }
+
+  .misc-mask,
+  .misc-tree {
+    position: absolute;
+  }
+
+  .misc-mask {
+    bottom: 0;
+    width: 100%;
+  }
+
+  .misc-tree {
+    height: 226px;
+    max-width: 300px;
+    left: 0;
+    bottom: 8%;
+  }
+
+  .misc-input-width {
+    max-width: 15.125rem;
+  }
+}
+
+@media (max-width: 550px) {
+  #misc {
+    .page-title {
+      margin-top: 3rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .misc-tree,
+  .misc-mask {
+    display: none;
+  }
+}

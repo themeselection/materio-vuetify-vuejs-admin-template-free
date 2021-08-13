@@ -1,0 +1,767 @@
+// Variable Overrides
+@import './variables.scss';
+
+// Dark Styles
+@import './dark.scss';
+
+// Custom Classes
+@import './classes.scss';
+
+// Mixins
+@import './mixins';
+
+@import './rtl.scss';
+
+@import './libs/apex-chart.scss';
+
+// Component Variables
+@import '~vuetify/src/components/VAppBar/_variables.scss';
+@import '~vuetify/src/components/VAlert/_variables.scss';
+@import '~vuetify/src/components/VBadge/_variables.scss';
+@import '~vuetify/src/components/VBanner/_variables.scss';
+@import '~vuetify/src/components/VCard/_variables.scss';
+@import '~vuetify/src/components/VDialog/_variables.scss';
+@import '~vuetify/src/components/VFooter/_variables.scss';
+@import '~vuetify/src/components/VNavigationDrawer/_variables.scss';
+@import '~vuetify/src/components/VList/_variables.scss';
+@import '~vuetify/src/components/VSnackbar/_variables.scss';
+@import '~vuetify/src/components/VStepper/_variables.scss';
+@import '~vuetify/src/components/VToolbar/_variables.scss';
+
+// * Change the font size of content
+@include theme(v-application) using ($material) {
+  color: map-deep-get($material, 'text', 'secondary') !important;
+}
+@include theme(v-card) using ($material) {
+  color: map-deep-get($material, 'text', 'secondary') !important;
+}
+@include theme(v-sheet) using ($material) {
+  color: map-deep-get($material, 'text', 'secondary') !important;
+
+  .v-card__title {
+    color: map-deep-get($material, 'text', 'primary') !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: map-deep-get($material, 'text', 'primary') !important;
+  }
+}
+
+// Remove outline from button on focus
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+// ————————————————————————————————————
+//* ——— Shadows
+// ————————————————————————————————————
+
+@include app-elevation(elevation-1, 1, true);
+
+@include app-elevation(elevation-2, 2, true);
+
+@include app-elevation(elevation-3, 3, true);
+
+@include app-elevation(elevation-4, 4, true);
+
+@include app-elevation(elevation-6, 5, true);
+
+@include app-elevation(elevation-8, 8, true);
+
+@include app-elevation(elevation-9, 9, true);
+
+@include app-elevation(elevation-12, 12, true);
+
+@include app-elevation(elevation-16, 16, true);
+
+@include app-elevation(elevation-24, 24, true);
+
+//
+//* ——— Override Vuetify Usage of `elevation` mixin ——————————————————
+//
+
+@include app-elevation('v-item-group.v-bottom-navigation', 4, true);
+
+// Button
+@include app-elevation('v-btn--is-elevated', 2);
+@include app-elevation('v-btn--is-elevated::after', 4);
+@include app-elevation('v-btn--is-elevated::active', 8);
+@include app-elevation('v-btn--is-elevated.v-btn-fab', 6);
+@include app-elevation('v-btn--is-elevated.v-btn-fab::after', 8);
+@include app-elevation('v-btn--is-elevated.v-btn-fab::active', 12);
+
+// Card
+@include app-elevation('v-sheet.v-card--hover:hover', $card-hover-elevation);
+@include app-elevation('v-sheet.v-card--hover:focus', $card-hover-elevation);
+@include app-elevation('v-card--raised', $card-raised-elevation);
+
+// Chip
+@include app-elevation('v-chip--clickable:active', 2);
+
+// Color Picker
+@include app-elevation('v-color-picker', 2);
+
+// Color Picker Preview
+@include app-elevation('v-color-picker__preview:not(.v-slider--disabled) .v-slider__thumb', 3);
+
+// Dialog
+@include app-elevation('v-dialog', $dialog-elevation);
+
+// Expansion Panel
+@include app-elevation('v-expansion-panel::before', 2);
+
+// Menu
+@include app-elevation('v-menu__content', 8);
+@include app-elevation('v-menu__content.theme--dark', 9);
+
+// Navigation Drawer
+@include app-elevation(
+  'v-navigation-drawer--is-mobile:not(.v-navigation-drawer--close)',
+  $navigation-drawer-mobile-temporary-elevation
+);
+
+@include app-elevation(
+  'v-navigation-drawer--temporary:not(.v-navigation-drawer--close)',
+  $navigation-drawer-mobile-temporary-elevation
+);
+
+// Pagination
+@include app-elevation('v-pagination__item', 2);
+@include app-elevation('v-pagination__item--active', 4);
+@include app-elevation('v-pagination__navigation', 2);
+
+// VStepper
+@include app-elevation('v-stepper:not(.v-sheet--outlined)', $stepper-elevation);
+@include app-elevation('v-stepper__content', $stepper-header-elevation);
+
+// VSwitch
+@include app-elevation(
+  'v-input--switch:not(v-input--switch--flat):not(v-input--switch--inset) .v-input--switch__thumb',
+  $switch-thumb-elevation
+);
+
+// VTextField
+@include app-elevation(
+  'v-text-field.v-text-field--solo:not(.v-text-field--solo-flat) > .v-input__control > .v-input__slot',
+  2
+);
+
+// VTimeline
+@include app-elevation('v-timeline-item__dot', 1);
+
+// VToolbar
+@include app-elevation('v-toolbar', 4);
+
+// Code
+@include app-elevation('v-application.kbd', 4);
+
+// VSheet
+// ! Check it
+// @include app-elevation('v-sheet:not(.v-sheet--outlined)', 4);
+
+//
+//* ——— Components Which uses `sheet` mixin ——————————————————
+//
+
+// Alert
+@include app-elevation('v-sheet.v-alert:not(.v-sheet--outlined)', $alert-elevation);
+
+// VAppBar
+@include app-elevation('v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined)', $app-bar-elevation);
+
+// VBanner
+@include app-elevation('v-sheet.v-banner:not(.v-sheet--outlined)', $banner-elevation, true);
+
+// VCard
+@include app-elevation('v-sheet.v-card:not(.v-sheet--outlined)', $card-elevation);
+
+// VFooter
+@include app-elevation('v-sheet.v-footer:not(.v-sheet--outlined)', $footer-elevation);
+
+// VList
+@include app-elevation('v-sheet.v-list:not(.v-sheet--outlined)', $list-elevation);
+
+// VSnackbar
+@include app-elevation('v-sheet.v-snack__wrapper:not(.v-sheet--outlined)', $snackbar-elevation, true);
+
+// VToolbar
+@include app-elevation('v-sheet.v-toolbar:not(.v-sheet--outlined)', $toolbar-elevation);
+
+//* ——— /shadows —————————————————— //
+
+// Vuetify Fix: `dense` prop isn't working with SVG icons
+.v-chip {
+  .v-chip__content {
+    .v-icon--dense {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
+//
+//* ——— Card Overrides ——————————————————
+//
+
+.v-card {
+  .v-card__title {
+    line-height: 1;
+    padding-top: $card-spacer;
+    padding-bottom: $card-spacer;
+  }
+  .v-card__title ~ .v-card__title {
+    padding-top: $card-spacer-content;
+  }
+
+  .v-card__subtitle,
+  .v-card__text,
+  .v-card__actions {
+    padding-top: 0;
+
+    @at-root {
+      .v-card {
+        > .v-card__subtitle:first-child,
+        > .v-card__text:first-child,
+        > .v-card__actions:first-child {
+          padding-top: $card-spacer;
+        }
+      }
+    }
+
+    &:last-child {
+      padding-bottom: $card-spacer;
+    }
+  }
+
+  .v-divider + {
+    .v-card__subtitle,
+    .v-card__text,
+    .v-card__actions {
+      padding-top: $card-spacer-content;
+    }
+  }
+
+  .v-card__actions {
+    &.dense {
+      padding: 0 calc(#{$card-spacer} - 8px) calc(#{$card-spacer} - 8px);
+      .v-btn {
+        &:not(.v-btn--icon) {
+          min-width: 68px;
+        }
+      }
+    }
+  }
+}
+
+// Vuetify Fix: We have replace the icon with svg icon badge don't have any style for svg inside the badge.
+.v-badge__badge {
+  .v-icon {
+    height: $badge-font-size;
+    width: $badge-font-size;
+  }
+}
+
+.v-badge--dot {
+  .v-badge__badge {
+    height: 10px !important;
+    width: 10px !important;
+    &::after {
+      border-width: 2px !important;
+    }
+  }
+}
+
+// Vuetify Fix: Calendar default color should be primary but they add accent class
+.v-date-picker-table {
+  .v-date-picker-table__current,
+  .v-btn--active {
+    &.accent {
+      background-color: var(--v-primary-base) !important;
+      border-color: var(--v-primary-base) !important;
+    }
+    &.accent--text {
+      color: var(--v-primary-base) !important;
+      caret-color: var(--v-primary-base) !important;
+    }
+  }
+}
+
+// Vuetify Fix: month picker header text should be primary
+
+.v-date-picker-header {
+  .v-date-picker-header__value {
+    .accent--text {
+      button:hover {
+        color: var(--v-primary-base);
+      }
+    }
+  }
+}
+
+// Vuetify Fix: Time picker active time should be primary
+.v-picker--time {
+  .v-time-picker-clock__hand {
+    &.accent {
+      background-color: var(--v-primary-base) !important;
+      border-color: var(--v-primary-base) !important;
+    }
+  }
+  .v-time-picker-clock__item--active {
+    &.accent {
+      background-color: var(--v-primary-base) !important;
+      border-color: var(--v-primary-base) !important;
+    }
+  }
+}
+
+//
+//* ——— Expansion Panel ——————————————————
+//
+
+@include theme(v-expansion-panels) using ($material) {
+  .v-expansion-panel-content__wrap {
+    color: map-deep-get($material, 'text', 'secondary');
+  }
+}
+
+.v-expansion-panels {
+  &.v-expansion-panels--focusable {
+    .v-expansion-panel--active {
+      > .v-expansion-panel-header {
+        min-height: unset;
+      }
+    }
+
+    .v-expansion-panel-content__wrap {
+      padding-top: 1rem;
+    }
+  }
+}
+
+@include app-elevation('v-expansion-panel.v-expansion-panel--active', 3, true);
+
+.v-expansion-panel {
+  .v-expansion-panel-header {
+    padding: 1rem;
+  }
+
+  .v-expansion-panel-content__wrap {
+    padding: 0rem 1rem 1rem;
+  }
+}
+
+//
+//* ——— Dialog ——————————————————
+//
+
+// Add some space between divider and buttons
+.v-dialog {
+  .v-divider + .v-card__actions {
+    padding-top: $card-spacer-content !important;
+  }
+}
+
+//
+//* ——— Pagination ——————————————————
+//
+
+// ? We have to use various selectors because `!important` isn't working
+.v-application[class*='theme'] {
+  .v-pagination__item,
+  .v-pagination__navigation {
+    box-shadow: none !important;
+  }
+}
+
+@include theme(v-pagination) using ($material) {
+  .v-pagination__item,
+  .v-pagination__navigation {
+    &:hover {
+      background-color: rgba(map-get($material, 'primary-shade'), map-deep-get($material, 'states', 'hover'));
+    }
+  }
+}
+
+//
+//* ——— AutoComplete & Select ——————————————————
+//
+
+.v-autocomplete,
+.v-select {
+  .v-input__icon--clear {
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
+//
+//* ——— Textarea ——————————————————
+//
+
+// ? Reason: Textarea hover underline color is too dark
+@include theme(v-text-field) using ($material) {
+  &:not(.v-input--has-state):hover > .v-input__control > .v-input__slot:before {
+    border-color: rgba(map-get($material, 'primary-shade'), 0.28) !important;
+  }
+}
+
+//
+//* ——— Date Picker ——————————————————
+//
+
+.v-date-picker-table {
+  .v-btn {
+    &.v-btn--active.v-btn--disabled {
+      color: #fff !important;
+      opacity: 0.5;
+    }
+  }
+}
+
+//
+//* ——— Button ——————————————————
+//
+
+.v-application {
+  .v-btn:not(.v-btn--outlined) {
+    &.primary,
+    &.secondary,
+    &.accent,
+    &.success,
+    &.error,
+    &.warning,
+    &.info {
+      color: map-deep-get($shades, 'white');
+    }
+  }
+}
+
+$btn-custom-heights: (
+  'x-small': 26,
+  'small': 30,
+  'default': 38,
+  'large': 42,
+  'x-large': 46,
+);
+
+.v-btn {
+  &:not(.v-btn--round) {
+    @each $name, $height in $btn-custom-heights {
+      &.v-size--#{$name} {
+        height: #{$height}px !important;
+        // min-width: #{round($size * 1.777777777777778)}px // default ratio
+      }
+    }
+  }
+}
+
+.v-btn--icon {
+  @each $name, $height in $btn-custom-heights {
+    &.v-size--#{$name} {
+      height: #{$height}px !important;
+      width: #{$height}px !important;
+    }
+  }
+}
+
+@include app-elevation(v-btn--is-elevated, 3, !important);
+@include app-elevation('v-btn--is-elevated:hover', 4, !important);
+@include app-elevation('v-btn--is-elevated:active', 2, !important);
+
+//
+//* ——— Date Picker ——————————————————
+//
+
+@at-root .v-application--wrap {
+  @include theme(v-picker) using ($material) {
+    // ? `.v-application--wrap` is used to make sure pickers shown in/from dialog/input don't have border.
+    .v-picker__body {
+      border: 1px solid rgba(map-deep-get($material, 'primary-shade'), 0.22);
+    }
+  }
+}
+
+@include theme-diff(v-picker, map-get($shades, 'white'), map-deep-get($material-dark, 'background')) using
+  ($property-value) {
+  .v-picker__actions {
+    background-color: $property-value;
+  }
+}
+
+//
+//* ——— Chip ——————————————————
+//
+
+// Modify small chip
+.v-chip {
+  &.v-size--small {
+    font-size: 12px;
+    height: 20px;
+    padding: 0 8px;
+  }
+  .v-chip__close svg {
+    opacity: 0.38;
+  }
+  &:not(.v-chip-light-bg):not(.v-chip--no-color):not(.v-chip--outlined) {
+    color: #fff !important;
+  }
+}
+
+//
+//* ——— Snackbar ——————————————————
+//
+
+.v-snack__wrapper {
+  .v-snack__content {
+    letter-spacing: 0.25px;
+    // line-height: 1.5;
+  }
+}
+
+@include theme-diff(v-snack__wrapper, #5e5669, map-get($shades, 'white')) using ($property-value) {
+  &:not([class*='--text']) {
+    .v-snack__content {
+      color: $property-value;
+    }
+  }
+}
+
+//
+//* ——— Menu ——————————————————
+//
+
+.v-menu__content {
+  &:not(.list-style) {
+    .v-list-item {
+      height: 2.375rem;
+      min-height: 2.375rem;
+
+      .v-list-item__icon {
+        margin: 8px 0;
+      }
+    }
+
+    .v-list.v-list--dense {
+      .v-list-item {
+        min-height: 2rem;
+        height: 2rem;
+      }
+
+      .v-list-item__icon {
+        margin: 5px 0;
+      }
+
+      .v-list-item__title,
+      .v-list-item__subtitle,
+      .v-list-item .v-list-item__title,
+      .v-list-item .v-list-item__subtitle {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+//
+//* ——— Form ——————————————————
+//
+
+@if $customize-form-icons {
+  .v-input {
+    &.v-input--dense {
+      .v-input__prepend-inner,
+      .v-input__append-inner {
+        .v-input__icon {
+          .v-icon__svg {
+            font-size: 20px;
+            height: 20px;
+            width: 20px;
+          }
+        }
+      }
+    }
+    .v-input__prepend-inner,
+    .v-input__append-inner {
+      .v-input__icon {
+        .v-icon {
+          transform-origin: 10px;
+          .v-icon__svg {
+            @include ltr() {
+              margin-right: 10px;
+            }
+            @include rtl() {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.v-input {
+  &.error--text {
+    .v-text-field__details {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+//
+//* ——— Slider ——————————————————
+//
+
+.v-slider__track-background {
+  opacity: 0.38;
+}
+
+.v-slider__thumb-label-container {
+  svg {
+    color: #fff;
+  }
+}
+
+//
+//* ——— Input ——————————————————
+//
+
+@include theme-diff(v-input, #fff, map-deep-get($material-light, 'text', 'secondary')) using ($value) {
+  &.v-text-field--solo-inverted.v-input--is-focused {
+    input,
+    textarea {
+      color: $value !important;
+    }
+  }
+}
+
+//
+//* ——— Switch ——————————————————
+//
+
+.v-input--selection-controls__ripple:before {
+  opacity: 0.08 !important;
+}
+
+//
+//* ——— Tabs ——————————————————
+//
+
+@include app-elevation('v-tabs:not(.v-tabs--vertical)', 3, true);
+
+// tabs shadow
+.v-tabs:not(.v-tabs--vertical) {
+  position: relative;
+  z-index: 1;
+}
+
+.v-tabs {
+  &.v-tabs--vertical {
+    .v-tabs-slider-wrapper {
+      right: 0 !important;
+      left: unset !important;
+    }
+  }
+}
+
+@include theme(v-tabs) using ($material) {
+  &.v-tabs--vertical {
+    .v-slide-group__wrapper {
+      border-right: thin solid map-get($material, 'dividers');
+    }
+  }
+}
+
+//
+//* ——— Table ——————————————————
+//
+
+.v-data-table {
+  th {
+    font-weight: 600;
+    background-color: #fafafa !important;
+  }
+
+  .v-data-footer {
+    .v-data-footer__select {
+      @include ltr() {
+        margin-left: 14px;
+      }
+
+      @include rtl() {
+        margin-right: 14px;
+      }
+      .v-input__append-inner {
+        align-self: flex-start;
+      }
+
+      .v-select {
+        margin-bottom: 6px !important;
+        margin-top: 8px !important;
+        @include ltr() {
+          margin-left: 6px;
+        }
+        @include rtl() {
+          margin-right: 6px;
+        }
+        > .v-input__control > .v-input__slot {
+          &::before,
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .v-data-footer__pagination {
+      @include ltr() {
+        margin-left: auto;
+      }
+      @include rtl() {
+        margin-right: auto;
+      }
+    }
+  }
+
+  // remove box shadow from expanded content
+  > .v-data-table__wrapper {
+    tbody {
+      tr.v-data-table__expanded__content {
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+@include theme(v-data-table) using ($material) {
+  th {
+    color: map-deep-get($material, 'text', 'primary') !important;
+    border-top: thin solid map-deep-get($material, 'dividers');
+  }
+  td {
+    color: map-deep-get($material, 'text', 'secondary') !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .v-data-table {
+    .v-data-footer {
+      .v-data-footer__select {
+        min-width: 100%;
+        @include ltr() {
+          margin-left: 0;
+        }
+        @include rtl() {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

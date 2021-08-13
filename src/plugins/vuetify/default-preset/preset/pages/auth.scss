@@ -1,0 +1,58 @@
+.auth-wrapper {
+  display: flex;
+  min-height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  flex-basis: 100%;
+  align-items: center;
+
+  // common style for both v1 and v2
+  a {
+    text-decoration: unset;
+  }
+
+  // auth v1
+  &.auth-v1 {
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1.5rem;
+
+    .auth-mask-bg {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    .auth-tree,
+    .auth-tree-3 {
+      position: absolute;
+    }
+    .auth-tree {
+      bottom: 0;
+      left: 0;
+    }
+    .auth-tree-3 {
+      bottom: 0;
+      right: 0;
+    }
+
+    // auth card
+    .auth-inner {
+      width: 28rem;
+      z-index: 1;
+      .auth-card {
+        padding: 0.9375rem 0.875rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  // auth bg and tree hide in sm screen
+  .auth-v1 {
+    .auth-tree,
+    .auth-tree-3,
+    .auth-mask-bg {
+      display: none;
+    }
+  }
+}
