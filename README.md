@@ -97,7 +97,7 @@ Check GitHub [Wiki](https://github.com/themeselection/materio-vuetify-vuejs-admi
 
 Contribution are always welcome and recommended! Here is how:
 
-- Fork the repository (here is the guide).
+- Fork the repository ([here is the guide](https://docs.github.com/en/get-started/quickstart/fork-a-repo)).
 - Clone to your machine `git clone https://github.com/YOUR_USERNAME/REPO_URL` Make your changes
 - Create a pull request
 
