@@ -94,13 +94,19 @@
         :icon="icons.mdiFormSelect"
       ></nav-menu-link>
     </v-list>
-    <v-img
-      :src="require(`@/assets/images/pro/upgrade-banner-${$vuetify.theme.dark ? 'dark' : 'light'}.png`)"
-      alt="upgrade-banner"
-      transition="scale-transition"
-      class="upgrade-banner mx-auto"
-      max-width="230"
-    ></v-img>
+    <a
+      href="https://themeselection.com/demo/materio-vuetify-vuejs-admin-template/landing"
+      target="_blank"
+      rel="nofollow"
+    >
+      <v-img
+        :src="require(`@/assets/images/pro/upgrade-banner-${$vuetify.theme.dark ? 'dark' : 'light'}.png`)"
+        alt="upgrade-banner"
+        transition="scale-transition"
+        class="upgrade-banner mx-auto"
+        max-width="230"
+      ></v-img>
+    </a>
   </v-navigation-drawer>
 </template>
 

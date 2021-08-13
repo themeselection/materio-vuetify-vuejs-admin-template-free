@@ -28,9 +28,6 @@
     <v-card
       class="elevation-0"
       max-width="400"
-      href="https://themeselection.com/demo/materio-vuetify-vuejs-admin-template/landing"
-      target="_blank"
-      rel="nofollow"
     >
       <v-img
         max-width="400"
@@ -45,8 +42,28 @@
         Materio Admin is the most developer friendly &amp; highly customisable Admin Dashboard Template based on Vuetify.
       </v-card-text>
       <v-card-text>
-        <span>Click on below button to explore PRO version including <strong>3 niche dashboards</strong> and carefully crafted <strong>5 Applications</strong>.</span>
+        <span>Click on below button to explore PRO version.</span>
       </v-card-text>
+      <v-card-actions>
+        <v-btn
+          color="primary"
+          class="me-2"
+          href="https://themeselection.com/demo/materio-vuetify-vuejs-admin-template/landing"
+          target="_blank"
+          rel="nofollow"
+        >
+          Demo
+        </v-btn>
+        <v-btn
+          color="primary"
+          outlined
+          href="https://themeselection.com/demo/materio-vuetify-vuejs-admin-template"
+          target="_blank"
+          rel="nofollow"
+        >
+          Download
+        </v-btn>
+      </v-card-actions>
     </v-card>
   </v-menu>
 </template>
