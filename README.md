@@ -1,5 +1,7 @@
 # [Materio - Vuetify VueJS Free Admin Template](https://themeselection.com/products/materio-vuetify-vuejs-admin-template-free)
 
+[![Materio - Vuetify VueJS Free Admin Template Demo Screenshot](https://user-images.githubusercontent.com/47495003/129342383-2816d6fe-3a88-4189-b08f-f30b9abac2b0.png)](https://themeselection.com/products/materio-vuetify-vuejs-admin-template-free)
+
 Materio Admin Dashboard Template – is the most developer friendly & highly customisable Admin Dashboard Template based on Vuetify.
 
 If you’re a developer looking for an admin dashboard that is developer-friendly, rich with features, and highly customizable look no further than Materio. We’ve followed the highest industry standards to bring you the very best admin template that is not only fast and easy to use but highly scalable. Offering ultimate convenience and flexibility, you’ll be able to build whatever application you want with very little hassle.
