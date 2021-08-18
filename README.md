@@ -1,8 +1,29 @@
-# [Materio - Vuetify VueJS Free Admin Template](https://themeselection.com/products/materio-vuetify-vuejs-admin-template-free)
+<p align="center">
+   <a href="https://themeselection.com/products/materio-vuetify-vuejs-admin-template-free" target="_blank">
+      <img src="src/assets/images/logos/logo.svg" alt="materio-logo" width="60px" height="auto">
+   </a>
+</p>
+
+<a href="https://themeselection.com/products/materio-vuetify-vuejs-admin-template-free" target="_blank" align="center">
+   <h1 align="center">Materio - Vuetify VueJS Free Admin Template</h1>
+</a>
+
+<p align="center">Production ready carefully crafted most comprehensive admin template</p>
+
+<p align="center">
+   <a href="https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/themeselection/materio-vuetify-vuejs-admin-template-free" alt="license">
+   </a>
+   <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/themeselection/materio-vuetify-vuejs-admin-template-free/Deploy">
+   <a href="https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free/releases">
+    <img src="https://img.shields.io/github/release/themeselection/materio-vuetify-vuejs-admin-template-free.svg" alt="GitHub release">
+  </a>
+   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/Theme_Selection">
+</p>
 
 [![Materio - Vuetify VueJS Free Admin Template Demo Screenshot](https://user-images.githubusercontent.com/47495003/129342383-2816d6fe-3a88-4189-b08f-f30b9abac2b0.png)](https://themeselection.com/products/materio-vuetify-vuejs-admin-template-free)
 
-Materio Admin Dashboard Template – is the most developer friendly & highly customisable Admin Dashboard Template based on Vuetify.
+## Introduction
 
 If you’re a developer looking for an admin dashboard that is developer-friendly, rich with features, and highly customizable look no further than Materio. We’ve followed the highest industry standards to bring you the very best admin template that is not only fast and easy to use but highly scalable. Offering ultimate convenience and flexibility, you’ll be able to build whatever application you want with very little hassle.
 
@@ -114,7 +135,7 @@ Contribution are always welcome and recommended! Here is how:
 
 ## Changelog 📆
 
-Please refer to the [changelog](CHANGELOG.md) file. We will add a detailed release notes to each new release.
+Please refer to the [CHANGELOG](CHANGELOG.md) file. We will add a detailed release notes to each new release.
 
 ## Credits 🙏
 
@@ -137,8 +158,8 @@ If you are looking for more free templates like Materio - Vuetify VueJS Free Adm
 
 ## Useful Links 🔗
 
-- More products from [ThemeSelection](https://themeselection.com/products/)
-- Freebies from [ThemeSelection](https://themeselection.com/products/category/freebies/)
+- More products from [ThemeSelection](https://themeselection.com)
+- Freebies from [ThemeSelection](https://themeselection.com/products/category/download-free-admin-templates/)
 - [Blog](https://themeselection.com/blog/)
 
 ## Social Media 🌍
