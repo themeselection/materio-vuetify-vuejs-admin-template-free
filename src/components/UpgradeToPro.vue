@@ -57,7 +57,7 @@
         <v-btn
           color="primary"
           outlined
-          href="https://themeselection.com/demo/materio-vuetify-vuejs-admin-template"
+          href="https://themeselection.com/products/materio-vuetify-vuejs-admin-template"
           target="_blank"
           rel="nofollow"
         >

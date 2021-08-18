@@ -95,7 +95,7 @@
       ></nav-menu-link>
     </v-list>
     <a
-      href="https://themeselection.com/demo/materio-vuetify-vuejs-admin-template/landing"
+      href="https://themeselection.com/products/materio-vuetify-vuejs-admin-template"
       target="_blank"
       rel="nofollow"
     >
