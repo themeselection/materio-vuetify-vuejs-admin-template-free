@@ -6,9 +6,11 @@
    </a>
 </p>
 
-<a href="https://themeselection.com/products/materio-vuetify-vuejs-admin-template-free" target="_blank" align="center">
-   <h1 align="center">Materio - Vuetify VueJS Free Admin Template</h1>
-</a>
+<h1 align="center">
+   <a href="https://themeselection.com/products/materio-vuetify-vuejs-admin-template-free" target="_blank" align="center">
+      Materio - Vuetify VueJS Free Admin Template
+   </a>
+</h1>
 
 <p align="center">Production ready carefully crafted most comprehensive admin template</p>
 
