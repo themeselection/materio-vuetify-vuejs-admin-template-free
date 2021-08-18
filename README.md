@@ -1,3 +1,5 @@
+<p align="center"></p>
+
 <p align="center">
    <a href="https://themeselection.com/products/materio-vuetify-vuejs-admin-template-free" target="_blank">
       <img src="src/assets/images/logos/logo.svg" alt="materio-logo" width="60px" height="auto">
