@@ -79,8 +79,8 @@
         :icon="icons.mdiEyeOutline"
       ></nav-menu-link>
       <nav-menu-link
-        title="Basic Cards"
-        :to="{ name: 'basic-cards' }"
+        title="Cards"
+        :to="{ name: 'cards' }"
         :icon="icons.mdiCreditCardOutline"
       ></nav-menu-link>
       <nav-menu-link

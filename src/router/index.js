@@ -24,9 +24,9 @@ const routes = [
     component: () => import('@/views/icons/Icons.vue'),
   },
   {
-    path: '/basic-cards',
-    name: 'basic-cards',
-    component: () => import('@/views/basic-cards/Card.vue'),
+    path: '/cards',
+    name: 'cards',
+    component: () => import('@/views/cards/Card.vue'),
   },
   {
     path: '/simple-table',
