@@ -1,13 +1,13 @@
 <p align="center"></p>
 
 <p align="center">
-   <a href="https://themeselection.com/products/materio-vuetify-vuejs-admin-template-free" target="_blank">
+   <a href="https://themeselection.com/products/materio-free-vuetify-vuejs-admin-template" target="_blank">
       <img src="src/assets/images/logos/logo.svg" alt="materio-logo" width="60px" height="auto">
    </a>
 </p>
 
 <h1 align="center">
-   <a href="https://themeselection.com/products/materio-vuetify-vuejs-admin-template-free" target="_blank" align="center">
+   <a href="https://themeselection.com/products/materio-free-vuetify-vuejs-admin-template" target="_blank" align="center">
       Materio - Vuetify VueJS Free Admin Template
    </a>
 </h1>
@@ -25,7 +25,7 @@
    <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/Theme_Selection">
 </p>
 
-[![Materio - Vuetify VueJS Free Admin Template Demo Screenshot](https://user-images.githubusercontent.com/47495003/129342383-2816d6fe-3a88-4189-b08f-f30b9abac2b0.png)](https://themeselection.com/products/materio-vuetify-vuejs-admin-template-free)
+[![Materio - Vuetify VueJS Free Admin Template Demo Screenshot](https://user-images.githubusercontent.com/47495003/129342383-2816d6fe-3a88-4189-b08f-f30b9abac2b0.png)](https://themeselection.com/products/materio-free-vuetify-vuejs-admin-template)
 
 ## Introduction
 
@@ -83,7 +83,7 @@ Build premium quality applications with ease. Use our innovative admin template 
 | Materio Free Version                                                                             | Materio Premium Version                                                                        |
 | ------------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------- |
 | [Demo](https://themeselection.com/demo/materio-vuetify-vuejs-admin-template-free/demo/)          | [Demo](https://themeselection.com/demo/materio-vuetify-vuejs-admin-template/landing)           |
-| [Download](https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free/releases) | [Purchase](https://themeselection.com/products/materio-vuetify-vuejs-admin-template)           |
+| [Download](https://themeselection.com/products/materio-free-vuetify-vuejs-admin-template)        | [Purchase](https://themeselection.com/products/materio-vuetify-vuejs-admin-template)           |
 | Single vertical menu                                                                             | Vertical (+ vertical collapsed) & Horizontal menu                                              |
 | Simple Light/Dark theme                                                                          | 3 Skin variants w/ light/dark theme support: Default, Bordered & Semi-dark                     |
 | 1 Simple Dashboard                                                                               | 3 Niche Dashboards                                                                             |

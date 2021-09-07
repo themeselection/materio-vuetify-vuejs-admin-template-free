@@ -1,6 +1,9 @@
-# v1.0.0 (2021-08-13)
+## V1.0.2 (2021-08-18)
 
-* Initial Release
+* broken links updated in footer
+* "Basic Cards" page renamed to "Cards"
+* `README.md` updated
+
 
 ## V1.0.1 (2021-08-13)
 
@@ -9,8 +12,6 @@
 * `README.md` updated
 
 
-## V1.0.2 (2021-08-18)
+# v1.0.0 (2021-08-13)
 
-* broken links updated in footer
-* "Basic Cards" page renamed to "Cards"
-* `README.md` updated
+* Initial Release
