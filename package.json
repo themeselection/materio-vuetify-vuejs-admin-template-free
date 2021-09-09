@@ -1,7 +1,7 @@
 {
-  "name": "materio-free",
+  "name": "materio-free-vuetify-vuejs-admin-template",
   "version": "1.0.1",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
