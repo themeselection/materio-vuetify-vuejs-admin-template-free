@@ -22,7 +22,9 @@
    <a href="https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free/releases">
     <img src="https://img.shields.io/github/release/themeselection/materio-vuetify-vuejs-admin-template-free.svg" alt="GitHub release">
   </a>
-   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/Theme_Selection">
+   <a href="https://twitter.com/Theme_Selection" target="_blank">
+      <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/Theme_Selection">
+   </a>
 </p>
 
 [![Materio - Vuetify VueJS Free Admin Template Demo Screenshot](https://user-images.githubusercontent.com/47495003/129342383-2816d6fe-3a88-4189-b08f-f30b9abac2b0.png)](https://themeselection.com/products/materio-free-vuetify-vuejs-admin-template)
