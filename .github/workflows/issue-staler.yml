@@ -12,6 +12,7 @@ jobs:
           stale-issue-message: 'This issue has been automatically marked as stale because its has not had recent activity. It will be closed if no further activity occurs. Thank you for raising the concern.'
           close-issue-message: 'This issue has been automatically marked as closed because it has not had recent activity.'
           stale-issue-label: 'stale'
+          only-labels: 'awaiting-reply'
           exempt-issue-labels: 'feat-req,triage'
           days-before-stale: 10
           days-before-close: 7
