@@ -2,7 +2,7 @@
   "name": "materio-free-vuetify-vuejs-admin-template",
   "description": "Production ready carefully crafted most comprehensive admin template",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "author": {
     "name": "ThemeSelection",
     "url": "https://themeselection.com/"
@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@mdi/js": "^5.9.55",
-    "@vue/composition-api": "1.0.4",
+    "@vue/composition-api": "^1.3.3",
     "@vuetify/cli-plugin-utils": "^0.0.9",
     "apexcharts": "^3.27.3",
     "core-js": "^3.6.5",
