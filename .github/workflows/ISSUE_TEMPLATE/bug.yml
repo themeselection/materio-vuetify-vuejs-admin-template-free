@@ -1,0 +1,22 @@
+name: 🐞 Bug
+about: File a bug
+labels: [Bug] 
+body:
+  - type: markdown
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      label: What is expected?
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      label: What is actually happening?
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      label: Any additional comments?
