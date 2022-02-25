@@ -27,7 +27,7 @@ jobs:
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
         with:
-          source: dist/*
+          source: dist
           target: ${{ secrets.PROJECTDIR }}
       - name: Replace old demo
         uses: appleboy/ssh-action@master
@@ -36,4 +36,4 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
-          script: mkdir -p ${{ secrets.PROJECTDIR }} && if [ -d ${{ secrets.PROJECTDIR }}/demo ]; then mv ${{ secrets.PROJECTDIR }}/demo ${{ secrets.PROJECTDIR }}/demo-old; fi && mv ${{ secrets.PROJECTDIR }}/demo-new ${{ secrets.PROJECTDIR }}/demo && rm -rf ${{ secrets.PROJECTDIR }}/demo-old
+          script: mkdir -p ${{ secrets.PROJECTDIR }} && if [ -d ${{ secrets.PROJECTDIR }}/demo ]; then mv ${{ secrets.PROJECTDIR }}/demo ${{ secrets.PROJECTDIR }}/demo-old; fi && mv ${{ secrets.PROJECTDIR }}/dist ${{ secrets.PROJECTDIR }}/demo && rm -rf ${{ secrets.PROJECTDIR }}/demo-old
