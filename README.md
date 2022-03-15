@@ -172,5 +172,5 @@ If you want to [Download Free Admin Templates](https://themeselection.com/produc
 
 - Twitter : [https://twitter.com/Theme_Selection](https://twitter.com/Theme_Selection)
 - Facebook : [https://www.facebook.com/ThemeSelections/](https://www.facebook.com/ThemeSelections/)
-- Pintrest : [https://pinterest.com/themeselect/](https://pinterest.com/themeselect/)
-- Instagram : [https://www.instagram.com/themeselect_official/](https://www.instagram.com/themeselect_official/)
+- Pinterest : [https://pinterest.com/themeselect/](https://pinterest.com/themeselect/)
+- Instagram : [https://www.instagram.com/themeselection/](https://www.instagram.com/themeselection/)
