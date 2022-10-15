@@ -1,0 +1,39 @@
+name: Deploy
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: yarn install
+      - run: yarn build
+      - name: Upload dist content via scp
+        uses: appleboy/scp-action@master
+        env:
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSHKEY }}
+        with:
+          source: dist
+          target: ${{ secrets.PROJECTDIR }}
+      - name: Replace old demo
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSHKEY }}
+          script: mkdir -p ${{ secrets.PROJECTDIR }} && if [ -d ${{ secrets.PROJECTDIR }}/demo ]; then mv ${{ secrets.PROJECTDIR }}/demo ${{ secrets.PROJECTDIR }}/demo-old; fi && mv ${{ secrets.PROJECTDIR }}/dist ${{ secrets.PROJECTDIR }}/demo && rm -rf ${{ secrets.PROJECTDIR }}/demo-old
