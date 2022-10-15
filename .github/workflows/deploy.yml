@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - run: ls -la && cd typescript-version
+      - run: ls -la && cd typescript-version && ls -la
       - run: ls -la && yarn install
       - run: ls -la && yarn build --base=/materio-vuetify-vuejs-admin-template-free/demo
       - name: Upload dist content via scp
