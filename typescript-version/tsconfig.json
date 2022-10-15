@@ -31,7 +31,7 @@
       ],
       "@axios": [
         "src/plugins/axios"
-      ],
+      ]
     },
     "lib": [
       "esnext",
