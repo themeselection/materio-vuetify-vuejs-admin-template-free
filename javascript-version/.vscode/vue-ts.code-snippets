@@ -1,0 +1,18 @@
+{
+    "Vue TS - DefineProps": {
+        "prefix": "dprops",
+        "body": [
+            "defineProps<${1:Props}>()"
+        ],
+        "description": "DefineProps in script setup"
+    },
+    "Vue TS - Props interface": {
+        "prefix": "iprops",
+        "body": [
+            "interface Props {",
+            "  ${1}",
+            "}"
+        ],
+        "description": "Create props interface in script setup"
+    }
+}

@@ -1,0 +1,28 @@
+// These are styles which are both common in layout w/ vertical nav & horizontal nav
+@use "@layouts/styles/placeholders";
+@use "@configured-variables" as variables;
+
+html,
+body {
+  min-block-size: 100%;
+}
+
+.layout-page-content {
+  flex-grow: 1;
+}
+
+.layout-footer {
+  .footer-content-container {
+    block-size: variables.$layout-vertical-nav-footer-height;
+  }
+
+  .layout-footer-sticky & {
+    position: sticky;
+    inset-block-end: 0;
+    will-change: transform;
+  }
+
+  .layout-footer-hidden & {
+    display: none;
+  }
+}

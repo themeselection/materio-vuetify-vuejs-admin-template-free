@@ -1,0 +1,92 @@
+{
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.autoClosingBrackets": "always"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "volar.preview.port": 3000,
+    "volar.completion.preferredTagNameCase": "pascal",
+    "eslint.options": {},
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true,
+        "source.organizeImports": true
+    },
+    "eslint.alwaysShowStatus": true,
+    "eslint.format.enable": true,
+    "eslint.packageManager": "yarn",
+    "stylelint.packageManager": "yarn",
+    "stylelint.validate": [
+        "css",
+        "scss",
+        "vue"
+    ],
+    "cSpell.words": [
+        "Composables",
+        "Customizer",
+        "flagpack",
+        "Iconify",
+        "psudo",
+        "stylelint",
+        "triggerer",
+        "vuetify"
+    ],
+    "commentAnchors.tags.list": [
+        {
+            "tag": "ℹ️",
+            "scope": "hidden",
+            "highlightColor": "#3498DB",
+            "styleComment": true,
+            "isItalic": false
+        },
+        {
+            "tag": "👉",
+            "scope": "file",
+            "highlightColor": "#98C379",
+            "styleComment": true,
+            "isItalic": false
+        },
+        {
+            "tag": "❗",
+            "scope": "hidden",
+            "highlightColor": "#FF2D00",
+            "styleComment": true,
+            "isItalic": false
+        }
+    ],
+    "highlight.regexFlags": "gi",
+    "highlight.regexes": {
+        "(100vh|translate|margin:|padding:|margin-left|margin-right|rotate|text-align|border-top|border-right|border-bottom|border-left|float|background-position|transform|width|height|top|left|bottom|right|float|clear|(p|m)(l|r)-|border-(start|end)-(start|end)-radius)": [
+            {
+                "borderWidth": "1px",
+                "borderColor": "tomato",
+                "borderStyle": "solid"
+            }
+        ],
+        "(overflow-x:|overflow-y:)": [
+            {
+                "borderWidth": "1px",
+                "borderColor": "green",
+                "borderStyle": "solid"
+            }
+        ]
+    }
+}

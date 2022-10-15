@@ -1,0 +1,140 @@
+@use "./placeholders";
+@use "@configured-variables" as variables;
+@use "@core/scss/mixins" as mixins;
+@use "vuetify/lib/styles/tools/states" as vuetifyStates;
+@use "vuetify/lib/styles/tools/elevation" as elevation;
+
+.layout-nav-type-vertical {
+  // 👉 Layout Vertical nav
+  .layout-vertical-nav {
+    $sl-layout-nav-type-vertical: &;
+
+    @extend %nav;
+
+    background-color: variables.$vertical-nav-background-color;
+
+    // 👉 Nav header
+    .nav-header {
+      overflow: hidden;
+      padding: variables.$vertical-nav-header-padding;
+      margin-inline: variables.$vertical-nav-header-inline-spacing;
+      min-block-size: variables.$vertical-nav-header-height;
+
+      // TEMPLATE: Check if we need to move this to master
+      .app-logo {
+        flex-shrink: 0;
+        transition: transform 0.25s ease-in-out;
+
+        @at-root {
+          // Move logo a bit to align center with the icons in vertical nav mini variant
+          .layout-vertical-nav-collapsed#{$sl-layout-nav-type-vertical}:not(.hovered) .nav-header .app-logo {
+            transform: translateX(variables.$vertical-nav-header-logo-translate-x-when-vertical-nav-mini);
+          }
+        }
+      }
+
+      .app-title {
+        margin-inline-start: variables.$vertical-nav-header-logo-title-spacing;
+      }
+    }
+
+    // 👉 Nav items shadow
+    .vertical-nav-items-shadow {
+      position: absolute;
+      z-index: 1;
+      background:
+        linear-gradient(
+          rgb(#{variables.$vertical-nav-background-color-rgb}) 5%,
+          rgba(#{variables.$vertical-nav-background-color-rgb}, 85%) 30%,
+          rgba(#{variables.$vertical-nav-background-color-rgb}, 50%) 65%,
+          rgba(#{variables.$vertical-nav-background-color-rgb}, 30%) 75%,
+          transparent
+        );
+      block-size: 64px;
+      inline-size: 100%;
+      inset-block-start: calc(#{variables.$vertical-nav-header-height} - 2px);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(-8px);
+      transition: opacity 0.15s ease-in-out;
+      will-change: opacity;
+    }
+
+    &.scrolled {
+      .vertical-nav-items-shadow {
+        opacity: 1;
+      }
+    }
+
+    // 👉 Nav section title
+    .nav-section-title {
+      @extend %vertical-nav-item;
+      @extend %vertical-nav-section-title;
+
+      // ℹ️ Update the margin-inline-end when vertical nav is in mini state. We done same for link & group.
+      @at-root {
+          .layout-nav-type-vertical.layout-vertical-nav-collapsed .layout-vertical-nav:not(.hovered) .nav-section-title {
+            margin-inline: 4px 0;
+          }
+        }
+
+      margin-block-end: variables.$vertical-nav-section-title-mb;
+
+      &:not(:first-child) {
+        margin-block-start: variables.$vertical-nav-section-title-mt;
+      }
+
+      .placeholder-icon {
+        margin-inline: auto;
+      }
+    }
+
+    // Nav item badge
+    .nav-item-badge {
+      @extend %vertical-nav-item-badge;
+    }
+
+    // 👉 Nav Link
+    .nav-link {
+      overflow: hidden;
+
+      > :first-child {
+        @extend %vertical-nav-item;
+        @extend %vertical-nav-item-interactive;
+        
+        // ℹ️ Update the margin-inline-end when vertical nav is in mini state. We done same for section title.
+        @at-root {
+          .layout-nav-type-vertical.layout-vertical-nav-collapsed .layout-vertical-nav:not(.hovered) .nav-link > :first-child, .layout-nav-type-vertical .layout-vertical-nav .nav-group > :first-child {
+            margin-inline: 0 5px;
+          }
+        }
+      }
+
+      .nav-item-icon {
+        @extend %vertical-nav-items-icon;
+      }
+
+      &.disabled {
+        opacity: var(--v-disabled-opacity);
+        pointer-events: none;
+      }
+    }
+
+    // 👉 Vertical nav link
+    .nav-link {
+      @extend %nav-link;
+
+      > .router-link-exact-active {
+        @extend %nav-link-active;
+      }
+
+      > a {
+        // Adds before psudo element to style hover state
+        @include mixins.before-pseudo;
+
+        // Adds vuetify states
+        @include vuetifyStates.states($active: false);
+      }
+    }
+  }
+}

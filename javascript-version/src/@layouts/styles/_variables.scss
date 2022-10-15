@@ -1,0 +1,20 @@
+// @use "@/styles/style.scss";
+
+// 👉 Vertical nav
+$layout-vertical-nav-z-index: 12 !default;
+$layout-vertical-nav-width: 260px !default;
+$layout-vertical-nav-collapsed-width: 80px !default;
+
+// 👉 Navbar
+$layout-vertical-nav-navbar-height: 64px !default;
+$layout-vertical-nav-layout-navbar-z-index: 11 !default;
+$layout-horizontal-nav-layout-navbar-z-index: 11 !default;
+
+//  👉Footer
+$layout-vertical-nav-footer-height: 56px !default;
+
+// 👉 Layout overlay
+$layout-overlay-z-index: 11 !default;
+
+// 👉 RTL
+$enable-rtl-styles: true !default;

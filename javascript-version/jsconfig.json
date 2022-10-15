@@ -1,0 +1,47 @@
+{
+    "include": [
+        "vite.config.*",
+        "env.d.js",
+        "shims.d.ts",
+        "src/**/*",
+        "src/**/*.vue",
+        "themeConfig.ts"
+    ],
+    "exclude": [
+        "dist",
+        "node_modules",
+        "src/@iconify/*"
+    ],
+    "compilerOptions": {
+        "baseUrl": "./",
+        "target": "esnext",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "jsx": "preserve",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ],
+            "@layouts/*": [
+                "src/@layouts/*"
+            ],
+            "@layouts": [
+                "src/@layouts"
+            ],
+            "@core/*": [
+                "src/@core/*"
+            ],
+            "@core": [
+                "src/@core"
+            ],
+            "@axios": [
+                "src/plugins/axios"
+            ]
+        },
+        "types": [
+            "vite/client",
+            "vite-plugin-pages/client",
+            "vite-plugin-vue-layouts/client"
+        ]
+    }
+}

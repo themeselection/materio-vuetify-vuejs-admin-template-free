@@ -1,0 +1,57 @@
+{
+    "Vuetify Menu -- Parent Activator": {
+        "prefix": "v-menu",
+        "body": [
+            "<v-btn color=\"primary\">",
+            "  Activator",
+            "  <v-menu activator=\"parent\">",
+            "    <v-list>",
+            "      <v-list-item",
+            "        v-for=\"(item, index) in ['apple', 'banana', 'cherry']\"",
+            "        :key=\"index\"",
+            "        :value=\"index\"",
+            "      >",
+            "        <v-list-item-title>{{ item }}</v-list-item-title>",
+            "      </v-list-item>",
+            "    </v-list>",
+            "  </v-menu>",
+            "</v-btn>"
+        ],
+        "description": "We use menu component with parent activator mostly because it is compact and easy to understand."
+    },
+    "Vuetify CSS variable": {
+        "prefix": "v-css-var",
+        "body": [
+            "rgb(var(--v-${1:theme}))"
+        ],
+        "description": "Vuetify CSS variable"
+    },
+    "Icon only button": {
+        "prefix": "v-btn-icon",
+        "body": [
+            "<v-btn",
+            "  icon=\"mdi-${1:icon}\"",
+            "  variant=\"text\"",
+            "/>"
+        ],
+        "description": "Icon only button"
+    },
+    "Radio Group": {
+        "prefix": "v-radio-grp",
+        "body": [
+            "<v-radio-group",
+            "  v-model=\"${1:modelValue}\"",
+            "  inline",
+            "  hide-details",
+            ">",
+            "  <v-radio",
+            "    v-for=\"item in ['apple', 'banana', 'cherry']\"",
+            "    :key=\"item\"",
+            "    :label=\"item\"",
+            "    :value=\"item\"",
+            "  />",
+            "</v-radio-group>"
+        ],
+        "description": "Radio Group"
+    }
+}
