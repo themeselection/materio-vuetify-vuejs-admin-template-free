@@ -17,9 +17,6 @@
       "@/*": [
         "src/*"
       ],
-      "@themeConfig": [
-        "themeConfig.ts"
-      ],
       "@layouts/*": [
         "src/@layouts/*"
       ],
@@ -35,9 +32,6 @@
       "@axios": [
         "src/plugins/axios"
       ],
-      "@validators": [
-        "src/@core/utils/validators"
-      ]
     },
     "lib": [
       "esnext",
