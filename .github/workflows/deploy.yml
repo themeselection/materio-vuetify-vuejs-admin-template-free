@@ -19,7 +19,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
         working-directory: ./typescript-version
-      - run: yarn build --base=/materio-vuetify-vuejs-admin-template-free/demo
+      - run: yarn build --base=/materio-vuetify-vuejs-admin-template-free/demo/
         working-directory: ./typescript-version
       - name: Upload dist content via scp
         uses: appleboy/scp-action@master
