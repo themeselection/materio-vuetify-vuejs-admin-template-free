@@ -1,0 +1,21 @@
+// ℹ️ scrollable-content allows creating fixed header and scrollable content for VNavigationDrawer (Used when perfect scrollbar is used)
+.scrollable-content {
+  &.v-navigation-drawer {
+    .v-navigation-drawer__content {
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+    }
+  }
+}
+
+// ℹ️ adding styling for code tag
+code {
+  background: rgba(var(--v-code-background-color), var(--v-focus-opacity));
+  border-radius: 3px;
+  color: currentcolor;
+  font-size: 85%;
+  font-weight: 400;
+  padding-block: 0.2em;
+  padding-inline: 0.4em;
+}

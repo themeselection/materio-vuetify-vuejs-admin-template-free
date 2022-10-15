@@ -1,0 +1,167 @@
+@use "@core/scss/utils";
+@use "@configured-variables" as variables;
+
+// 👉 Application
+// ℹ️ We need accurate vh in mobile devices as well
+.v-application__wrap {
+  /* stylelint-disable-next-line liberty/use-logical-spec */
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+// 👉 Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.text-h1,
+.text-h2,
+.text-h3,
+.text-h4,
+.text-h5,
+.text-h6,
+.text-button,
+.text-overline,
+.v-card-title {
+  color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity));
+}
+
+.v-application,
+.text-body-1,
+.text-body-2,
+.text-subtitle-1,
+.text-subtitle-2 {
+  color: rgba(var(--v-theme-on-background), var(--v-medium-emphasis-opacity));
+}
+
+// 👉 Grid
+// Remove margin-bottom of v-input_details inside grid (validation error message)
+.v-row {
+  .v-col,
+  [class^="v-col-*"] {
+    .v-input__details {
+      margin-block-end: 0;
+    }
+  }
+}
+
+// 👉 Card
+// Removes padding-top for immediately placed v-card-text after itself
+.v-card-text {
+  & + & {
+    padding-block-start: 0 !important;
+  }
+}
+
+/*
+  👉 Checkbox & Radio Ripple
+
+  TODO Checkbox and switch component. Remove it when vuetify resolve the extra spacing: https://github.com/vuetifyjs/vuetify/issues/15519
+  We need this because form elements likes checkbox and switches are by default set to height of textfield height which is way big than we want
+  Tested with checkbox & switches
+*/
+.v-checkbox.v-input,
+.v-switch.v-input {
+  --v-input-control-height: auto;
+
+  flex: unset;
+}
+
+.v-selection-control--density-comfortable {
+  &.v-checkbox-btn,
+  &.v-radio,
+  &.v-radio-btn {
+    margin-inline-start: -0.5625rem;
+  }
+}
+
+.v-selection-control--density-compact {
+  &.v-radio,
+  &.v-radio-btn,
+  &.v-checkbox-btn {
+    margin-inline-start: -0.3125rem;
+  }
+}
+
+.v-selection-control--density-default {
+  &.v-checkbox-btn,
+  &.v-radio,
+  &.v-radio-btn {
+    margin-inline-start: -0.6875rem;
+  }
+}
+
+.v-radio-group {
+  .v-selection-control-group {
+    .v-radio:not(:last-child) {
+      margin-inline-end: 0.9rem;
+    }
+  }
+}
+
+/*
+  👉 Tabs
+  Disable tab transition
+
+  This is for tabs where we don't have card wrapper to tabs and have multiple cards as tab content.
+
+  This class will disable transition and adds `overflow: unset` on `VWindow` to allow spreading shadow
+*/
+.disable-tab-transition {
+  overflow: unset !important;
+
+  .v-window__container {
+    block-size: auto !important;
+  }
+
+  .v-window-item:not(.v-window-item--active) {
+    display: none !important;
+  }
+
+  .v-window__container .v-window-item {
+    transform: none !important;
+  }
+}
+
+// 👉 List
+.v-list {
+  // Set icons opacity to .87
+  .v-list-item__prepend > .v-icon,
+  .v-list-item__append > .v-icon {
+    opacity: var(--v-high-emphasis-opacity);
+  }
+}
+
+// 👉 Card list
+
+/*
+  ℹ️ Custom class
+
+  Remove list spacing inside card
+
+  This is because card title gets padding of 20px and list item have padding of 16px. Moreover, list container have padding-bottom as well.
+*/
+.card-list {
+  --v-card-list-gap: 20px;
+
+  &.v-list {
+    padding-block: 0;
+  }
+
+  .v-list-item {
+    min-block-size: unset;
+    min-block-size: auto !important;
+    padding-block: 0 !important;
+    padding-inline: 0 !important;
+
+    &:not(:last-child) {
+      padding-block-end: var(--v-card-list-gap) !important;
+    }
+  }
+}
+
+// 👉 Table
+.v-table {
+  color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity));
+}

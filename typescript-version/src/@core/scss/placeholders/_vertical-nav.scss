@@ -1,0 +1,88 @@
+@use "@core/scss/mixins";
+@use "@configured-variables" as variables;
+@use "vuetify/lib/styles/tools/states" as vuetifyStates;
+@use "@core/scss/utils";
+
+// Nav items styles (including section title)
+%vertical-nav-item {
+  margin-block: 0;
+  margin-inline: variables.$vertical-nav-horizontal-spacing;
+  padding-block: 0;
+  padding-inline: variables.$vertical-nav-horizontal-padding;
+  white-space: nowrap;
+}
+
+// This is same as `%vertical-nav-item` except section title is excluded
+%vertical-nav-item-interactive {
+  block-size: 2.625rem;
+  border-end-end-radius: 3.125rem;
+  border-start-end-radius: 3.125rem;
+
+  /*
+    ℹ️ We will use `margin-block-end` instead of `margin-block` to give more space for shadow to appear.
+    With `margin-block`, due to small space (space gets divided between top & bottom) shadow cuts
+  */
+  margin-block-end: 0.375rem;
+}
+
+// Common styles for nav item icon styles
+// ℹ️ Nav group's children icon styles are not here (Adjusts height, width & margin)
+%vertical-nav-items-icon {
+  flex-shrink: 0;
+  font-size: variables.$vertical-nav-items-icon-size;
+  margin-inline-end: variables.$vertical-nav-items-icon-margin-inline-end;
+}
+
+// Section title
+%vertical-nav-section-title {
+  // ℹ️ Setting height will prevent jerking when text & icon is toggled
+  block-size: 1.5rem;
+  color: rgba(var(--v-theme-on-surface), var(--v-disabled-opacity));
+  font-size: 0.75rem;
+  padding-inline: variables.$vertical-nav-horizontal-padding;
+  text-transform: uppercase;
+
+  /*
+    ℹ️ We will use this to add gap between divider and text.
+    Moreover, we will use this to adjust the `flex-basis` property of left divider
+  */
+  $divider-gap: 0.625rem;
+
+  // Thanks: https://stackoverflow.com/a/62359101/10796681
+  .title-text {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: $divider-gap;
+
+    &::before,
+    &::after {
+      border-block-end: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
+      content: "";
+    }
+
+    &::after {
+      flex: 1 1 auto;
+    }
+
+    &::before {
+      flex: 0 1 calc(variables.$vertical-nav-horizontal-padding-start - $divider-gap);
+      margin-inline-start: -#{variables.$vertical-nav-horizontal-padding-start};
+    }
+  }
+}
+
+// Vertical nav item badge styles
+%vertical-nav-item-badge {
+  display: inline-block;
+  border-radius: 1.5rem;
+  font-size: 0.8em;
+  font-weight: 500;
+  line-height: 1;
+  padding-block: 0.25em;
+  padding-inline: 0.55em;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+}

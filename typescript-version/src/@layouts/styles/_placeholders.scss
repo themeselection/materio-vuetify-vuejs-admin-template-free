@@ -1,0 +1,29 @@
+// placeholders
+@use "@configured-variables" as variables;
+
+%style-scroll-bar {
+  /* width */
+
+  &::-webkit-scrollbar {
+    background: rgb(var(--v-theme-surface));
+    block-size: 8px;
+    border-end-end-radius: 14px;
+    border-start-end-radius: 14px;
+    inline-size: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgb(var(--v-code-background-color));
+    border-radius: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+}

@@ -1,0 +1,73 @@
+@use "@configured-variables" as variables;
+
+// 👉 Demo spacers
+// TODO: Use vuetify SCSS variable here
+$card-spacer-content: 16px;
+
+.demo-space-x {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-block-start: -$card-spacer-content;
+
+  & > * {
+    margin-block-start: $card-spacer-content;
+    margin-inline-end: $card-spacer-content;
+  }
+}
+
+.demo-space-y {
+  & > * {
+    margin-block-end: $card-spacer-content;
+
+    &:last-child {
+      margin-block-end: 0;
+    }
+  }
+}
+
+// 👉 Card match height
+.match-height.v-row {
+  .v-card {
+    block-size: 100%;
+  }
+}
+
+// 👉 Whitespace
+.whitespace-no-wrap {
+  white-space: nowrap;
+}
+
+// 👉 Colors
+
+/*
+  ℹ️ Vuetify is applying `.text-white` class to badge icon but don't provide its styles
+  Moreover, we also use this class in some places
+
+  ℹ️ In vuetify 2 with `$color-pack: false` SCSS var config this class was getting generated but this is not the case in v3
+
+  ℹ️ We also need !important to get correct color in badge icon
+*/
+.text-white {
+  color: #fff !important;
+}
+
+.bg-var-theme-background {
+  background-color: rgba(var(--v-theme-on-surface), var(--v-hover-opacity)) !important;
+}
+
+// [/^bg-light-(\w+)$/, ([, w]) => ({ backgroundColor: `rgba(var(--v-theme-${w}), var(--v-activated-opacity))` })],
+@each $color-name in variables.$theme-colors-name {
+  .bg-light-#{$color-name} {
+    background-color: rgba(var(--v-theme-#{$color-name}), var(--v-activated-opacity)) !important;
+  }
+}
+
+// 👉 Typography
+.font-weight-semibold {
+  font-weight: 600 !important;
+}
+
+.leading-normal {
+  line-height: normal !important;
+}
