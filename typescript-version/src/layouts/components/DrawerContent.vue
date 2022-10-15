@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useTheme } from 'vuetify'
 import upgradeBannerDark from '@/assets/images/pro/upgrade-banner-dark.png'
 import upgradeBannerLight from '@/assets/images/pro/upgrade-banner-light.png'
 import logo from '@/assets/logo.svg?raw'
 import { VerticalNavLink, VerticalNavSectionTitle } from '@layouts'
+import { useTheme } from 'vuetify'
 
 const vuetifyTheme = useTheme()
 const upgradeBanner = computed(() => {
@@ -34,65 +34,85 @@ const upgradeBanner = computed(() => {
   <!-- 👉 Nav items -->
   <ul>
     <VerticalNavLink
-      title="Dashboard"
-      to="index"
-      :icon="{ icon: 'mdi-home-outline' }"
+      :item="{
+        title: 'Dashboard',
+        to: 'index',
+        icon: { icon: 'mdi-home-outline' }
+      }"
     />
     <VerticalNavLink
-      title="Account Settings"
-      to="account-settings"
-      :icon="{ icon: 'mdi-account-cog-outline' }"
+      :item="{
+        title: 'Account Settings',
+        to: 'account-settings',
+        icon: { icon: 'mdi-account-cog-outline' }
+      }"
     />
     <!-- 👉 Pages -->
-    <VerticalNavSectionTitle heading="Pages" />
+    <VerticalNavSectionTitle :item="{ heading: 'Pages' }" />
     <VerticalNavLink
-      title="Login"
-      to="login"
-      target="_blank"
-      :icon="{ icon: 'mdi-login' }"
+      :item="{
+        title: 'Login',
+        to: 'login',
+        target: '_blank',
+        icon: { icon: 'mdi-login' }
+      }"
     />
     <VerticalNavLink
-      title="Register"
-      to="register"
-      target="_blank"
-      :icon="{ icon: 'mdi-account-plus-outline' }"
+      :item="{
+        title: 'Register',
+        to: 'register',
+        target: '_blank',
+        icon: { icon: 'mdi-account-plus-outline' }
+      }"
     />
 
     <!-- ℹ️ This path doesn't exist so 404 route will catch this undefined path -->
     <VerticalNavLink
-      title="Error"
-      :to="{ path: '/error' }"
-      target="_blank"
-      :icon="{ icon: 'mdi-alert-circle-outline' }"
+      :item="{
+        title: 'Error',
+        to: { path: '/error' },
+        target: '_blank',
+        icon: { icon: 'mdi-alert-circle-outline' }
+      }"
     />
 
     <!-- 👉 User Interface -->
-    <VerticalNavSectionTitle heading="User Interface" />
+    <VerticalNavSectionTitle :item="{ heading: 'User Interface' }" />
 
     <VerticalNavLink
-      title="Typography"
-      to="typography"
-      :icon="{ icon: 'mdi-alpha-t-box-outline' }"
+      :item="{
+        title: 'Typography',
+        to: 'typography',
+        icon: { icon: 'mdi-alpha-t-box-outline' }
+      }"
     />
     <VerticalNavLink
-      title="Icons"
-      to="icons"
-      :icon="{ icon: 'mdi-eye-outline' }"
+      :item="{
+        title: 'Icons',
+        to: 'icons',
+        icon: { icon: 'mdi-eye-outline' }
+      }"
     />
     <VerticalNavLink
-      title="Cards"
-      to="card-basic"
-      :icon="{ icon: 'mdi-credit-card-outline' }"
+      :item="{
+        title: 'Cards',
+        to: 'card-basic',
+        icon: { icon: 'mdi-credit-card-outline' }
+      }"
     />
     <VerticalNavLink
-      title="Tables"
-      to="tables"
-      :icon="{ icon: 'mdi-table' }"
+      :item="{
+        title: 'Tables',
+        to: 'tables',
+        icon: { icon: 'mdi-table' }
+      }"
     />
     <VerticalNavLink
-      title="Form Layouts"
-      to="form-layouts"
-      :icon="{ icon: 'mdi-form-select' }"
+      :item="{
+        title: 'Form Layouts',
+        to: 'form-layouts',
+        icon: { icon: 'mdi-form-select' }
+      }"
     />
   </ul>
 

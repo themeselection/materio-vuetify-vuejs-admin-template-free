@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import VueApexCharts from 'vue3-apexcharts'
-import { useTheme } from 'vuetify'
-import { useThemeConfig } from '@core/composable/useThemeConfig'
+import VueApexCharts from 'vue3-apexcharts';
+import { useTheme } from 'vuetify';
 
 const vuetifyTheme = useTheme()
-const { theme } = useThemeConfig()
 
-const currentTheme = controlledComputed(theme, () => { return vuetifyTheme.current.value.colors })
+const currentTheme = computed(() => vuetifyTheme.current.value.colors)
 
 const series = [
   {
@@ -19,7 +17,7 @@ const series = [
   },
 ]
 
-const chartOptions = controlledComputed(theme, () => {
+const chartOptions = computed(() => {
   return {
     chart: {
       type: 'bar',

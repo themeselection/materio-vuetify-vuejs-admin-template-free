@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import type { NavSectionTitle } from '@layouts/types'
+import type { NavSectionTitle } from '@layouts/types';
 
-defineProps<NavSectionTitle>()
+defineProps<{ item: NavSectionTitle }>()
 </script>
 
 <template>
@@ -14,7 +14,7 @@ defineProps<NavSectionTitle>()
         <!-- eslint-disable vue/no-v-text-v-html-on-component -->
         <span
           class="title-text"
-          v-text="heading"
+          v-text="item.heading"
         />
         <!-- eslint-enable vue/no-v-text-v-html-on-component -->
       </Transition>
