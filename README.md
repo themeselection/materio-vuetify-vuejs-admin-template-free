@@ -35,6 +35,15 @@ If you’re a developer looking for an admin dashboard that is developer-friendl
 
 Build premium quality applications with ease. Use our innovative admin template to create eye-catching, high-quality, and high-performing single-page applications. Your apps will be completely responsive, ensuring they’ll look stunning and function flawlessly on desktops, tablets, and mobile devices.
 
+- ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite 3](https://github.com/vitejs/vite) & [Vuetify 3](https://next.vuetifyjs.com/en/) - Uses the latest Vuetify 3
+- 🗂 [File based routing](https://github.com/hannoeru/vite-plugin-pages)
+- 📦 [Components auto importing](https://github.com/antfu/unplugin-vue-components)
+- 📑 [Layout system](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
+- 😃 Use icons from any icon sets with classes by [Iconify](https://iconify.design/)
+- 🔥 Use the [`<script setup>`](https://vuejs.org/api/sfc-script-setup.html) syntax
+- 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Composition API and others directly
+- 🦾 TypeScript & JavaScript versions
+
 [View Demo](https://themeselection.com/demo/materio-vuetify-vuejs-admin-template-free/demo/)
 
 ## Installation ⚒️
