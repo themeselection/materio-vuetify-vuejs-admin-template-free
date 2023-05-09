@@ -56,11 +56,12 @@ const handleNavScroll = (evt: Event) => {
           to="/"
           class="app-logo d-flex align-center gap-x-3 app-title-wrapper"
         >
-          <div v-html="logo" />
+          <div
+            class="d-flex"
+            v-html="logo"
+          />
 
-          <h1
-            class="font-weight-semibold leading-normal text-xl text-uppercase"
-          >
+          <h1 class="font-weight-semibold leading-normal text-xl text-uppercase">
             Materio
           </h1>
         </RouterLink>
