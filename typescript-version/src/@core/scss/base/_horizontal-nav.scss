@@ -1,0 +1,189 @@
+@use "@core/scss/base/placeholders" as *;
+@use "@core/scss/template/placeholders" as *;
+@use "@configured-variables" as variables;
+@use "@layouts/styles/mixins" as layoutsMixins;
+@use "@core/scss/base/mixins";
+@use "vuetify/lib/styles/tools/states" as vuetifyStates;
+
+.layout-horizontal-nav {
+  @extend %nav;
+
+  // 👉 Icon styles
+  .nav-item-icon {
+    @extend %horizontal-nav-item-icon;
+  }
+
+  // 👉 Common styles for nav group & nav link
+  .nav-link,
+  .nav-group {
+    // 👉 Disabled nav items
+    &.disabled {
+      opacity: var(--v-disabled-opacity);
+      pointer-events: none;
+    }
+
+    // Set width of inner nav group and link
+    &.sub-item {
+      @extend %horizontal-nav-subitem;
+    }
+  }
+
+  // SECTION Nav Link
+  .nav-link {
+    @extend %nav-link;
+
+    a {
+      @extend %horizontal-nav-item;
+
+      // Adds before psudo element to style hover state
+      @include mixins.before-pseudo;
+
+      // Adds vuetify states
+      @include vuetifyStates.states($active: false);
+    }
+
+    // 👉 Top level nav link
+    &:not(.sub-item) {
+      a {
+        @extend %horizontal-nav-top-level-item;
+
+        &.router-link-active {
+          @extend %nav-link-active;
+        }
+      }
+    }
+
+    // 👉 Sub link
+    &.sub-item {
+      a {
+        &.router-link-active {
+          // ℹ️ We will not use active styles from material here because we want to use primary color for active link
+          @extend %horizontal-nav-sub-nav-link-active;
+        }
+      }
+    }
+  }
+
+  // !SECTION
+
+  // SECTION Nav Group
+  .nav-group {
+    .popper-triggerer {
+      .nav-group-label {
+        @extend %horizontal-nav-item;
+      }
+    }
+
+    > .popper-triggerer > .nav-group-label {
+      // Adds before psudo element to style hover state
+      @include mixins.before-pseudo;
+
+      // Adds vuetify states
+      @include vuetifyStates.states($active: false);
+    }
+
+    // 👉 Top level group
+    &:not(.sub-item) {
+      > .popper-triggerer {
+        position: relative;
+
+        /*
+          ℹ️ The Bridge
+          This after pseudo will work as bridge when we have space between popper triggerer and popper content
+          Initially it will have pointer events none for normal behavior and once the content is shown it will
+            work as bridge by setting pointer events to `auto`
+        */
+        &::after {
+          position: absolute;
+          block-size: variables.$horizontal-nav-popper-content-top;
+          content: "";
+          inline-size: 100%;
+          inset-block-start: 100%;
+          inset-inline-start: 0;
+          pointer-events: none;
+        }
+      }
+
+      // Enable the pseudo bridge when content is shown by setting pointer events to `auto`
+      &.show-content > .popper-triggerer::after {
+        /*
+          ℹ️ We have added `z-index: 2` because when there is horizontal nav item below the popper trigger (group)
+            without this style nav item below popper trigger (group) gets focus hence closes the popper content
+        */
+        z-index: 2;
+        pointer-events: auto;
+      }
+
+      > .popper-triggerer > .nav-group-label {
+        @extend %horizontal-nav-top-level-item;
+      }
+
+      &.active {
+        > .popper-triggerer > .nav-group-label {
+          @extend %nav-link-active;
+        }
+      }
+
+      > .popper-content {
+        // ℹ️ Add space between popper wrapper & content
+        margin-block-start: variables.$horizontal-nav-popper-content-top !important;
+      }
+    }
+
+    // 👉 Sub group
+    &.sub-item {
+      &.active {
+        @include mixins.selected-states("> .popper-triggerer > .nav-group-label::before");
+      }
+
+      // Reduce the icon's size of nested group's nav links (Top level group > Sub group > [Nav links])
+      .sub-item {
+        .nav-item-icon {
+          @extend %third-level-nav-item-icon;
+        }
+      }
+    }
+
+    .nav-group-arrow {
+      font-size: 1.375rem;
+
+      /*
+        ℹ️ ml-auto won't matter in top level group (because we haven't specified fixed width for top level groups)
+        but we wrote generally because we don't want to become so specific
+      */
+      margin-inline-start: auto;
+    }
+
+    &.popper-inline-end {
+      .nav-group-arrow {
+        transform: rotateZ(270deg);
+
+        @include layoutsMixins.rtl {
+          transform: rotateZ(90deg);
+        }
+      }
+    }
+
+    .nav-item-title {
+      @extend %horizontal-nav-item-title;
+    }
+
+    .popper-content {
+      @extend %horizontal-nav-popper-content-hidden;
+      @extend %horizontal-nav-popper-content;
+
+      background-color: rgb(var(--v-theme-surface));
+
+      // Set max-height for the popper content
+      > div {
+        max-block-size: variables.$horizontal-nav-popper-content-max-height;
+      }
+    }
+
+    &.show-content > .popper-content {
+      @extend %horizontal-nav-popper-content-visible;
+    }
+  }
+
+  // !SECTION
+}

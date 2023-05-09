@@ -1,0 +1,27 @@
+@use "vuetify/lib/styles/tools/elevation" as elevation;
+@use "@configured-variables" as variables;
+@use "misc";
+
+%default-layout-horizontal-nav-navbar-and-nav-container {
+  @include elevation.elevation(3);
+
+  // ℹ️ 1000 is v-window z-index
+  z-index: 1001;
+  background-color: rgb(var(--v-theme-surface));
+
+  &.header-blur {
+    @extend %blurry-bg;
+  }
+}
+
+%default-layout-horizontal-nav-navbar {
+  border-block-end: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
+}
+
+%default-layout-horizontal-nav-nav {
+  padding-block: variables.$horizontal-nav-padding;
+}
+
+%default-layout-horizontal-nav-nav-items-list {
+  gap: variables.$horizontal-nav-top-level-items-gap;
+}

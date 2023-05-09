@@ -1,0 +1,95 @@
+@use "@styles/variables/_vuetify.scss" as vuetify;
+@use "vuetify/lib/styles/tools/_elevation" as mixins_elevation;
+@use "@layouts/styles/mixins" as layoutsMixins;
+
+.v-application .apexcharts-canvas {
+  &line[stroke="transparent"] {
+    display: "none";
+  }
+
+  .apexcharts-tooltip {
+    @include mixins_elevation.elevation(3);
+
+    border-color: rgba(var(--v-border-color), var(--v-border-opacity));
+    background: rgb(var(--v-theme-surface));
+
+    .apexcharts-tooltip-title {
+      border-color: rgba(var(--v-border-color), var(--v-border-opacity));
+      background: rgb(var(--v-theme-surface));
+      font-weight: 600;
+    }
+
+    &.apexcharts-theme-light {
+      color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity));
+    }
+
+    &.apexcharts-theme-dark {
+      color: white;
+    }
+
+    .apexcharts-tooltip-series-group:first-of-type {
+      padding-block-end: 0;
+    }
+  }
+
+  .apexcharts-xaxistooltip {
+    border-color: rgba(var(--v-border-color), var(--v-border-opacity));
+    background: rgb(var(--v-theme-grey-50));
+    color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity));
+
+    &::after {
+      border-block-end-color: rgb(var(--v-theme-grey-50));
+    }
+
+    &::before {
+      border-block-end-color: rgba(var(--v-border-color), var(--v-border-opacity));
+    }
+  }
+
+  .apexcharts-yaxistooltip {
+    border-color: rgba(var(--v-border-color), var(--v-border-opacity));
+    background: rgb(var(--v-theme-grey-50));
+
+    &::after {
+      border-inline-start-color: rgb(var(--v-theme-grey-50));
+    }
+
+    &::before {
+      border-inline-start-color: rgba(var(--v-border-color), var(--v-border-opacity));
+    }
+  }
+
+  .apexcharts-xaxistooltip-text,
+  .apexcharts-yaxistooltip-text {
+    color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity));
+  }
+
+  .apexcharts-yaxis .apexcharts-yaxis-texts-g .apexcharts-yaxis-label {
+    @include layoutsMixins.rtl {
+      text-anchor: start;
+    }
+  }
+
+  .apexcharts-text,
+  .apexcharts-tooltip-text,
+  .apexcharts-datalabel-label,
+  .apexcharts-datalabel,
+  .apexcharts-xaxistooltip-text,
+  .apexcharts-yaxistooltip-text,
+  .apexcharts-legend-text {
+    font-family: vuetify.$body-font-family !important;
+  }
+
+  .apexcharts-pie-label {
+    fill: white;
+    filter: none;
+  }
+
+  .apexcharts-marker {
+    box-shadow: none;
+  }
+
+  .apexcharts-legend-marker {
+    margin-inline-end: 0.3875rem !important;
+  }
+}

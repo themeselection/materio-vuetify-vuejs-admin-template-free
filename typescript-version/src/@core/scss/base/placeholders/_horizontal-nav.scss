@@ -1,0 +1,94 @@
+@use "@layouts/styles/mixins" as layoutsMixins;
+@use "vuetify/lib/styles/tools/elevation" as elevation;
+@use "@core/scss/base/variables";
+@use "@layouts/styles/placeholders";
+
+// Horizontal nav item styles (including nested)
+%horizontal-nav-item {
+  padding-block: 0.6rem;
+  padding-inline: 1rem;
+}
+
+// Top level horizontal nav item styles (`a` tag & group label)
+%horizontal-nav-top-level-item {
+  border-radius: 0.4rem;
+}
+
+// Active styles for sub nav link
+%horizontal-nav-sub-nav-link-active {
+  background: rgba(var(--v-theme-primary), 0.1);
+  color: rgb(var(--v-theme-primary));
+}
+
+/*
+  ℹ️ This style is required when you don't provide any transition to horizontal nav items via themeConfig `themeConfig.horizontalNav.transition`
+  Also, you have to disable it if you are using transition
+*/
+// Popper content styles when it's hidden
+%horizontal-nav-popper-content-hidden {
+  // display: none;
+
+  // opacity: 0;
+  // pointer-events: none;
+  // transform: translateY(7px);
+  // transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+/*
+  ℹ️ This style is required when you don't provide any transition to horizontal nav items via themeConfig `themeConfig.horizontalNav.transition`
+  Also, you have to disable it if you are using transition
+*/
+// Popper content styles when it's shown
+%horizontal-nav-popper-content-visible {
+  // display: block;
+
+  // opacity: 1;
+  // pointer-events: auto;
+  // pointer-events: auto;
+  // transform: translateY(0);
+}
+
+// Horizontal nav item icon (Including sub nav items)
+%horizontal-nav-item-icon {
+  font-size: variables.$horizontal-nav-items-icon-size;
+  margin-inline-end: variables.$horizontal-nav-items-icon-margin-inline-end;
+}
+
+// Horizontal nav subitem
+%horizontal-nav-subitem {
+  min-inline-size: 12rem;
+
+  .nav-item-title {
+    margin-inline-end: 1rem;
+  }
+}
+
+// Styles for third level item icon/ (e.g. Reduce the icon's size of nested group's nav links (Top level group > Sub group > [Nav links]))
+%third-level-nav-item-icon {
+  font-size: variables.$horizontal-nav-third-level-icon-size;
+  margin-inline-end: 0.75rem;
+
+  /*
+    ℹ️ `margin-inline` will be (normal icon font-size - small icon font-size) / 2
+    (1.5rem - 0.9rem) / 2 => 0.6rem / 2 => 0.3rem
+  */
+  margin-inline-start: calc((variables.$horizontal-nav-items-icon-size - variables.$horizontal-nav-third-level-icon-size) / 2);
+}
+
+// Horizontal nav item title
+%horizontal-nav-item-title {
+  margin-inline-end: 0.3rem;
+  white-space: nowrap;
+}
+
+// Popper content styles
+%horizontal-nav-popper-content {
+  @include elevation.elevation(4);
+
+  border-radius: 6px;
+  padding-block: 0.3rem;
+
+  > div {
+    @extend %style-scroll-bar;
+  }
+}

@@ -1,0 +1,63 @@
+{
+    "script": {
+        "prefix": "vue-sfc-ts",
+        "body": [
+            "<script lang=\"ts\" setup>",
+            "",
+            "</script>",
+            "",
+            "<template>",
+            "  ",
+            "</template>",
+            "",
+            "<style lang=\"scss\">",
+            "",
+            "</style>",
+            ""
+        ],
+        "description": "Vue SFC Typescript"
+    },
+    "template": {
+        "scope": "vue",
+        "prefix": "template",
+        "body": [
+            "<template>",
+            "  $1",
+            "</template>"
+        ],
+        "description": "Create <template> block"
+    },
+    "Script setup + TS": {
+        "prefix": "script-setup-ts",
+        "body": [
+            "<script setup lang=\"ts\">",
+            "${1}",
+            "</script>"
+        ],
+        "description": "Script setup + TS"
+    },
+    "style": {
+        "scope": "vue",
+        "prefix": "style",
+        "body": [
+            "<style lang=\"scss\">",
+            "$1",
+            "</style>"
+        ],
+        "description": "Create <style> block"
+    },
+    "use composable": {
+        "prefix": "use-composable",
+        "body": [
+            "const { $2 } = ${1:useComposable}()"
+        ],
+        "description": "We frequently uses composable in our components and writing const {} = useModule() is tedious. This snippet helps you to write it quickly."
+    },
+    "template interpolation": {
+        "prefix": "cc",
+        "body": [
+            "{{ ${1} }}"
+        ],
+        "description": "We are just making writing template interpolation easier."
+    }
+}

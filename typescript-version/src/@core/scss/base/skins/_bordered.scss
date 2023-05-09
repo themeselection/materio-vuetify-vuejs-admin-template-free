@@ -1,0 +1,51 @@
+@use "sass:map";
+@use "@core/scss/base/mixins";
+@use "@configured-variables" as variables;
+@use "../utils";
+
+$header: ".layout-navbar";
+
+@if variables.$layout-vertical-nav-navbar-is-contained {
+  $header: ".layout-navbar .navbar-content-container";
+}
+
+.skin--bordered {
+  @include mixins.bordered-skin(".v-card:not(.v-card .v-card):not(.v-card--flat)");
+  @include mixins.bordered-skin(".v-menu .v-overlay__content > .v-card, .v-menu .v-overlay__content > .v-sheet, .v-menu .v-overlay__content > .v-list");
+  @include mixins.bordered-skin(".popper-content");
+
+  // Navbar
+  // -- Horizontal
+  @include mixins.bordered-skin(".layout-navbar-and-nav-container", "border-bottom");
+
+  // -- Vertical
+  // ℹ️ We have added `.layout-navbar-sticky` as well in selector because we don't want to add borders if navbar is static
+  @if variables.$layout-vertical-nav-navbar-is-contained {
+    @include mixins.bordered-skin(".layout-nav-type-vertical.window-scrolled.layout-navbar-sticky #{$header}");
+    .layout-nav-type-vertical.window-scrolled #{$header} {
+      border-block-start: none !important;
+    }
+  } @else {
+    @include mixins.bordered-skin(".layout-nav-type-vertical.window-scrolled.layout-navbar-sticky #{$header}", "border-bottom");
+  }
+
+  // Footer
+  // -- Vertical
+  @include mixins.bordered-skin(".layout-nav-type-vertical.layout-footer-sticky .layout-footer .footer-content-container");
+
+  .layout-nav-type-vertical.layout-footer-sticky .layout-footer .footer-content-container {
+    border-block-end: none;
+  }
+
+  // -- Horizontal
+  @include mixins.bordered-skin(".layout-nav-type-horizontal.layout-footer-sticky .layout-footer");
+
+  .layout-nav-type-horizontal.layout-footer-sticky .layout-footer {
+    border-block-end: none;
+  }
+
+  // Vertical Nav
+  .layout-vertical-nav {
+    border-inline-end: thin solid rgba(var(--v-border-color), var(--v-border-opacity));
+  }
+}

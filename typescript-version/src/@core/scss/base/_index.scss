@@ -1,0 +1,48 @@
+@use "sass:map";
+
+// Layout
+@use "vertical-nav";
+@use "horizontal-nav";
+@use "default-layout";
+@use "default-layout-w-vertical-nav";
+@use "default-layout-w-horizontal-nav";
+
+// Layouts package
+@use "layouts";
+
+// Skins
+@use "skins";
+
+// Components
+@use "components";
+
+// Utilities
+@use "utilities";
+
+// Route Transitions
+@use "route-transitions";
+
+// Misc
+@use "misc";
+
+// Dark
+@use "dark";
+
+// libs
+@use "libs/perfect-scrollbar";
+
+a {
+  color: rgb(var(--v-theme-primary));
+  text-decoration: none;
+}
+
+// Vuetify 3 don't provide margin bottom style like vuetify 2
+p {
+  margin-block-end: 1rem;
+}
+
+// Iconify icon size
+svg.iconify {
+  block-size: 1em;
+  inline-size: 1em;
+}

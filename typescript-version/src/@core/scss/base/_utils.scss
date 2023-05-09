@@ -1,0 +1,152 @@
+@use "sass:map";
+@use "sass:list";
+
+// Thanks: https://css-tricks.com/snippets/sass/deep-getset-maps/
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map.get($map, $key);
+  }
+
+  @return $map;
+}
+
+@function map-deep-set($map, $keys, $value) {
+  $maps: ($map,);
+  $result: null;
+
+  // If the last key is a map already
+  // Warn the user we will be overriding it with $value
+  @if type-of(nth($keys, -1)) == "map" {
+    @warn "The last key you specified is a map; it will be overrided with `#{$value}`.";
+  }
+
+  // If $keys is a single key
+  // Just merge and return
+  @if length($keys) == 1 {
+    @return map-merge($map, ($keys: $value));
+  }
+
+  // Loop from the first to the second to last key from $keys
+  // Store the associated map to this key in the $maps list
+  // If the key doesn't exist, throw an error
+  @for $i from 1 through length($keys) - 1 {
+    $current-key: list.nth($keys, $i);
+    $current-map: list.nth($maps, -1);
+    $current-get: map.get($current-map, $current-key);
+
+    @if not $current-get {
+      @error "Key `#{$key}` doesn't exist at current level in map.";
+    }
+
+    $maps: list.append($maps, $current-get);
+  }
+
+  // Loop from the last map to the first one
+  // Merge it with the previous one
+  @for $i from length($maps) through 1 {
+    $current-map: list.nth($maps, $i);
+    $current-key: list.nth($keys, $i);
+    $current-val: if($i == list.length($maps), $value, $result);
+    $result: map.map-merge($current-map, ($current-key: $current-val));
+  }
+
+  // Return result
+  @return $result;
+}
+
+// font size utility classes
+// font size
+$font-sizes: (
+  "xs": 0.75rem,
+  "sm": 0.875rem,
+  "base": 1rem,
+  "lg": 1.125rem,
+  "xl": 1.25rem,
+  "2xl": 1.5rem,
+  "3xl": 1.875rem,
+  "4xl": 2.25rem,
+  "5xl": 3rem,
+  "6xl": 3.75rem,
+  "7xl": 4.5rem,
+  "8xl": 6rem,
+  "9xl": 8rem
+);
+
+// font line-height
+$font-line-height: (
+  "xs": 1rem,
+  "sm": 1.25rem,
+  "base": 1.5rem,
+  "lg": 1.75rem,
+  "xl": 1.75rem,
+  "2xl": 2rem,
+  "3xl": 2.25rem,
+  "4xl": 2.5rem,
+  "5xl": 1,
+  "6xl": 1,
+  "7xl": 1,
+  "8xl": 1,
+  "9xl": 1
+);
+
+@each $name, $size in $font-sizes {
+  .text-#{$name} {
+    font-size: $size;
+    line-height: map.get($font-line-height, $name);
+  }
+}
+
+// truncate utility class
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// gap utility class
+$gap: (
+  "0": 0,
+  "1": 0.25rem,
+  "2": 0.5rem,
+  "3": 0.75rem,
+  "4": 1rem,
+  "5": 1.25rem,
+  "6":1.5rem,
+  "7": 1.75rem,
+  "8": 2rem,
+  "9": 2.25rem,
+  "10": 2.5rem,
+  "11": 2.75rem,
+  "12": 3rem,
+  "14": 3.5rem,
+  "16": 4rem,
+  "20": 5rem,
+  "24": 6rem,
+  "28": 7rem,
+  "32": 8rem,
+  "36": 9rem,
+  "40": 10rem,
+  "44": 11rem,
+  "48": 12rem,
+  "52": 13rem,
+  "56": 14rem,
+  "60": 15rem,
+  "64": 16rem,
+  "72": 18rem,
+  "80": 20rem,
+  "96": 24rem
+);
+
+@each $name, $size in $gap {
+  .gap-#{$name} {
+    gap: $size;
+  }
+
+  .gap-x-#{$name} {
+    column-gap: $size;
+  }
+
+  .gap-y-#{$name} {
+    row-gap: $size;
+  }
+}
