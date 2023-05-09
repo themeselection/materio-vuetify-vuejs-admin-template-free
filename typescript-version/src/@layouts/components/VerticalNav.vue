@@ -61,9 +61,7 @@ const handleNavScroll = (evt: Event) => {
             v-html="logo"
           />
 
-          <h1
-            class="font-weight-semibold leading-normal text-xl text-uppercase"
-          >
+          <h1 class="font-weight-semibold leading-normal text-xl text-uppercase">
             Master
           </h1>
         </RouterLink>
