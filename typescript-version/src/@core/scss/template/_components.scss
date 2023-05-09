@@ -1,0 +1,119 @@
+@use "vuetify/lib/styles/tools/_elevation" as mixins_elevation;
+@use "@configured-variables" as variables;
+@use "mixins";
+
+// 👉 Avatar font-size
+.v-avatar {
+  @include mixins.avatar-font-sizes($map: variables.$avatar-font-sizes);
+}
+
+// v-tab with pill support
+.v-tabs.v-tabs-pill {
+  .v-tab.v-btn {
+    border-radius: 5px !important;
+  }
+}
+
+// 👉 added box shadow
+.v-timeline-item {
+  .v-timeline-divider__dot {
+    .v-timeline-divider__inner-dot {
+      box-shadow: 0 0 0 0.1875rem rgb(var(--v-theme-on-surface-variant));
+
+      @each $color-name in variables.$theme-colors-name {
+
+        &.bg-#{$color-name} {
+          box-shadow: 0 0 0 0.1875rem rgba(var(--v-theme-#{$color-name}), 0.12);
+        }
+      }
+    }
+  }
+}
+
+// 👉 Timeline Outlined style
+.v-timeline-variant-outlined.v-timeline {
+  .v-timeline-divider__dot {
+    .v-timeline-divider__inner-dot {
+      box-shadow: inset 0 0 0 0.125rem rgb(var(--v-theme-on-surface-variant));
+
+      @each $color-name in variables.$theme-colors-name {
+        background-color: rgb(var(--v-theme-surface)) !important;
+
+        &.bg-#{$color-name} {
+          box-shadow: inset 0 0 0 0.125rem rgb(var(--v-theme-#{$color-name}));
+        }
+      }
+    }
+  }
+}
+
+// 👉 Expansion panels
+.v-expansion-panel-title,
+.v-expansion-panel-title--active,
+.v-expansion-panel-title:hover,
+.v-expansion-panel-title:focus,
+.v-expansion-panel-title:focus-visible,
+.v-expansion-panel-title--active:focus,
+.v-expansion-panel-title--active:hover {
+  .v-expansion-panel-title__overlay {
+    opacity: 0 !important;
+  }
+}
+
+// 👉 Set Elevation when panel open
+
+.v-expansion-panels:not(.v-expansion-panels--variant-accordion) {
+  .v-expansion-panel.v-expansion-panel--active {
+    .v-expansion-panel__shadow {
+      @include mixins_elevation.elevation(3);
+    }
+  }
+}
+
+// 👉 Slider
+
+.v-slider.v-input--horizontal .v-slider-track__fill {
+  block-size: var(--v-slider-track-size);
+}
+
+.v-slider.v-input--vertical .v-slider-track__fill {
+  inline-size: var(--v-slider-track-size);
+}
+
+.v-slider-thumb {
+  .v-slider-thumb__label {
+    color: rgb(var(--v-theme-on-primary));
+  }
+}
+
+// 👉 Table
+.v-table--density-default > .v-table__wrapper > table > tbody > tr > td,
+.v-table--density-default > .v-table__wrapper > table > thead > tr > td,
+.v-table--density-default > .v-table__wrapper > table > tfoot > tr > td {
+  block-size: 50px !important;
+}
+
+.v-table {
+  --v-table-header-height: 54px !important;
+
+  th {
+    color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity)) !important;
+    font-size: 0.75rem;
+
+    .v-data-table-header__content {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .v-selection-control {
+    color: rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity)) !important;
+    font-size: 1rem;
+  }
+}
+
+.v-data-table {
+  th {
+    background: rgb(var(--v-table-header-background)) !important;
+  }
+}

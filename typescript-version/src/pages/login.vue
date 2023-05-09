@@ -38,7 +38,7 @@ const rememberMe = ref(false)
       >
         <VCardText>
           <h5 class="text-h5 mb-1">
-            Welcome to Master! 👋🏻
+            Welcome to Materio! 👋🏻
           </h5>
           <p class="mb-0">
             Please sign-in to your account and start the adventure

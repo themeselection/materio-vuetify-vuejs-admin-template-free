@@ -1,5 +1,5 @@
+import type { IconProps } from '@iconify/vue'
 import { Icon } from '@iconify/vue'
-import type { IconProps, IconSet } from 'vuetify'
 import { aliases } from 'vuetify/lib/iconsets/mdi'
 
 const alertTypeIcon = {
@@ -11,7 +11,7 @@ const alertTypeIcon = {
 
 const modifiedAliases = Object.assign(aliases, alertTypeIcon)
 
-export const iconify: IconSet = {
+export const iconify = {
   component: (props: IconProps) => h(Icon, props),
 }
 

@@ -9,6 +9,7 @@ export default {
     },
   },
   VAlert: {
+    density: 'comfortable',
     VBtn: {
       color: undefined,
     },
@@ -45,6 +46,8 @@ export default {
   },
   VCheckboxBtn: {
     color: 'primary',
+    density: 'comfortable',
+    hideDetails: 'auto',
   },
   VCheckbox: {
     // set v-checkbox default color to primary
@@ -58,6 +61,7 @@ export default {
     hideDetails: 'auto',
   },
   VRadio: {
+    color: 'primary',
     density: 'comfortable',
     hideDetails: 'auto',
   },

@@ -108,6 +108,9 @@ devDependencies:
   '@iconify/tools':
     specifier: ^2.2.0
     version: 2.2.0
+  '@iconify/types':
+    specifier: ^2.0.0
+    version: 2.0.0
   '@iconify/utils':
     specifier: ^2.1.5
     version: 2.1.5
@@ -117,6 +120,9 @@ devDependencies:
   '@intlify/unplugin-vue-i18n':
     specifier: ^0.9.1
     version: 0.9.2(vue-i18n@9.2.2)
+  '@types/cheerio':
+    specifier: ^0.22.31
+    version: 0.22.31
   '@types/node':
     specifier: ^18.7.18
     version: 18.11.18

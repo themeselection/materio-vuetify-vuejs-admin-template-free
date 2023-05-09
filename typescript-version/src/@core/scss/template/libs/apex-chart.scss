@@ -1,6 +1,7 @@
 @use "@styles/variables/_vuetify.scss" as vuetify;
 @use "vuetify/lib/styles/tools/_elevation" as mixins_elevation;
 @use "@layouts/styles/mixins" as layoutsMixins;
+@use "@core/scss/base/mixins";
 
 .v-application .apexcharts-canvas {
   &line[stroke="transparent"] {
@@ -8,7 +9,7 @@
   }
 
   .apexcharts-tooltip {
-    @include mixins_elevation.elevation(3);
+    @include mixins.elevation(3);
 
     border-color: rgba(var(--v-border-color), var(--v-border-opacity));
     background: rgb(var(--v-theme-surface));
@@ -16,7 +17,7 @@
     .apexcharts-tooltip-title {
       border-color: rgba(var(--v-border-color), var(--v-border-opacity));
       background: rgb(var(--v-theme-surface));
-      font-weight: 600;
+      font-weight: 500;
     }
 
     &.apexcharts-theme-light {
@@ -91,5 +92,9 @@
 
   .apexcharts-legend-marker {
     margin-inline-end: 0.3875rem !important;
+
+    @include layoutsMixins.rtl {
+      margin-inline-end: 0.75rem !important;
+    }
   }
 }
