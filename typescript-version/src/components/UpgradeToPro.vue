@@ -14,6 +14,7 @@
       offset="15"
       max-width="400px"
       :close-on-content-click="false"
+      transition="slide-y-reverse-transition"
     >
       <VCard>
         <VImg src="https://cdn.jsdelivr.net/gh/themeselection/ts-assets/master/master-vuetify-vuejs-admin-template/banner/banner.png" />
