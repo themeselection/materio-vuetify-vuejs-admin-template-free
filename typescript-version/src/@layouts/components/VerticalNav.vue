@@ -27,7 +27,6 @@ const route = useRoute()
 watch(
   () => route.path,
   () => {
-    console.log('object')
     props.toggleIsOverlayNavActive(false)
   })
 
