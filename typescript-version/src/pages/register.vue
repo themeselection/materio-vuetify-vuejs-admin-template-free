@@ -1,138 +1,137 @@
 <script setup lang="ts">
+import logo from '@/assets/logo.svg?raw'
 import AuthProvider from '@/views/pages/authentication/AuthProvider.vue'
 
-const username = ref('johnDoe')
-const email = ref('john@example.com')
-const password = ref('john@MATERIO#123')
-const privacyPolicies = ref(true)
+const form = ref({
+  username: '',
+  email: '',
+  password: '',
+  privacyPolicies: false,
+})
+
 const isPasswordVisible = ref(false)
 </script>
 
 <template>
-  <VRow
-    no-gutters
-    class="auth-wrapper"
-  >
-    <VCol
-      lg="8"
-      class="d-none d-lg-flex"
+  <div class="auth-wrapper d-flex align-center justify-center pa-4">
+    <VCard
+      class="auth-card pa-4 pt-7"
+      max-width="448"
     >
-      <!-- here your illustrator -->
-    </VCol>
+      <VCardItem class="justify-center">
+        <template #prepend>
+          <div class="d-flex">
+            <div
+              class="d-flex text-primary"
+              v-html="logo"
+            />
+          </div>
+        </template>
 
-    <VCol
-      cols="12"
-      lg="4"
-      class="d-flex align-center justify-center"
-      style="background-color: rgb(var(--v-theme-surface));"
-    >
-      <VCard
-        flat
-        :max-width="500"
-        class="mt-12 mt-sm-0 pa-4"
-      >
-        <VCardText>
-          <h5 class="text-h5 mb-1">
-            Adventure starts here 🚀
-          </h5>
-          <p class="mb-0">
-            Make your app management easy and fun!
-          </p>
-        </VCardText>
+        <VCardTitle class="text-2xl text-uppercase">
+          Master
+        </VCardTitle>
+      </VCardItem>
 
-        <VCardText>
-          <VForm @submit.prevent="$router.push('/')">
-            <VRow>
-              <!-- Username -->
-              <VCol cols="12">
-                <VTextField
-                  v-model="username"
-                  autofocus
-                  label="Username"
+      <VCardText class="pt-2">
+        <h5 class="text-h5 mb-1">
+          Adventure starts here 🚀
+        </h5>
+        <p class="mb-0">
+          Make your app management easy and fun!
+        </p>
+      </VCardText>
+
+      <VCardText>
+        <VForm @submit.prevent="$router.push('/')">
+          <VRow>
+            <!-- Username -->
+            <VCol cols="12">
+              <VTextField
+                v-model="form.username"
+                autofocus
+                label="Username"
+              />
+            </VCol>
+            <!-- email -->
+            <VCol cols="12">
+              <VTextField
+                v-model="form.email"
+                label="Email"
+                type="email"
+              />
+            </VCol>
+
+            <!-- password -->
+            <VCol cols="12">
+              <VTextField
+                v-model="form.password"
+                label="Password"
+                :type="isPasswordVisible ? 'text' : 'password'"
+                :append-inner-icon="isPasswordVisible ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
+                @click:append-inner="isPasswordVisible = !isPasswordVisible"
+              />
+              <div class="d-flex align-center mt-1 mb-4">
+                <VCheckbox
+                  id="privacy-policy"
+                  v-model="form.privacyPolicies"
+                  inline
                 />
-              </VCol>
-
-              <!-- email -->
-              <VCol cols="12">
-                <VTextField
-                  v-model="email"
-                  label="Email"
-                  type="email"
-                />
-              </VCol>
-
-              <!-- password -->
-              <VCol cols="12">
-                <VTextField
-                  v-model="password"
-                  label="Password"
-                  :type="isPasswordVisible ? 'text' : 'password'"
-                  :append-inner-icon="isPasswordVisible ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
-                  @click:append-inner="isPasswordVisible = !isPasswordVisible"
-                />
-
-                <div class="d-flex align-center mt-1 mb-4">
-                  <VCheckbox
-                    id="privacy-policy"
-                    v-model="privacyPolicies"
-                    inline
-                  >
-                    <template #label>
-                      <span class="me-1">
-                        I agree to
-                        <a
-                          href="javascript:void(0)"
-                          class="text-primary"
-                        >privacy policy & terms</a>
-                      </span>
-                    </template>
-                  </VCheckbox>
-                </div>
-
-                <VBtn
-                  block
-                  type="submit"
+                <VLabel
+                  for="privacy-policy"
+                  style="opacity: 1;"
                 >
-                  Sign up
-                </VBtn>
-              </VCol>
+                  <span class="me-1">I agree to</span>
+                  <a
+                    href="javascript:void(0)"
+                    class="text-primary"
+                  >privacy policy & terms</a>
+                </VLabel>
+              </div>
 
-              <!-- create account -->
-              <VCol
-                cols="12"
-                class="text-center text-base"
+              <VBtn
+                block
+                type="submit"
               >
-                <span>Already have an account?</span>
-                <RouterLink
-                  class="text-primary ms-2"
-                  to="/login"
-                >
-                  Sign in instead
-                </RouterLink>
-              </VCol>
+                Sign up
+              </VBtn>
+            </VCol>
 
-              <VCol
-                cols="12"
-                class="d-flex align-center"
+            <!-- login instead -->
+            <VCol
+              cols="12"
+              class="text-center text-base"
+            >
+              <span>Already have an account?</span>
+              <RouterLink
+                class="text-primary ms-2"
+                to="/login"
               >
-                <VDivider />
-                <span class="mx-4">or</span>
-                <VDivider />
-              </VCol>
+                Sign in instead
+              </RouterLink>
+            </VCol>
 
-              <!-- auth providers -->
-              <VCol
-                cols="12"
-                class="text-center"
-              >
-                <AuthProvider />
-              </VCol>
-            </VRow>
-          </VForm>
-        </VCardText>
-      </VCard>
-    </VCol>
-  </VRow>
+            <VCol
+              cols="12"
+              class="d-flex align-center"
+            >
+              <VDivider />
+              <span class="mx-4">or</span>
+              <VDivider />
+            </VCol>
+
+            <!-- auth providers -->
+            <VCol
+              cols="12"
+              class="text-center"
+            >
+              <AuthProvider />
+            </VCol>
+          </VRow>
+        </VForm>
+      </VCardText>
+    </VCard>
+  </div>
 </template>
 
 <style lang="scss">
