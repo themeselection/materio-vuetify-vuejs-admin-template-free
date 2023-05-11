@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import avatar1 from '@images/avatars/avatar-1.png'
-import avatar4 from '@images/avatars/avatar-4.png'
-import avatar8 from '@images/avatars/avatar-8.png'
+import avatar1 from '@images/avatars/avatar-1.png';
+import avatar2 from '@images/avatars/avatar-2.png';
+import avatar4 from '@images/avatars/avatar-4.png';
 
 const solidCardData = [
   {
@@ -29,7 +29,7 @@ const solidCardData = [
     title: 'Linkedin Card',
     icon: 'mdi-linkedin',
     text: 'With the Internet spreading like wildfire and reaching every part of our daily life, more and more traffic is directed.',
-    avatarImg: avatar8,
+    avatarImg: avatar2,
     avatarName: 'Anne Burke1',
     likes: '1.2k',
     share: '80',
