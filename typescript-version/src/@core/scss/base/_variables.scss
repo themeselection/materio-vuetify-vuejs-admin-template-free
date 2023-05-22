@@ -1,3 +1,5 @@
+@use "vuetify/lib/styles/tools/functions" as *;
+
 /*
   TODO: Add docs on when to use placeholder vs when to use SASS variable
 
@@ -112,3 +114,84 @@ $plugin-ps-thumb-y-dark: rgba(var(--v-theme-surface-variant), 0.35) !default;
 
 // Used in src/@core/scss/base/libs/vuetify/_overrides.scss
 $vuetify-reduce-default-compact-button-icon-size: true !default;
+
+// 👉 Custom variables
+// for utility classes
+$font-sizes: () !default;
+$font-sizes: map-deep-merge(
+  (
+    "xs": 0.75rem,
+    "sm": 0.875rem,
+    "base": 1rem,
+    "lg": 1.125rem,
+    "xl": 1.25rem,
+    "2xl": 1.5rem,
+    "3xl": 1.875rem,
+    "4xl": 2.25rem,
+    "5xl": 3rem,
+    "6xl": 3.75rem,
+    "7xl": 4.5rem,
+    "8xl": 6rem,
+    "9xl": 8rem
+  ),
+  $font-sizes
+);
+
+// line height
+$font-line-height: () !default;
+$font-line-height: map-deep-merge(
+  (
+    "xs": 1rem,
+    "sm": 1.25rem,
+    "base": 1.5rem,
+    "lg": 1.75rem,
+    "xl": 1.75rem,
+    "2xl": 2rem,
+    "3xl": 2.25rem,
+    "4xl": 2.5rem,
+    "5xl": 1,
+    "6xl": 1,
+    "7xl": 1,
+    "8xl": 1,
+    "9xl": 1
+  ),
+  $font-line-height
+);
+
+// gap utility class
+$gap: () !default;
+$gap: map-deep-merge(
+  (
+    "0": 0,
+    "1": 0.25rem,
+    "2": 0.5rem,
+    "3": 0.75rem,
+    "4": 1rem,
+    "5": 1.25rem,
+    "6":1.5rem,
+    "7": 1.75rem,
+    "8": 2rem,
+    "9": 2.25rem,
+    "10": 2.5rem,
+    "11": 2.75rem,
+    "12": 3rem,
+    "14": 3.5rem,
+    "16": 4rem,
+    "20": 5rem,
+    "24": 6rem,
+    "28": 7rem,
+    "32": 8rem,
+    "36": 9rem,
+    "40": 10rem,
+    "44": 11rem,
+    "48": 12rem,
+    "52": 13rem,
+    "56": 14rem,
+    "60": 15rem,
+    "64": 16rem,
+    "72": 18rem,
+    "80": 20rem,
+    "96": 24rem
+  ),
+  $gap
+);

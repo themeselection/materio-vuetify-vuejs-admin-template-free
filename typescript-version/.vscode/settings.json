@@ -1,4 +1,5 @@
 {
+    "editor.formatOnSave": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "[javascript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"

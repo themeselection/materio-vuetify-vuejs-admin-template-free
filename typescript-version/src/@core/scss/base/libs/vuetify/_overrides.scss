@@ -50,9 +50,9 @@ h6,
 @if variables.$vuetify-reduce-default-compact-button-icon-size {
   .v-btn--density-compact.v-btn--size-default {
     .v-btn__content > svg {
-      width: 22px;
-      height: 22px;
+      block-size: 22px;
       font-size: 22px;
+      inline-size: 22px;
     }
   }
 }
@@ -191,13 +191,30 @@ h6,
   }
 }
 
-// 👉 Table
-.v-table {
-  color: rgba(var(--v-theme-on-background), var(--v-medium-emphasis-opacity)) !important;
+// 👉 Divider
+.v-divider {
+  color: rgb(var(--v-border-color));
+}
 
-  th {
-    font-size: 12px;
+// 👉 DataTable
+// 👉 DataTable
+.v-data-table {
+  /* stylelint-disable-next-line no-descending-specificity */
+  .v-checkbox-btn .v-selection-control__wrapper {
+    margin-inline-start: 0 !important;
   }
+
+  .v-selection-control {
+    display: flex !important;
+  }
+
+  .v-pagination {
+    color: rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity));
+  }
+}
+
+.v-data-table-footer {
+  margin-block-start: 1rem;
 }
 
 // 👉 v-field
@@ -215,8 +232,10 @@ h6,
 }
 
 // 👉 Overlay
-.v-overlay__scrim {
+.v-overlay__scrim,
+.v-navigation-drawer__scrim {
   background: rgba(var(--v-overlay-scrim-background), var(--v-overlay-scrim-opacity)) !important;
+  opacity: 1 !important;
 }
 
 // 👉 VMessages

@@ -1,7 +1,5 @@
 import type { VuetifyOptions } from 'vuetify'
 
-export const staticPrimaryColor = '#a169ff'
-
 const theme: VuetifyOptions['theme'] = {
   defaultTheme: 'light',
   themes: {
@@ -37,6 +35,12 @@ const theme: VuetifyOptions['theme'] = {
         'code-color': '#d400ff',
         'overlay-scrim-background': '#4C4E64',
         'overlay-scrim-opacity': 0.5,
+        'hover-opacity': 0.08,
+        'focus-opacity': 0.1,
+        'selected-opacity': 0.12,
+        'activated-opacity': 0.1,
+        'pressed-opacity': 0.14,
+        'dragged-opacity': 0.1,
 
         // Shadows
         'shadow-key-umbra-opacity': 'rgba(var(--v-theme-on-surface), 0.08)',
@@ -76,6 +80,12 @@ const theme: VuetifyOptions['theme'] = {
         'code-color': '#d400ff',
         'overlay-scrim-background': '#101121',
         'overlay-scrim-opacity': 0.6,
+        'hover-opacity': 0.08,
+        'focus-opacity': 0.1,
+        'selected-opacity': 0.12,
+        'activated-opacity': 0.1,
+        'pressed-opacity': 0.14,
+        'dragged-opacity': 0.1,
 
         // Shadows
         'shadow-key-umbra-opacity': 'rgba(20, 18, 33, 0.08)',

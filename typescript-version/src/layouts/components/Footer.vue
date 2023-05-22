@@ -21,7 +21,7 @@
     <!-- 👉 Footer: right content -->
     <span class="d-md-flex gap-x-4 text-primary d-none">
       <a
-        href="https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free/blob/main/LICENSE"
+        href="https://themeselection.com/license/"
         target="noopener noreferrer"
       >License</a>
       <a

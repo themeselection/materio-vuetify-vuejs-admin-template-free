@@ -9,6 +9,7 @@
     "github.vscode-pull-request-github",
     "vue.volar",
     "antfu.iconify",
-    "cipchk.cssrem"
+    "cipchk.cssrem",
+    "matijao.vue-nuxt-snippets"
   ]
 }

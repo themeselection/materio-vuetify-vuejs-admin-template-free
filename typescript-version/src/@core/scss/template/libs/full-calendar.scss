@@ -1,4 +1,4 @@
-@use "vuetify/lib/styles/tools/elevation" as elevation;
+@use "@core/scss/base/mixins";
 
 .v-application .fc {
   --fc-today-bg-color: rgba(var(--v-theme-on-surface), 0.04);
@@ -202,7 +202,7 @@
   }
 
   .fc-popover {
-    @include elevation.elevation(3);
+    @include mixins.elevation(3);
 
     border-radius: 6px;
 
@@ -252,7 +252,9 @@
   // ℹ️ Workaround of https://github.com/fullcalendar/fullcalendar/issues/6407
   .fc-col-header,
   .fc-daygrid-body,
-  .fc-scrollgrid-sync-table {
+  .fc-scrollgrid-sync-table,
+  .fc-timegrid-body,
+  .fc-timegrid-body table {
     inline-size: 100% !important;
   }
 }

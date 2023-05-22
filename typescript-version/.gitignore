@@ -32,6 +32,3 @@ dist-ssr
 
 # iconify dist files
 src/@iconify/*.js
-
-# Free
-.stylelintrc.json

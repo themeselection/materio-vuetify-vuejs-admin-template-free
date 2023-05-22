@@ -6,7 +6,7 @@ $shadow-key-ambient-opacity-custom: var(--v-shadow-key-ambient-opacity);
 // 👉 Card transition properties
 $card-transition-property-custom: box-shadow, opacity;
 
-@forward "vuetify/_settings" with (
+@forward "vuetify/settings" with (
   // 👉 General settings
   $color-pack: false !default,
 
@@ -14,16 +14,6 @@ $card-transition-property-custom: box-shadow, opacity;
   $shadow-key-umbra-opacity: $shadow-key-umbra-opacity-custom !default,
   $shadow-key-penumbra-opacity: $shadow-key-penumbra-opacity-custom !default,
   $shadow-key-ambient-opacity: $shadow-key-ambient-opacity-custom !default,
-
-  // States
-  $states: (
-    "hover": 0.08,
-    "focus": 0.1,
-    "selected": 0.12,
-    "activated": 0.1,
-    "pressed": 0.14,
-    "dragged": 0.1
-  ) !default,
 
     // 👉 Card
   $card-color: rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity)) !default,

@@ -31,6 +31,17 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
 
     // indentation (Already present in TypeScript)
+    'comma-spacing': ['error', { before: false, after: true }],
+    'key-spacing': ['error', { afterColon: true }],
+
+    'vue/first-attribute-linebreak': ['error', {
+      singleline: 'beside',
+      multiline: 'below',
+    }],
+
+    'antfu/top-level-function': 'off',
+
+    // indentation (Already present in TypeScript)
     'indent': ['error', 2],
 
     // Enforce trailing comma (Already present in TypeScript)
@@ -63,6 +74,9 @@ module.exports = {
         allowArrayStart: true,
       },
     ],
+
+    // Ignore _ as unused variable
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
 
     'array-element-newline': ['error', 'consistent'],
     'array-bracket-newline': ['error', 'consistent'],
@@ -130,6 +144,7 @@ module.exports = {
     'vue/html-comment-indent': 'error',
     'vue/match-component-file-name': 'error',
     'vue/no-child-content': 'error',
+    'vue/require-default-prop': 'off',
 
     // NOTE this rule only supported in SFC,  Users of the unplugin-vue-define-options should disable that rule: https://github.com/vuejs/eslint-plugin-vue/issues/1886
     // 'vue/no-duplicate-attr-inheritance': 'error',
@@ -144,6 +159,9 @@ module.exports = {
     'vue/prefer-true-attribute-shorthand': 'error',
     'vue/v-on-function-call': 'error',
     'vue/no-restricted-class': ['error', '/^(p|m)(l|r)-/'],
+    'vue/valid-v-slot': ['error', {
+      allowModifiers: true,
+    }],
 
     // -- Extension Rules
     'vue/no-irregular-whitespace': 'error',

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useTheme } from 'vuetify'
-import type { ThemeSwitcherTheme } from '@layouts/types'
+import type { ThemeSwitcherTheme } from '@layouts/types';
+import { useTheme } from 'vuetify';
 
 const props = defineProps<{
   themes: ThemeSwitcherTheme[]
@@ -25,6 +25,7 @@ watch(() => globalTheme.name.value, val => {
     <VTooltip
       activator="parent"
       open-delay="1000"
+      scroll-strategy="close"
     >
       <span class="text-capitalize">{{ currentThemeName }}</span>
     </VTooltip>

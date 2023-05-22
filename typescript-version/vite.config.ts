@@ -1,9 +1,8 @@
-import { fileURLToPath } from 'node:url'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import { fileURLToPath } from 'node:url'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import DefineOptions from 'unplugin-vue-define-options/vite'
 import { defineConfig } from 'vite'
 import vuetify from 'vite-plugin-vuetify'
 
@@ -19,17 +18,14 @@ export default defineConfig({
         configFile: 'src/styles/variables/_vuetify.scss',
       },
     }),
-
     Components({
-      dirs: ['src/@core/components', 'src/views/demos'],
+      dirs: ['src/@core/components'],
       dts: true,
     }),
     AutoImport({
       imports: ['vue', 'vue-router', '@vueuse/core', '@vueuse/math', 'pinia'],
       vueTemplate: true,
     }),
-
-    DefineOptions(),
   ],
   define: { 'process.env': {} },
   resolve: {

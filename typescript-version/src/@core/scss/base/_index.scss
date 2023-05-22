@@ -2,25 +2,17 @@
 
 // Layout
 @use "vertical-nav";
-@use "horizontal-nav";
 @use "default-layout";
 @use "default-layout-w-vertical-nav";
-@use "default-layout-w-horizontal-nav";
 
 // Layouts package
 @use "layouts";
-
-// Skins
-@use "skins";
 
 // Components
 @use "components";
 
 // Utilities
 @use "utilities";
-
-// Route Transitions
-@use "route-transitions";
 
 // Misc
 @use "misc";

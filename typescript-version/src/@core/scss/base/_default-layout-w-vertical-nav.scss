@@ -3,6 +3,7 @@
 @use "@core/scss/template/placeholders" as *;
 @use "vuetify/lib/styles/tools/_elevation" as mixins_elevation;
 @use "misc";
+@use "@core/scss/base/mixins";
 
 $header: ".layout-navbar";
 
@@ -31,7 +32,7 @@ $header: ".layout-navbar";
       /* ℹ️ This html selector with not selector is required when:
         dialog is opened and window don't have any scroll. This removes window-scrolled class from layout and out style broke
     */
-      html.v-overlay-scroll-blocked:not([style*="--v-body-scroll-y:0px;"]) .layout-navbar-sticky,
+      html.v-overlay-scroll-blocked:not([style*="--v-body-scroll-y: 0px;"]) .layout-navbar-sticky,
       &.window-scrolled.layout-navbar-sticky {
 
         #{$header} {
@@ -94,7 +95,7 @@ $header: ".layout-navbar";
             padding-block: 0;
             padding-inline: 1.2rem;
 
-            @include mixins_elevation.elevation(3);
+            @include mixins.elevation(3);
           }
         }
       }

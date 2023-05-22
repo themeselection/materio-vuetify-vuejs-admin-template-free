@@ -1,8 +1,6 @@
 <script lang="ts" setup>
-import type { ItemProps } from 'vuetify/composables/item'
-
 interface Props {
-  menuList?: ItemProps[]
+  menuList?: unknown[]
   itemProps?: boolean
 }
 

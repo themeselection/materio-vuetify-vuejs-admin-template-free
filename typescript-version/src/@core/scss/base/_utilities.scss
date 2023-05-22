@@ -64,11 +64,6 @@ $card-spacer-content: 16px;
   }
 }
 
-// 👉 Typography
-.font-weight-semibold {
-  font-weight: 600 !important;
-}
-
 // 👉 clamp text
 .clamp-text {
   display: -webkit-box;
@@ -121,5 +116,26 @@ $card-spacer-content: 16px;
         }
       }
     }
+  }
+}
+
+.v-timeline-item {
+  .app-timeline-title {
+    color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3125rem;
+  }
+
+  .app-timeline-meta {
+    color: rgba(var(--v-theme-on-surface), var(--v-disabled-opacity));
+    font-size: 12px;
+    line-height: 0.875rem;
+  }
+
+  .app-timeline-text {
+    color: rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity));
+    font-size: 14px;
+    line-height: 1.25rem;
   }
 }

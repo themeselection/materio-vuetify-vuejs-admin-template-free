@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import ThemeSwitcher from '@core/components/ThemeSwitcher.vue'
 import type { ThemeSwitcherTheme } from '@layouts/types'
 
 const themes: ThemeSwitcherTheme[] = [

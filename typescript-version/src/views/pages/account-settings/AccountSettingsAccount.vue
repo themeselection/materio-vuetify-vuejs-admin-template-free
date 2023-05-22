@@ -117,10 +117,7 @@ const currencies = [
           />
 
           <!-- 👉 Upload Photo -->
-          <form
-            ref="refForm"
-            class="d-flex flex-column justify-center gap-5"
-          >
+          <form class="d-flex flex-column justify-center gap-5">
             <div class="d-flex flex-wrap gap-2">
               <VBtn
                 color="primary"

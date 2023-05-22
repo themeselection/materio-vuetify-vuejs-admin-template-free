@@ -1,13 +1,13 @@
-@use "vuetify/lib/styles/tools/elevation" as elevation;
 @use "@configured-variables" as variables;
 @use "misc";
+@use "@core/scss/base/mixins";
 
 %default-layout-vertical-nav-scrolled-sticky-elevated-nav {
   background-color: rgb(var(--v-theme-surface));
 }
 
 %default-layout-vertical-nav-floating-navbar-and-sticky-elevated-navbar-scrolled {
-  @include elevation.elevation(variables.$vertical-nav-navbar-elevation);
+  @include mixins.elevation(variables.$vertical-nav-navbar-elevation);
 
   // If navbar is contained => Squeeze navbar content on scroll
   @if variables.$layout-vertical-nav-navbar-is-contained {
