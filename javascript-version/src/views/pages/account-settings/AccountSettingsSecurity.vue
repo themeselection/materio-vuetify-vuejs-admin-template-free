@@ -5,11 +5,13 @@ const isConfirmPasswordVisible = ref(false)
 const currentPassword = ref('12345678')
 const newPassword = ref('87654321')
 const confirmPassword = ref('87654321')
+
 const passwordRequirements = [
   'Minimum 8 characters long - the more, the better',
   'At least one lowercase character',
   'At least one number, symbol, or whitespace character',
 ]
+
 const serverKeys = [
   {
     name: 'Server Key 1',
@@ -30,6 +32,7 @@ const serverKeys = [
     permission: 'Full Access',
   },
 ]
+
 const recentDevices = [
   {
     browser: 'Chrome on Windows',
@@ -285,7 +288,7 @@ const recentDevices = [
                 {{ serverKey.permission }}
               </VChip>
             </div>
-            <p class="text-base font-weight-semibold">
+            <p class="text-base font-weight-medium">
               <span class="me-3">{{ serverKey.key }}</span>
               <VIcon
                 :size="18"

@@ -4,6 +4,7 @@ import { useTheme } from 'vuetify'
 
 const vuetifyTheme = useTheme()
 const currentTheme = vuetifyTheme.current.value.colors
+
 const series = [{
   name: 'Subscribers',
   data: [
@@ -16,6 +17,7 @@ const series = [{
     55,
   ],
 }]
+
 const chartOptions = {
   chart: {
     parentHeightOffset: 0,

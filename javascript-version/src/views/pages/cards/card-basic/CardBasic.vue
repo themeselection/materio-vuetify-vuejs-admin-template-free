@@ -1,14 +1,14 @@
 <script setup>
-import avatar1 from '@/assets/images/avatars/avatar-1.png'
-import avatar2 from '@/assets/images/avatars/avatar-2.png'
-import avatar3 from '@/assets/images/avatars/avatar-3.png'
-import avatar4 from '@/assets/images/avatars/avatar-4.png'
-import eCommerce2 from '@/assets/images/eCommerce/2.png'
-import pages1 from '@/assets/images/pages/1.png'
-import pages2 from '@/assets/images/pages/2.png'
-import pages3 from '@/assets/images/pages/3.png'
-import pages5 from '@/assets/images/pages/5.jpg'
-import pages6 from '@/assets/images/pages/6.jpg'
+import avatar1 from '@images/avatars/avatar-1.png'
+import avatar2 from '@images/avatars/avatar-2.png'
+import avatar3 from '@images/avatars/avatar-3.png'
+import avatar4 from '@images/avatars/avatar-4.png'
+import eCommerce2 from '@images/eCommerce/2.png'
+import pages1 from '@images/pages/1.png'
+import pages2 from '@images/pages/2.png'
+import pages3 from '@images/pages/3.png'
+import pages5 from '@images/pages/5.jpg'
+import pages6 from '@images/pages/6.jpg'
 
 const avatars = [
   avatar1,
@@ -16,6 +16,7 @@ const avatars = [
   avatar3,
   avatar4,
 ]
+
 const isCardDetailsVisible = ref(false)
 </script>
 
@@ -144,6 +145,7 @@ const isCardDetailsVisible = ref(false)
           <div class="ma-auto pa-5">
             <VImg
               width="137"
+              height="176"
               :src="eCommerce2"
             />
           </div>
@@ -160,7 +162,7 @@ const isCardDetailsVisible = ref(false)
             </VCardText>
 
             <VCardText class="text-subtitle-1">
-              <span>Price :</span> <span class="font-weight-bold">$899</span>
+              <span>Price :</span> <span class="font-weight-medium">$899</span>
             </VCardText>
 
             <VCardActions class="justify-space-between">
@@ -191,7 +193,7 @@ const isCardDetailsVisible = ref(false)
               <VCardTitle>Stumptown Roasters</VCardTitle>
             </VCardItem>
 
-            <VCardText class="d-flex align-center flex-wrap body-1">
+            <VCardText class="d-flex align-center flex-wrap text-body-1">
               <VRating
                 :model-value="5"
                 readonly

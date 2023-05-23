@@ -6,6 +6,7 @@ import { useTheme } from 'vuetify'
 const vuetifyTheme = useTheme()
 const currentTheme = computed(() => vuetifyTheme.current.value.colors)
 const variableTheme = computed(() => vuetifyTheme.current.value.variables)
+
 const series = [{
   data: [
     0,
@@ -16,6 +17,7 @@ const series = [{
     45,
   ],
 }]
+
 const chartOptions = computed(() => {
   return {
     chart: {

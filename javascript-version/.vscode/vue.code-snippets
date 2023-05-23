@@ -49,7 +49,7 @@
     "use composable": {
         "prefix": "use-composable",
         "body": [
-            "const { ${2:property} } = use${1:Composable}()"
+            "const { $2 } = ${1:useComposable}()"
         ],
         "description": "We frequently uses composable in our components and writing const {} = useModule() is tedious. This snippet helps you to write it quickly."
     },

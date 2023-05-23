@@ -1,11 +1,12 @@
 <script setup>
+import misc404 from '@images/pages/404.png'
+import miscMaskDark from '@images/pages/misc-mask-dark.png'
+import miscMaskLight from '@images/pages/misc-mask-light.png'
+import tree from '@images/pages/tree.png'
 import { useTheme } from 'vuetify'
-import misc404 from '@/assets/images/pages/404.png'
-import miscMaskDark from '@/assets/images/pages/misc-mask-dark.png'
-import miscMaskLight from '@/assets/images/pages/misc-mask-light.png'
-import tree from '@/assets/images/pages/tree.png'
 
 const vuetifyTheme = useTheme()
+
 const authThemeMask = computed(() => {
   return vuetifyTheme.global.name.value === 'light' ? miscMaskLight : miscMaskDark
 })
@@ -57,10 +58,3 @@ const authThemeMask = computed(() => {
   inset-inline-start: 0.375rem;
 }
 </style>
-
-<route lang="yaml">
-meta:
-  layout: blank
-  action: read
-  subject: Auth
-</route>

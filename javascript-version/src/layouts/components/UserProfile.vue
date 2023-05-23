@@ -1,20 +1,18 @@
 <script setup>
-import avatar1 from '@/assets/images/avatars/avatar-1.png'
-
-const avatarBadgeProps = {
-  dot: true,
-  location: 'bottom right',
-  offsetX: 3,
-  offsetY: 3,
-  color: 'success',
-  bordered: true,
-}
+import avatar1 from '@images/avatars/avatar-1.png'
 </script>
 
 <template>
-  <VBadge v-bind="avatarBadgeProps">
+  <VBadge
+    dot
+    location="bottom right"
+    offset-x="3"
+    offset-y="3"
+    color="success"
+    bordered
+  >
     <VAvatar
-      style="cursor: pointer;"
+      class="cursor-pointer"
       color="primary"
       variant="tonal"
     >
@@ -32,10 +30,15 @@ const avatarBadgeProps = {
           <VListItem>
             <template #prepend>
               <VListItemAction start>
-                <VBadge v-bind="avatarBadgeProps">
+                <VBadge
+                  dot
+                  location="bottom right"
+                  offset-x="3"
+                  offset-y="3"
+                  color="success"
+                >
                   <VAvatar
                     color="primary"
-                    size="40"
                     variant="tonal"
                   >
                     <VImg :src="avatar1" />
@@ -47,11 +50,8 @@ const avatarBadgeProps = {
             <VListItemTitle class="font-weight-semibold">
               John Doe
             </VListItemTitle>
-            <VListItemSubtitle class="text-disabled">
-              Admin
-            </VListItemSubtitle>
+            <VListItemSubtitle>Admin</VListItemSubtitle>
           </VListItem>
-
           <VDivider class="my-2" />
 
           <!-- 👉 Profile -->
@@ -114,7 +114,7 @@ const avatarBadgeProps = {
             <template #prepend>
               <VIcon
                 class="me-2"
-                icon="mdi-logout-variant"
+                icon="mdi-logout"
                 size="22"
               />
             </template>

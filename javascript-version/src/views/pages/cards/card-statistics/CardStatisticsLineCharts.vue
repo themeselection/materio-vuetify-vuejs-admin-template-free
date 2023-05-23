@@ -4,6 +4,7 @@ import { useTheme } from 'vuetify'
 
 const vuetifyTheme = useTheme()
 const currentTheme = computed(() => vuetifyTheme.current.value.colors)
+
 const series = [{
   data: [
     28,
@@ -12,6 +13,7 @@ const series = [{
     68,
   ],
 }]
+
 const chartOptions = computed(() => {
   return {
     grid: {

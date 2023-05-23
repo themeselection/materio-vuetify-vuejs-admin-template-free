@@ -4,6 +4,7 @@ import { useTheme } from 'vuetify'
 
 const vuetifyTheme = useTheme()
 const currentTheme = computed(() => vuetifyTheme.current.value.colors)
+
 const series = [
   {
     name: 'Earning',
@@ -26,6 +27,7 @@ const series = [
     ],
   },
 ]
+
 const chartOptions = computed(() => {
   return {
     chart: {

@@ -51,7 +51,6 @@ const tabs = [
     <VWindow
       v-model="activeTab"
       class="mt-5 disable-tab-transition"
-      :touch="false"
     >
       <!-- Account -->
       <VWindowItem value="account">
@@ -70,8 +69,3 @@ const tabs = [
     </VWindow>
   </div>
 </template>
-
-<route lang="yaml">
-meta:
-  navActiveLink: pages-account-settings-tab
-</route>

@@ -25,6 +25,7 @@ const recentDevices = ref([
     app: false,
   },
 ])
+
 const selectedNotification = ref('Only when I\'m online')
 </script>
 
