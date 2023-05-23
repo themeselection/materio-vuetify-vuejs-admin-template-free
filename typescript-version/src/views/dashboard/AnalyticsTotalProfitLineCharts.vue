@@ -1,12 +1,12 @@
 <script setup lang="ts">
+import { hexToRgb } from '@layouts/utils'
 import VueApexCharts from 'vue3-apexcharts'
 import { useTheme } from 'vuetify'
-import { hexToRgb } from '@layouts/utils'
 
 const vuetifyTheme = useTheme()
 
-const currentTheme = computed(() => { return vuetifyTheme.current.value.colors })
-const variableTheme = computed(() => { return vuetifyTheme.current.value.variables })
+const currentTheme = controlledComputed(() => vuetifyTheme.name.value, () => vuetifyTheme.current.value.colors)
+const variableTheme = controlledComputed(() => vuetifyTheme.name.value, () => vuetifyTheme.current.value.variables)
 
 const series = [
   {
@@ -14,7 +14,7 @@ const series = [
   },
 ]
 
-const chartOptions = computed(() => {
+const chartOptions = controlledComputed(() => vuetifyTheme.name.value, () => {
   return {
     chart: {
       parentHeightOffset: 0,
@@ -86,7 +86,7 @@ const chartOptions = computed(() => {
         :height="100"
       />
 
-      <p class="text-center font-weight-semibold mb-0">
+      <p class="text-center font-weight-medium mb-0">
         Total Profit
       </p>
     </VCardText>

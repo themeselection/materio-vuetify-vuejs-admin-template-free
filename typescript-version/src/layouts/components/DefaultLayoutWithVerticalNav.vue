@@ -56,7 +56,7 @@ const upgradeBanner = computed(() => {
 
         <IconBtn
           class="me-2"
-          href="https://github.com/themeselection/master-vuetify-vuejs-admin-template-free"
+          href="https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -166,14 +166,14 @@ const upgradeBanner = computed(() => {
         href="https://themeselection.com/item/materio-vuetify-vuejs-admin-template"
         target="_blank"
         rel="noopener noreferrer"
-        style="margin-left: 7px"
+        style="margin-left: 7px;"
       >
         <img
           :src="upgradeBanner"
           alt="upgrade-banner"
           transition="scale-transition"
           class="upgrade-banner mx-auto"
-          style="max-width: 230px"
+          style="max-width: 230px;"
         >
       </a>
     </template>

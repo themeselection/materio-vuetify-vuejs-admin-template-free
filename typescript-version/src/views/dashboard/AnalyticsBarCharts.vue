@@ -4,7 +4,7 @@ import { useTheme } from 'vuetify'
 
 const vuetifyTheme = useTheme()
 
-const currentTheme = computed(() => { return vuetifyTheme.current.value.colors })
+const currentTheme = controlledComputed(() => vuetifyTheme.name.value, () => vuetifyTheme.current.value.colors)
 
 const series = [
   {
@@ -13,7 +13,7 @@ const series = [
   },
 ]
 
-const chartOptions = computed(() => {
+const chartOptions = controlledComputed(() => vuetifyTheme.name.value, () => {
   const backgroundColor = currentTheme.value.background
 
   return {
@@ -89,7 +89,7 @@ const chartOptions = computed(() => {
         :height="95"
       />
 
-      <p class="text-center font-weight-semibold mb-0">
+      <p class="text-center font-weight-medium mb-0">
         Sessions
       </p>
     </VCardText>

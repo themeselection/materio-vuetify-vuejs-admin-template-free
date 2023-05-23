@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import americanBank from '@/assets/images/logos/american-bank.png'
-import aws from '@/assets/images/logos/aws.png'
-import citiBank from '@/assets/images/logos/citi-bank.png'
-import digitalOcean from '@/assets/images/logos/digital-ocean.png'
-import github from '@/assets/images/logos/github.png'
-import google from '@/assets/images/logos/google.png'
-import gumroad from '@/assets/images/logos/gumroad.png'
-import mastercardLabel from '@/assets/images/logos/mastercard-label.png'
-import slack from '@/assets/images/logos/slack.png'
-import stripe from '@/assets/images/logos/stripe.png'
+import americanBank from '@images/logos/american-bank.png'
+import aws from '@images/logos/aws.png'
+import citiBank from '@images/logos/citi-bank.png'
+import digitalOcean from '@images/logos/digital-ocean.png'
+import github from '@images/logos/github.png'
+import google from '@images/logos/google.png'
+import gumroad from '@images/logos/gumroad.png'
+import mastercardLabel from '@images/logos/mastercard-label.png'
+import slack from '@images/logos/slack.png'
+import stripe from '@images/logos/stripe.png'
 
 const deposits = [
   {
@@ -114,7 +114,7 @@ const withdraws = [
                 </VAvatar>
               </template>
 
-              <VListItemTitle class="text-sm font-weight-semibold mb-1">
+              <VListItemTitle class="text-sm font-weight-medium mb-1">
                 {{ deposit.title }}
               </VListItemTitle>
               <VListItemSubtitle class="text-xs">
@@ -122,7 +122,7 @@ const withdraws = [
               </VListItemSubtitle>
 
               <template #append>
-                <VListItemAction class="text-success font-weight-semibold">
+                <VListItemAction class="text-success font-weight-medium">
                   {{ deposit.amount }}
                 </VListItemAction>
               </template>
@@ -170,7 +170,7 @@ const withdraws = [
                 </VAvatar>
               </template>
 
-              <VListItemTitle class="text-sm font-weight-semibold mb-1">
+              <VListItemTitle class="text-sm font-weight-medium mb-1">
                 {{ withdraw.title }}
               </VListItemTitle>
               <VListItemSubtitle class="text-xs">
@@ -178,7 +178,7 @@ const withdraws = [
               </VListItemSubtitle>
 
               <template #append>
-                <VListItemAction class="text-error font-weight-semibold">
+                <VListItemAction class="text-error font-weight-medium">
                   {{ withdraw.amount }}
                 </VListItemAction>
               </template>

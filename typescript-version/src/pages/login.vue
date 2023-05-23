@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useTheme } from 'vuetify'
 import logo from '@/assets/logo.svg?raw'
 import AuthProvider from '@/views/pages/authentication/AuthProvider.vue'
+import { useTheme } from 'vuetify'
 
 import authV1MaskDark from '@/assets/images/pages/auth-v1-mask-dark.png'
 import authV1MaskLight from '@/assets/images/pages/auth-v1-mask-light.png'
@@ -106,7 +106,7 @@ const isPasswordVisible = ref(false)
               <span>New on our platform?</span>
               <RouterLink
                 class="text-primary ms-2"
-                :to="{ name: 'register' }"
+                to="/register"
               >
                 Create an account
               </RouterLink>

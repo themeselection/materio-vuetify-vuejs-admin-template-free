@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import aviato from '@/assets/images/logos/aviato.png'
-import bitbank from '@/assets/images/logos/bitbank.png'
-import zipcar from '@/assets/images/logos/zipcar.png'
+import aviato from '@images/logos/aviato.png'
+import bitbank from '@images/logos/bitbank.png'
+import zipcar from '@images/logos/zipcar.png'
+
 const earnings = [
   {
     avatar: zipcar,
@@ -34,17 +35,7 @@ const earnings = [
 
       <template #append>
         <div class="me-n3">
-          <VBtn
-            icon
-            size="x-small"
-            variant="text"
-            color="default"
-          >
-            <VIcon
-              size="24"
-              icon="mdi-dots-vertical"
-            />
-          </VBtn>
+          <MoreBtn />
         </div>
       </template>
     </VCardItem>
@@ -77,7 +68,7 @@ const earnings = [
             />
           </template>
 
-          <VListItemTitle class="text-sm font-weight-semibold mb-1">
+          <VListItemTitle class="text-sm font-weight-medium mb-1">
             {{ earning.title }}
           </VListItemTitle>
           <VListItemSubtitle class="text-xs">
@@ -86,7 +77,7 @@ const earnings = [
 
           <template #append>
             <div>
-              <h6 class="text-sm mb-2">
+              <h6 class="text-sm font-weight-medium mb-2">
                 {{ earning.amount }}
               </h6>
               <VProgressLinear

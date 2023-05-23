@@ -178,21 +178,21 @@ const usreList = data
 
           <td>
             <div class="d-flex flex-column">
-              <span class="d-block font-weight-semibold text--primary text-truncate">{{ row.fullName }}</span>
-              <small>{{ row.post }}</small>
+              <h6 class="text-sm font-weight-medium">{{ row.fullName }}</h6>
+              <span class="text-xs">{{ row.post }}</span>
             </div>
           </td>
 
-          <td v-text="row.email" />
-          <td v-text="row.start_date" />
-          <td v-text="`$${row.salary}`" />
-          <td v-text="row.age" />
+          <td class="text-sm" v-text="row.email" />
+          <td class="text-sm" v-text="row.start_date" />
+          <td class="text-sm" v-text="`$${row.salary}`" />
+          <td class="text-sm" v-text="row.age" />
           <!-- status -->
           <td>
             <VChip
-              small
+              size="small"
               :color="statusColor[status[row.status]]"
-              class="font-weight-medium"
+              class="text-capitalize"
             >
               {{ status[row.status] }}
             </VChip>

@@ -101,6 +101,7 @@ const isPasswordVisible = ref(false)
               <VBtn
                 block
                 type="submit"
+                to="/"
               >
                 Sign up
               </VBtn>

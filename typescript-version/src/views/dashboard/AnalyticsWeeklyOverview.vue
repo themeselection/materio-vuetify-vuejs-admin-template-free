@@ -1,11 +1,11 @@
 <script setup lang="ts">
+import { hexToRgb } from '@layouts/utils'
 import VueApexCharts from 'vue3-apexcharts'
 import { useTheme } from 'vuetify'
-import { hexToRgb } from '@layouts/utils'
 
 const vuetifyTheme = useTheme()
 
-const options = computed(() => {
+const options = controlledComputed(() => vuetifyTheme.name.value, () => {
   const currentTheme = ref(vuetifyTheme.current.value.colors)
   const variableTheme = ref(vuetifyTheme.current.value.variables)
 
@@ -43,12 +43,12 @@ const options = computed(() => {
     },
     dataLabels: { enabled: false },
     colors: [
-      currentTheme.value.background,
-      currentTheme.value.background,
-      currentTheme.value.background,
+      currentTheme.value['grey-100'],
+      currentTheme.value['grey-100'],
+      currentTheme.value['grey-100'],
       currentTheme.value.primary,
-      currentTheme.value.background,
-      currentTheme.value.background,
+      currentTheme.value['grey-100'],
+      currentTheme.value['grey-100'],
     ],
     states: {
       hover: { filter: { type: 'none' } },
@@ -88,17 +88,7 @@ const series = [{ data: [37, 57, 45, 75, 57, 40, 65] }]
 
       <template #append>
         <div class="me-n3">
-          <VBtn
-            icon
-            size="x-small"
-            color="default"
-            variant="text"
-          >
-            <VIcon
-              size="24"
-              icon="mdi-dots-vertical"
-            />
-          </VBtn>
+          <MoreBtn />
         </div>
       </template>
     </VCardItem>
@@ -126,4 +116,3 @@ const series = [{ data: [37, 57, 45, 75, 57, 40, 65] }]
     </VCardText>
   </VCard>
 </template>
-

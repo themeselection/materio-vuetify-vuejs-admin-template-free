@@ -34,23 +34,13 @@ const statistics = [
 
       <template #append>
         <div class="me-n3">
-          <VBtn
-            icon
-            color="default"
-            size="x-small"
-            variant="text"
-          >
-            <VIcon
-              size="24"
-              icon="mdi-dots-vertical"
-            />
-          </VBtn>
+          <MoreBtn />
         </div>
       </template>
     </VCardItem>
 
     <VCardText>
-      <h6 class="text-sm mb-12">
+      <h6 class="text-sm font-weight-medium mb-12">
         <span>Total 48.5% Growth 😎</span>
         <span class="font-weight-regular"> this month</span>
       </h6>
@@ -81,7 +71,7 @@ const statistics = [
               <span class="text-caption">
                 {{ item.title }}
               </span>
-              <span class="text-h6 font-weight-medium">{{ item.stats }}</span>
+              <span class="text-h6">{{ item.stats }}</span>
             </div>
           </div>
         </VCol>

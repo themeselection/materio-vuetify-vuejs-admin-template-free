@@ -2,7 +2,7 @@
   <VBtn
     color="error"
     class="product-upgrade-to-pro"
-    href="https://themeselection.com/item/master-vuetify-vuejs-admin-template/"
+    href="https://themeselection.com/item/materio-vuetify-vuejs-admin-template/"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -17,16 +17,16 @@
       transition="slide-y-reverse-transition"
     >
       <VCard>
-        <VImg src="https://cdn.jsdelivr.net/gh/themeselection/ts-assets/master/master-vuetify-vuejs-admin-template/banner/banner.png" />
-        <VCardTitle>Master - Vuetify Admin Template</VCardTitle>
+        <VImg src="https://cdn.jsdelivr.net/gh/themeselection/ts-assets/materio/materio-vuetify-vuejs-admin-template/banner/banner.png" />
+        <VCardTitle>Materio - Vuetify Admin Template</VCardTitle>
         <VCardText>
-          Master Admin is the most developer friendly & highly customisable Admin Dashboard Template based on Vuetify.
+          Materio Admin is the most developer friendly & highly customisable Admin Dashboard Template based on Vuetify.
         </VCardText>
         <VCardText>Click on below button to explore PRO version.</VCardText>
         <VCardText>
           <VBtn
             class="me-4"
-            href="https://themeselection.com/item/master-vuetify-vuejs-admin-template/?tab=details#details"
+            href="https://themeselection.com/item/materio-vuetify-vuejs-admin-template/?tab=details#details"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -34,7 +34,7 @@
           </VBtn>
           <VBtn
             variant="outlined"
-            href="https://themeselection.com/item/master-vuetify-vuejs-admin-template/"
+            href="https://themeselection.com/item/materio-vuetify-vuejs-admin-template/"
             target="_blank"
             rel="noopener noreferrer"
           >

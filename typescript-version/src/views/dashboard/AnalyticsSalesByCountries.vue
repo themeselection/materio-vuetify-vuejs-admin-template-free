@@ -51,17 +51,7 @@ const salesByCountries = [
 
       <template #append>
         <div class="me-n3">
-          <VBtn
-            icon
-            size="x-small"
-            variant="text"
-            color="default"
-          >
-            <VIcon
-              size="24"
-              icon="mdi-dots-vertical"
-            />
-          </VBtn>
+          <MoreBtn />
         </div>
       </template>
     </VCardItem>
@@ -84,7 +74,7 @@ const salesByCountries = [
           </template>
 
           <VListItemTitle class="mb-1">
-            <span class="text-sm font-weight-semibold">{{ data.amount }}</span>
+            <span class="text-sm font-weight-medium">{{ data.amount }}</span>
             <VIcon
               size="22"
               :color="data.change.charAt(0) === '+' ? 'success' : 'error'"
@@ -103,7 +93,7 @@ const salesByCountries = [
 
           <template #append>
             <div>
-              <h4 class="font-weight-semibold">
+              <h4 class="font-weight-medium">
                 {{ data.sales }}
               </h4>
               <span class="text-xs text-medium-emphasis">Sales</span>
@@ -120,4 +110,3 @@ const salesByCountries = [
     --v-card-list-gap: 1.5rem;
   }
   </style>
-

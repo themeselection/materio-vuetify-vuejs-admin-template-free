@@ -1,15 +1,11 @@
 <script setup lang="ts">
+import triangleDark from '@images/misc/triangle-dark.png'
+import triangleLight from '@images/misc/triangle-light.png'
+import trophy from '@images/misc/trophy.png'
 import { useTheme } from 'vuetify'
-import triangleDark from '@/assets/images/misc/triangle-dark.png'
-import triangleLight from '@/assets/images/misc/triangle-light.png'
-import trophy from '@/assets/images/misc/trophy.png'
 
-const vuetifyTheme = useTheme()
-const triangleBg = computed(() => {
-  return vuetifyTheme.global.name.value === 'light'
-    ? triangleLight
-    : triangleDark
-})
+const { global } = useTheme()
+const triangleBg = computed(() => global.name.value === 'light' ?  triangleLight : triangleDark)
 </script>
 
 <template>
@@ -43,14 +39,16 @@ const triangleBg = computed(() => {
 </template>
 
 <style lang="scss">
-.triangle-bg {
+@use "@layouts/styles/mixins" as layoutsMixins;
+
+.v-card .triangle-bg {
   position: absolute;
   inline-size: 10.375rem;
   inset-block-end: 0;
   inset-inline-end: 0;
 }
 
-.trophy {
+.v-card .trophy {
   position: absolute;
   inline-size: 4.9375rem;
   inset-block-end: 2rem;

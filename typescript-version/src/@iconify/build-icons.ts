@@ -64,11 +64,11 @@ interface BundleScriptConfig {
 
 const sources: BundleScriptConfig = {
   svg: [
-    {
-      dir: 'src/assets/images/iconify-svg',
-      monotone: true,
-      prefix: 'custom',
-    },
+    // {
+    //   dir: 'src/assets/images/iconify-svg',
+    //   monotone: true,
+    //   prefix: 'custom',
+    // },
 
     // {
     //   dir: 'emojis',
