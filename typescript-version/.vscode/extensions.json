@@ -10,7 +10,6 @@
     "vue.volar",
     "antfu.iconify",
     "cipchk.cssrem",
-    "sonarsource.sonarlint-vscode",
-    "antfu.goto-alias"
+    "matijao.vue-nuxt-snippets"
   ]
 }

@@ -11,6 +11,8 @@ module.exports = {
     'plugin:promise/recommended',
     'plugin:sonarjs/recommended',
     'plugin:@typescript-eslint/recommended',
+
+    // 'plugin:unicorn/recommended',
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
@@ -21,6 +23,7 @@ module.exports = {
   plugins: [
     'vue',
     '@typescript-eslint',
+    'regex',
   ],
   ignorePatterns: ['src/@iconify/*.js', 'node_modules', 'dist', '*.d.ts'],
   rules: {
@@ -28,10 +31,24 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
 
     // indentation (Already present in TypeScript)
+    'comma-spacing': ['error', { before: false, after: true }],
+    'key-spacing': ['error', { afterColon: true }],
+
+    'vue/first-attribute-linebreak': ['error', {
+      singleline: 'beside',
+      multiline: 'below',
+    }],
+
+    'antfu/top-level-function': 'off',
+
+    // indentation (Already present in TypeScript)
     'indent': ['error', 2],
 
-    // Enforce trailing command (Already present in TypeScript)
+    // Enforce trailing comma (Already present in TypeScript)
     'comma-dangle': ['error', 'always-multiline'],
+
+    // Enforce consistent spacing inside braces of object (Already present in TypeScript)
+    'object-curly-spacing': ['error', 'always'],
 
     // Disable max-len
     'max-len': 'off',
@@ -58,15 +75,27 @@ module.exports = {
       },
     ],
 
+    // Ignore _ as unused variable
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
+
     'array-element-newline': ['error', 'consistent'],
     'array-bracket-newline': ['error', 'consistent'],
 
     'vue/multi-word-component-names': 'off',
 
-    // Plugin: eslint-plugin-import
-    'import/prefer-default-export': 'off',
+    'padding-line-between-statements': [
+      'error',
+      { blankLine: 'always', prev: 'expression', next: 'const' },
+      { blankLine: 'always', prev: 'const', next: 'expression' },
+      { blankLine: 'always', prev: 'multiline-const', next: '*' },
+      { blankLine: 'always', prev: '*', next: 'multiline-const' },
+    ],
 
     // Plugin: eslint-plugin-import
+    'import/prefer-default-export': 'off',
+    'import/newline-after-import': ['error', { count: 1 }],
+    'no-restricted-imports': ['error', 'vuetify/components'],
+
     // For omitting extension for ts files
     'import/extensions': [
       'error',
@@ -115,6 +144,7 @@ module.exports = {
     'vue/html-comment-indent': 'error',
     'vue/match-component-file-name': 'error',
     'vue/no-child-content': 'error',
+    'vue/require-default-prop': 'off',
 
     // NOTE this rule only supported in SFC,  Users of the unplugin-vue-define-options should disable that rule: https://github.com/vuejs/eslint-plugin-vue/issues/1886
     // 'vue/no-duplicate-attr-inheritance': 'error',
@@ -128,6 +158,10 @@ module.exports = {
     'vue/prefer-separate-static-class': 'error',
     'vue/prefer-true-attribute-shorthand': 'error',
     'vue/v-on-function-call': 'error',
+    'vue/no-restricted-class': ['error', '/^(p|m)(l|r)-/'],
+    'vue/valid-v-slot': ['error', {
+      allowModifiers: true,
+    }],
 
     // -- Extension Rules
     'vue/no-irregular-whitespace': 'error',
@@ -136,11 +170,72 @@ module.exports = {
     // -- Sonarlint
     'sonarjs/no-duplicate-string': 'off',
     'sonarjs/no-nested-template-literals': 'off',
+
+    // -- Unicorn
+    // 'unicorn/filename-case': 'off',
+    // 'unicorn/prevent-abbreviations': ['error', {
+    //   replacements: {
+    //     props: false,
+    //   },
+    // }],
+
+    // Internal Rules
+    'valid-appcardcode-code-prop': 'error',
+    'valid-appcardcode-demo-sfc': 'error',
+
+    // https://github.com/gmullerb/eslint-plugin-regex
+    'regex/invalid': [
+      'error',
+      [
+        {
+          regex: '@/assets/images',
+          replacement: '@images',
+          message: 'Use \'@images\' path alias for image imports',
+        },
+        {
+          regex: '@/styles',
+          replacement: '@styles',
+          message: 'Use \'@styles\' path alias for importing styles from \'src/styles\'',
+        },
+
+        // {
+        //   id: 'Disallow icon of icon library',
+        //   regex: 'tabler-\\w',
+        //   message: 'Only \'mdi\' icons are allowed',
+        // },
+
+        {
+          regex: '@core/\\w',
+          message: 'You can\'t use @core when you are in @layouts module',
+          files: {
+            inspect: '@layouts/.*',
+          },
+        },
+        {
+          regex: 'useLayouts\\(',
+          message: '`useLayouts` composable is only allowed in @layouts & @core directory. Please use `useThemeConfig` composable instead.',
+          files: {
+            inspect: '^(?!.*(@core|@layouts)).*',
+          },
+        },
+        {
+          regex: 'import axios from \'axios\'',
+          replacement: 'import axios from \'@axios\'',
+          message: 'Use axios instances created in \'src/plugin/axios.ts\' instead of unconfigured axios',
+          files: {
+            ignore: '^.*plugins/axios.ts.*',
+          },
+        },
+      ],
+
+      // Ignore files
+      '\.eslintrc\.js',
+    ],
   },
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.ts', '.js', '.tsx', '.jsx', '.mjs'],
+        extensions: ['.ts', '.js', '.tsx', '.jsx', '.mjs', '.png', '.jpg'],
       },
       typescript: {},
     },

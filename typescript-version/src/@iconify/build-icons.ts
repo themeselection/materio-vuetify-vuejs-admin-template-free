@@ -10,8 +10,8 @@
  * This example uses Iconify Tools to import and clean up icons.
  * For Iconify Tools documentation visit https://docs.iconify.design/tools/tools2/
  */
-import { promises as fs } from 'fs'
-import { dirname } from 'path'
+import { promises as fs } from 'node:fs'
+import { dirname, join } from 'node:path'
 
 // Installation: npm install --save-dev @iconify/tools @iconify/utils @iconify/json @iconify/iconify
 import {
@@ -64,11 +64,12 @@ interface BundleScriptConfig {
 
 const sources: BundleScriptConfig = {
   svg: [
-    // {
-    //   dir: 'svg',
-    //   monotone: true,
-    //   prefix: 'custom',
-    // },
+    {
+      dir: 'src/assets/images/iconify-svg',
+      monotone: true,
+      prefix: 'custom',
+    },
+
     // {
     //   dir: 'emojis',
     //   monotone: false,
@@ -114,7 +115,7 @@ const component = '@iconify/vue'
 const commonJS = false
 
 // File to save bundle to
-const target = 'src/@iconify/icons-bundle.js';
+const target = join(__dirname, 'icons-bundle.js');
 
 /**
  * Do stuff!
@@ -221,7 +222,7 @@ const target = 'src/@iconify/icons-bundle.js';
             await parseColors(svg, {
               defaultColor: 'currentColor',
               callback: (attr, colorStr, color) => {
-                return !color || isEmptyColor(color)
+                return (!color || isEmptyColor(color))
                   ? colorStr
                   : 'currentColor'
               },
