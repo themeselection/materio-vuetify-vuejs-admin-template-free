@@ -8,7 +8,7 @@ import AnalyticsTotalProfitLineCharts from '@/views/dashboard/AnalyticsTotalProf
 import AnalyticsTransactions from '@/views/dashboard/AnalyticsTransactions.vue';
 import AnalyticsUserTable from '@/views/dashboard/AnalyticsUserTable.vue';
 import AnalyticsWeeklyOverview from '@/views/dashboard/AnalyticsWeeklyOverview.vue';
-import CardStatisticsVertical from '@core/components/CardStatisticsVertical.vue';
+import CardStatisticsVertical from '@core/components/cards/CardStatisticsVertical.vue';
 
 const totalProfit = {
   title: 'Total Profit',
