@@ -1,4 +1,4 @@
-name: 🚀 Deploy Demos
+name: 🚀 Deploy Demo
 
 on: [workflow_dispatch]
 
