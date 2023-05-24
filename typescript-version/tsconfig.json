@@ -29,8 +29,11 @@
       "@core": [
         "src/@core"
       ],
-      "@axios": [
-        "src/plugins/axios"
+      "@images/*": [
+        "src/assets/images/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
       ]
     },
     "lib": [
@@ -52,7 +55,9 @@
     "shims.d.ts",
     "src/**/*",
     "src/**/*.vue",
-    "themeConfig.ts"
+    "themeConfig.ts",
+    "auto-imports.d.ts",
+    "components.d.ts"
   ],
   "exclude": [
     "dist",

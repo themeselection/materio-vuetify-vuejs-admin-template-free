@@ -1,21 +1,24 @@
 <script setup>
-import { useTheme } from 'vuetify'
 import logo from '@/assets/logo.svg?raw'
 import AuthProvider from '@/views/pages/authentication/AuthProvider.vue'
-import authV1MaskDark from '@/assets/images/pages/auth-v1-mask-dark.png'
-import authV1MaskLight from '@/assets/images/pages/auth-v1-mask-light.png'
-import authV1Tree2 from '@/assets/images/pages/auth-v1-tree-2.png'
-import authV1Tree from '@/assets/images/pages/auth-v1-tree.png'
+import { useTheme } from 'vuetify'
+import authV1MaskDark from '@images/pages/auth-v1-mask-dark.png'
+import authV1MaskLight from '@images/pages/auth-v1-mask-light.png'
+import authV1Tree2 from '@images/pages/auth-v1-tree-2.png'
+import authV1Tree from '@images/pages/auth-v1-tree.png'
 
 const form = ref({
   email: '',
   password: '',
   remember: false,
 })
+
 const vuetifyTheme = useTheme()
+
 const authThemeMask = computed(() => {
   return vuetifyTheme.global.name.value === 'light' ? authV1MaskLight : authV1MaskDark
 })
+
 const isPasswordVisible = ref(false)
 </script>
 
@@ -101,7 +104,7 @@ const isPasswordVisible = ref(false)
               <span>New on our platform?</span>
               <RouterLink
                 class="text-primary ms-2"
-                :to="{ name: 'register' }"
+                to="/register"
               >
                 Create an account
               </RouterLink>
@@ -151,8 +154,3 @@ const isPasswordVisible = ref(false)
 <style lang="scss">
 @use "@core/scss/pages/page-auth.scss";
 </style>
-
-<route lang="yaml">
-meta:
-  layout: blank
-</route>

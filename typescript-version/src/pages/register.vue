@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useTheme } from 'vuetify'
 import logo from '@/assets/logo.svg?raw'
 import AuthProvider from '@/views/pages/authentication/AuthProvider.vue'
+import { useTheme } from 'vuetify'
 
 import authV1MaskDark from '@/assets/images/pages/auth-v1-mask-dark.png'
 import authV1MaskLight from '@/assets/images/pages/auth-v1-mask-light.png'
@@ -101,6 +101,7 @@ const isPasswordVisible = ref(false)
               <VBtn
                 block
                 type="submit"
+                to="/"
               >
                 Sign up
               </VBtn>
@@ -164,8 +165,3 @@ const isPasswordVisible = ref(false)
 <style lang="scss">
 @use "@core/scss/pages/page-auth.scss";
 </style>
-
-<route lang="yaml">
-meta:
-  layout: blank
-</route>

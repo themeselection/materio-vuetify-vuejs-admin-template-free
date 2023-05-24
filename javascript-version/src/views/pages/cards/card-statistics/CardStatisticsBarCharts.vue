@@ -4,6 +4,7 @@ import { useTheme } from 'vuetify'
 
 const vuetifyTheme = useTheme()
 const currentTheme = computed(() => vuetifyTheme.current.value.colors)
+
 const series = [{
   name: '2020',
   data: [
@@ -14,6 +15,7 @@ const series = [{
     70,
   ],
 }]
+
 const chartOptions = computed(() => {
   const backgroundColor = currentTheme.value.background
   

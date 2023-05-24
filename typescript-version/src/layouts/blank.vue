@@ -1,19 +1,8 @@
-<script lang="ts">
-import { h } from 'vue'
-
-// @ts-expect-error There won't be declaration file for it
-import { VMain } from 'vuetify/lib/components/VMain/VMain'
-
-export default defineComponent({
-  setup() {
-    const routerView = resolveComponent('router-view')
-
-    return () => h(VMain, { class: 'layout-wrapper layout-blank' }, {
-      default: () => h(routerView),
-    })
-  },
-})
-</script>
+<template>
+  <div class="layout-wrapper layout-blank">
+    <RouterView />
+  </div>
+</template>
 
 <style>
 .layout-wrapper.layout-blank {

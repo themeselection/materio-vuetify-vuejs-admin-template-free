@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import avatar1 from '@/assets/images/avatars/avatar-1.png'
+import avatar1 from '@images/avatars/avatar-1.png';
+
 const accountData = {
   avatarImg: avatar1,
   firstName: 'john',
@@ -20,8 +21,6 @@ const refInputEl = ref<HTMLElement>()
 
 const accountDataLocal = ref(structuredClone(accountData))
 const isAccountDeactivated = ref(false)
-
-const validateAccountDeactivation = [(v: string) => !!v || 'Please confirm account deactivation']
 
 const resetForm = () => {
   accountDataLocal.value = structuredClone(accountData)
@@ -118,10 +117,7 @@ const currencies = [
           />
 
           <!-- 👉 Upload Photo -->
-          <form
-            ref="refForm"
-            class="d-flex flex-column justify-center gap-5"
-          >
+          <form class="d-flex flex-column justify-center gap-5">
             <div class="d-flex flex-wrap gap-2">
               <VBtn
                 color="primary"
@@ -331,26 +327,12 @@ const currencies = [
     </VCol>
 
     <VCol cols="12">
-      <!-- 👉 Delete Account -->
-      <VCard title="Delete Account">
+      <!-- 👉 Deactivate Account -->
+      <VCard title="Deactivate Account">
         <VCardText>
-          <!-- 👉 Checkbox and Button  -->
-          <VAlert
-            color="warning"
-            variant="tonal"
-            class="mb-4"
-          >
-            <VAlertTitle class="mb-1">
-              Are you sure you want to delete your account?
-            </VAlertTitle>
-            <p class="mb-0">
-              Once you delete your account, there is no going back. Please be certain.
-            </p>
-          </VAlert>
           <div>
             <VCheckbox
               v-model="isAccountDeactivated"
-              :rules="validateAccountDeactivation"
               label="I confirm my account deactivation"
             />
           </div>

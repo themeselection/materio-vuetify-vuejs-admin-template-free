@@ -1,7 +1,8 @@
 <script setup>
 import { useTheme } from 'vuetify'
 
-const vuetifyTheme = useTheme()
+const { global } = useTheme()
+
 const authProviders = [
   {
     icon: 'mdi-facebook',
@@ -32,6 +33,6 @@ const authProviders = [
     :key="link.icon"
     :icon="link.icon"
     variant="text"
-    :color="vuetifyTheme.global.name.value === 'dark' ? link.colorInDark : link.color"
+    :color="global.name.value === 'dark' ? link.colorInDark : link.color"
   />
 </template>

@@ -7,6 +7,7 @@ const vuetifyTheme = useTheme()
 const currentTheme = computed(() => vuetifyTheme.current.value.colors)
 const variableTheme = computed(() => vuetifyTheme.current.value.variables)
 const series = [78]
+
 const chartOptions = computed(() => {
   return {
     chart: { sparkline: { enabled: true } },

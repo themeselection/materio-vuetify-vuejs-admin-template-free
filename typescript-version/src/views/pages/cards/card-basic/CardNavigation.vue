@@ -54,7 +54,7 @@ const tabContent = 'Although cards can support multiple actions, UI controls, an
       <VCard>
         <VTabs
           v-model="navigationTab2"
-          centered
+          align-tabs="center"
         >
           <VTab
             v-for="item in tabItems"

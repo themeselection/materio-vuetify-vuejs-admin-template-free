@@ -18,3 +18,14 @@ export const isEmptyArray = arr => {
 
 // 👉 IsObject
 export const isObject = obj => obj !== null && !!obj && typeof obj === 'object' && !Array.isArray(obj)
+export const isToday = date => {
+  const today = new Date()
+  
+  return (
+    /* eslint-disable operator-linebreak */
+    date.getDate() === today.getDate() &&
+        date.getMonth() === today.getMonth() &&
+        date.getFullYear() === today.getFullYear()
+  /* eslint-enable */
+  )
+}

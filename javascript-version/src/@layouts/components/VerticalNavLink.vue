@@ -1,6 +1,4 @@
 <script setup>
-import { getComputedNavLinkToProp } from '@layouts/utils'
-
 const props = defineProps({
   item: {
     type: null,
@@ -16,31 +14,17 @@ const props = defineProps({
   >
     <Component
       :is="item.to ? 'RouterLink' : 'a'"
-      v-bind="getComputedNavLinkToProp(item)"
+      :to="item.to"
+      :href="item.href"
     >
       <VIcon
-        v-bind="item.icon"
+        :icon="item.icon"
         class="nav-item-icon"
       />
-      <TransitionGroup name="transition-slide-x">
-        <!-- 👉 Title -->
-        <span
-          key="title"
-          class="nav-item-title"
-        >
-          {{ item.title }}
-        </span>
-
-        <!-- 👉 Badge -->
-        <span
-          v-if="item.badgeContent"
-          key="badge"
-          class="nav-item-badge"
-          :class="item.badgeClass"
-        >
-          {{ item.badgeContent }}
-        </span>
-      </TransitionGroup>
+      <!-- 👉 Title -->
+      <span class="nav-item-title">
+        {{ item.title }}
+      </span>
     </Component>
   </li>
 </template>
@@ -50,6 +34,7 @@ const props = defineProps({
   .nav-link a {
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 }
 </style>

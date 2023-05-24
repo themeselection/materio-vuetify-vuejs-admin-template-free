@@ -1,11 +1,13 @@
 <script setup>
 const navigationTab = ref('ITEM ONE')
 const navigationTab2 = ref('ITEM ONE')
+
 const tabItems = [
   'ITEM ONE',
   'ITEM TWO',
   'ITEM THREE',
 ]
+
 const tabContent = 'Although cards can support multiple actions, UI controls, and an overflow menu, use restraint and remember that cards...'
 </script>
 
@@ -58,7 +60,7 @@ const tabContent = 'Although cards can support multiple actions, UI controls, an
       <VCard>
         <VTabs
           v-model="navigationTab2"
-          centered
+          align-tabs="center"
         >
           <VTab
             v-for="item in tabItems"

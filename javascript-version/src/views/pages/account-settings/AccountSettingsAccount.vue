@@ -1,5 +1,5 @@
 <script setup>
-import avatar1 from '@/assets/images/avatars/avatar-1.png'
+import avatar1 from '@images/avatars/avatar-1.png'
 
 const accountData = {
   avatarImg: avatar1,
@@ -16,16 +16,18 @@ const accountData = {
   timezone: '(GMT-11:00) International Date Line West',
   currency: 'USD',
 }
+
 const refInputEl = ref()
 const accountDataLocal = ref(structuredClone(accountData))
 const isAccountDeactivated = ref(false)
-const validateAccountDeactivation = [v => !!v || 'Please confirm account deactivation']
+
 const resetForm = () => {
   accountDataLocal.value = structuredClone(accountData)
 }
+
 const changeAvatar = file => {
   const fileReader = new FileReader()
-  const {files} = file.target
+  const { files } = file.target
   if (files && files.length) {
     fileReader.readAsDataURL(files[0])
     fileReader.onload = () => {
@@ -39,6 +41,7 @@ const changeAvatar = file => {
 const resetAvatar = () => {
   accountDataLocal.value.avatarImg = accountData.avatarImg
 }
+
 const timezones = [
   '(GMT-11:00) International Date Line West',
   '(GMT-11:00) Midway Island',
@@ -80,6 +83,7 @@ const timezones = [
   '(GMT+00:00) Lisbon',
   '(GMT+00:00) London',
 ]
+
 const currencies = [
   'USD',
   'EUR',
@@ -110,10 +114,7 @@ const currencies = [
           />
 
           <!-- 👉 Upload Photo -->
-          <form
-            ref="refForm"
-            class="d-flex flex-column justify-center gap-5"
-          >
+          <form class="d-flex flex-column justify-center gap-5">
             <div class="d-flex flex-wrap gap-2">
               <VBtn
                 color="primary"
@@ -323,26 +324,12 @@ const currencies = [
     </VCol>
 
     <VCol cols="12">
-      <!-- 👉 Delete Account -->
-      <VCard title="Delete Account">
+      <!-- 👉 Deactivate Account -->
+      <VCard title="Deactivate Account">
         <VCardText>
-          <!-- 👉 Checkbox and Button  -->
-          <VAlert
-            color="warning"
-            variant="tonal"
-            class="mb-4"
-          >
-            <VAlertTitle class="mb-1">
-              Are you sure you want to delete your account?
-            </VAlertTitle>
-            <p class="mb-0">
-              Once you delete your account, there is no going back. Please be certain.
-            </p>
-          </VAlert>
           <div>
             <VCheckbox
               v-model="isAccountDeactivated"
-              :rules="validateAccountDeactivation"
               label="I confirm my account deactivation"
             />
           </div>

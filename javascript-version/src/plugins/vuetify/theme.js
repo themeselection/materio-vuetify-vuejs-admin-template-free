@@ -18,7 +18,7 @@ const theme = {
         'on-background': '#3A3541',
         'on-surface': '#3A3541',
         'grey-50': '#FAFAFA',
-        'grey-100': '#F5F5F5',
+        'grey-100': '#F0F2F8',
         'grey-200': '#EEEEEE',
         'grey-300': '#E0E0E0',
         'grey-400': '#BDBDBD',
@@ -27,10 +27,23 @@ const theme = {
         'grey-700': '#616161',
         'grey-800': '#424242',
         'grey-900': '#212121',
+        'perfect-scrollbar-thumb': '#DBDADE',
+        'skin-bordered-background': '#fff',
+        'skin-bordered-surface': '#fff',
       },
       variables: {
+        'code-color': '#d400ff',
+        'overlay-scrim-background': '#3A3541',
+        'overlay-scrim-opacity': 0.5,
+        'hover-opacity': 0.04,
+        'focus-opacity': 0.1,
+        'selected-opacity': 0.12,
+        'activated-opacity': 0.1,
+        'pressed-opacity': 0.14,
+        'dragged-opacity': 0.1,
         'border-color': '#3A3541',
-        'medium-emphasis-opacity': 0.68,
+        'table-header-background': '#F9FAFC',
+        'custom-background': '#F9F8F9',
 
         // Shadows
         'shadow-key-umbra-opacity': 'rgba(var(--v-theme-on-surface), 0.08)',
@@ -56,7 +69,7 @@ const theme = {
         'surface': '#312D4B',
         'on-surface': '#E7E3FC',
         'grey-50': '#2A2E42',
-        'grey-100': '#2F3349',
+        'grey-100': '#474360',
         'grey-200': '#4A5072',
         'grey-300': '#5E6692',
         'grey-400': '#7983BB',
@@ -65,10 +78,23 @@ const theme = {
         'grey-700': '#B6BEE3',
         'grey-800': '#CFD3EC',
         'grey-900': '#E7E9F6',
+        'perfect-scrollbar-thumb': '#4A5072',
+        'skin-bordered-background': '#312d4b',
+        'skin-bordered-surface': '#312d4b',
       },
       variables: {
+        'code-color': '#d400ff',
+        'overlay-scrim-background': '#2C2942',
+        'overlay-scrim-opacity': 0.6,
+        'hover-opacity': 0.04,
+        'focus-opacity': 0.1,
+        'selected-opacity': 0.12,
+        'activated-opacity': 0.1,
+        'pressed-opacity': 0.14,
+        'dragged-opacity': 0.1,
         'border-color': '#E7E3FC',
-        'medium-emphasis-opacity': 0.68,
+        'table-header-background': '#3D3759',
+        'custom-background': '#373452',
 
         // Shadows
         'shadow-key-umbra-opacity': 'rgba(20, 18, 33, 0.08)',
@@ -78,4 +104,5 @@ const theme = {
     },
   },
 }
+
 export default theme

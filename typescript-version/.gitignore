@@ -21,12 +21,14 @@ dist-ssr
 !.vscode/extensions.json
 !.vscode/settings.json
 !.vscode/*.code-snippets
+!.vscode/tours
 .idea
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+.yarn
 
 # iconify dist files
 src/@iconify/*.js
