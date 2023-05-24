@@ -1,5 +1,5 @@
 <script setup>
-import logo from '@/assets/logo.svg?raw'
+import logo from '@images/logo.svg?raw'
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 import { useDisplay } from 'vuetify'
 
