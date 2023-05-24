@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import logo from '@/assets/logo.svg?raw'
+import logo from '@images/logo.svg?raw'
 import upgradeBannerDark from '@images/pro/upgrade-banner-dark.png'
 import upgradeBannerLight from '@images/pro/upgrade-banner-light.png'
 import { VerticalNavLink, VerticalNavSectionTitle } from '@layouts'

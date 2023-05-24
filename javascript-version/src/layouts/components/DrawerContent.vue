@@ -1,7 +1,7 @@
 <script setup>
+import logo from '@images/logo.svg?raw'
 import upgradeBannerDark from '@images/pro/upgrade-banner-dark.png'
 import upgradeBannerLight from '@images/pro/upgrade-banner-light.png'
-import logo from '@/assets/logo.svg?raw'
 import {
   VerticalNavLink,
   VerticalNavSectionTitle,
@@ -129,7 +129,7 @@ const upgradeBanner = computed(() => {
       alt="upgrade-banner"
       transition="scale-transition"
       class="upgrade-banner mx-auto"
-      style="max-width: 230px"
+      style="max-width: 230px;"
     >
   </a>
 </template>
@@ -149,7 +149,8 @@ const upgradeBanner = computed(() => {
 // }
 
 .upgrade-banner {
-  margin-top: auto;
+  margin-block-start: auto;
+
   // position: absolute;
   // bottom: 13px;
   // left: 50%;
