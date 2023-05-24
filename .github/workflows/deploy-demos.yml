@@ -34,4 +34,4 @@ jobs:
           rm: true
 
           # Setting it to `1` will upload all the files inside "dist" dir instead of "dist" dir itself
-          strip_components: 2
+          strip_components: 3
