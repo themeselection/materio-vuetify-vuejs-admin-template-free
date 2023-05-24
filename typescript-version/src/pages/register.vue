@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import logo from '@/assets/logo.svg?raw'
 import AuthProvider from '@/views/pages/authentication/AuthProvider.vue'
+import logo from '@images/logo.svg?raw'
 
 const form = ref({
   username: '',
