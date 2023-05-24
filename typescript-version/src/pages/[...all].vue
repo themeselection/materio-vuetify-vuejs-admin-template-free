@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import misc404 from '@/assets/images/pages/404.png'
-import miscMaskDark from '@/assets/images/pages/misc-mask-dark.png'
-import miscMaskLight from '@/assets/images/pages/misc-mask-light.png'
-import tree from '@/assets/images/pages/tree.png'
+import misc404 from '@images/pages/404.png'
+import miscMaskDark from '@images/pages/misc-mask-dark.png'
+import miscMaskLight from '@images/pages/misc-mask-light.png'
+import tree from '@images/pages/tree.png'
 import { useTheme } from 'vuetify'
 
 const vuetifyTheme = useTheme()
