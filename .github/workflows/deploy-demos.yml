@@ -22,12 +22,11 @@ jobs:
 
       - name: 🚀 Upload demo
         uses: appleboy/scp-action@master
-        env:
+        with:
           HOST: ${{ secrets.HOST }}
           USERNAME: ${{ secrets.USERNAME }}
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
-        with:
           source: ./typescript-version/dist
           target: ${{ secrets.PROD_DIR }}/demo
 
