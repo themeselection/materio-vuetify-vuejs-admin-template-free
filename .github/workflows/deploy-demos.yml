@@ -1,0 +1,38 @@
+name: 🚀 Deploy Demos
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⚙️ Set BRAND_NAME environment variable from repo name
+        run: echo BRAND_NAME=${{ github.event.repository.name }} | cut -d '-' -f1 >> $GITHUB_ENV
+
+      - name: ⬇️ Checkout template
+        uses: actions/checkout@v3
+
+      - name: ⬇️ Install packages
+        run: yarn install
+        working-directory: ./typescript-version
+
+      - name: 📦 Generate demo
+        run: yarn build --base=/${{ env.BRAND_NAME }}-vuetify-vuejs-admin-template-free/demo/
+        working-directory: ./typescript-version
+
+      - name: 🚀 Upload demo
+        uses: appleboy/scp-action@master
+        env:
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSHKEY }}
+        with:
+          source: ./typescript-version/dist
+          target: ${{ secrets.PROD_DIR }}/demo
+
+          # remove target folder before uploading data 
+          rm: true
+
+          # Setting it to `1` will upload all the files inside "dist" dir instead of "dist" dir itself
+          strip_components: 1
