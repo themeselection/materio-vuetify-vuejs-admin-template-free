@@ -1,9 +1,11 @@
 <script lang="ts" setup>
 import { useTheme } from 'vuetify'
 
-import VerticalNavSectionTitle from '@/@layouts/components/VerticalNavSectionTitle.vue'
+import upgradeBannerDark from '@images/pro/upgrade-banner-dark.png'
+import upgradeBannerLight from '@images/pro/upgrade-banner-light.png'
 import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
 import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
+import VerticalNavSectionTitle from '@/@layouts/components/VerticalNavSectionTitle.vue'
 
 // Components
 import Footer from '@/layouts/components/Footer.vue'
@@ -11,8 +13,6 @@ import NavbarThemeSwitcher from '@/layouts/components/NavbarThemeSwitcher.vue'
 import UserProfile from '@/layouts/components/UserProfile.vue'
 
 // Banner
-import upgradeBannerDark from '@images/pro/upgrade-banner-dark.png'
-import upgradeBannerLight from '@images/pro/upgrade-banner-light.png'
 
 const vuetifyTheme = useTheme()
 
@@ -44,9 +44,7 @@ const upgradeBanner = computed(() => {
             <VIcon icon="mdi-magnify" />
           </IconBtn>
 
-          <span
-            class="d-none d-md-flex align-center text-disabled"
-          >
+          <span class="d-none d-md-flex align-center text-disabled">
             <span class="me-3">Search</span>
             <span class="meta-key">&#8984;K</span>
           </span>
