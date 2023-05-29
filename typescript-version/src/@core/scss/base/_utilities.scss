@@ -95,7 +95,7 @@ $card-spacer-content: 16px;
     .v-btn--icon.v-btn--density-default {
       block-size: calc(var(--v-btn-height) + -10px);
       color: rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity));
-      inline-size: calc(var(--v-btn-height) + -10px);
+      inline-size: calc(var(--v-btn-height) + -8px);
 
       &.v-btn--active {
         color: #fff;
@@ -103,6 +103,17 @@ $card-spacer-content: 16px;
 
       .v-btn__overlay {
         opacity: 0;
+      }
+
+      .v-ripple__container {
+        display: none;
+      }
+
+      .v-btn__content {
+        .v-icon {
+          block-size: 8px !important;
+          inline-size: 8px !important;
+        }
       }
     }
   }

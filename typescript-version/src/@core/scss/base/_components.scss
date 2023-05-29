@@ -1,6 +1,6 @@
 @use "mixins";
-@use "vuetify/lib/styles/tools/_elevation" as mixins_elevation;
 @use "@layouts/styles/placeholders";
+@use "@layouts/styles/mixins" as layoutMixins;
 @use "@configured-variables" as variables;
 
 // 👉 Avatar group
@@ -61,6 +61,17 @@
 
     .v-icon {
       color: rgb(var(--v-theme-primary)) !important;
+    }
+  }
+}
+
+// 👉 Datatable
+.v-data-table-footer__pagination {
+  @include layoutMixins.rtl {
+    .v-btn {
+      .v-icon {
+        transform: rotate(180deg);
+      }
     }
   }
 }
@@ -148,8 +159,12 @@
   }
 }
 
-// 👉 Textarea
+// 👉 Switch
+.v-switch .v-selection-control:not(.v-selection-control--dirty) .v-switch__thumb {
+  color: #fff !important;
+}
 
+// 👉 Textarea
 .v-textarea .v-field__input {
   /* stylelint-disable-next-line property-no-vendor-prefix */
   -webkit-mask-image: none !important;

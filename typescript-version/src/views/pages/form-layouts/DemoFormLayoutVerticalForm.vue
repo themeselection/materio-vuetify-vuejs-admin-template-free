@@ -13,7 +13,7 @@ const checkbox = ref(false)
         <VTextField
           v-model="firstName"
           label="First Name"
-          placeholder="First Name"
+          placeholder="John"
         />
       </VCol>
 
@@ -22,7 +22,7 @@ const checkbox = ref(false)
           v-model="email"
           label="Email"
           type="email"
-          placeholder="Email"
+          placeholder="johndoe@example.com"
         />
       </VCol>
 
@@ -30,8 +30,8 @@ const checkbox = ref(false)
         <VTextField
           v-model="mobile"
           label="Mobile"
+          placeholder="+1 123 456 7890"
           type="number"
-          placeholder="Number"
         />
       </VCol>
 
@@ -40,7 +40,7 @@ const checkbox = ref(false)
           v-model="password"
           label="Password"
           type="password"
-          placeholder="password"
+          placeholder="············"
         />
       </VCol>
 

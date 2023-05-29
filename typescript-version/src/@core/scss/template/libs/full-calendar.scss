@@ -28,6 +28,12 @@
 
   .fc-event-time {
     font-size: 0.75rem;
+    font-weight: 500 !important;
+  }
+
+  .fc-event-title {
+    font-size: 0.75rem;
+    font-weight: 500 !important;
   }
 
   .fc-timegrid-event {
@@ -160,6 +166,7 @@
 
   .fc-event {
     border-color: transparent;
+    cursor: pointer;
     margin-block-end: 0.3rem;
     padding-block: 0.1875rem;
     padding-inline: 0.3125rem;

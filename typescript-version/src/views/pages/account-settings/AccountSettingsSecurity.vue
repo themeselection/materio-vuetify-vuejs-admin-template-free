@@ -32,6 +32,12 @@ const serverKeys = [
     permission: 'Full Access',
   },
 ]
+const recentDevicesHeaders = [
+  { title: 'BROWSER', key: 'browser' },
+  { title: 'DEVICE', key: 'device' },
+  { title: 'LOCATION', key: 'location' },
+  { title: 'RECENT ACTIVITY', key: 'recentActivity' },
+]
 
 const recentDevices = [
   {
@@ -98,6 +104,7 @@ const recentDevices = [
                   :type="isCurrentPasswordVisible ? 'text' : 'password'"
                   :append-inner-icon="isCurrentPasswordVisible ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
                   label="Current Password"
+                  placeholder="············"
                   @click:append-inner="isCurrentPasswordVisible = !isCurrentPasswordVisible"
                 />
               </VCol>
@@ -115,6 +122,7 @@ const recentDevices = [
                   :type="isNewPasswordVisible ? 'text' : 'password'"
                   :append-inner-icon="isNewPasswordVisible ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
                   label="New Password"
+                  placeholder="············"
                   @click:append-inner="isNewPasswordVisible = !isNewPasswordVisible"
                 />
               </VCol>
@@ -129,6 +137,7 @@ const recentDevices = [
                   :type="isConfirmPasswordVisible ? 'text' : 'password'"
                   :append-inner-icon="isConfirmPasswordVisible ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
                   label="Confirm New Password"
+                  placeholder="············"
                   @click:append-inner="isConfirmPasswordVisible = !isConfirmPasswordVisible"
                 />
               </VCol>
@@ -217,13 +226,17 @@ const recentDevices = [
                   <VCol cols="12">
                     <VSelect
                       label="Choose the API key type you want to create"
+                      placeholder="Select API key type"
                       :items="['Full Control', 'Modify', 'Read & Execute', 'List Folder Contents', 'Read Only', 'Read & Write']"
                     />
                   </VCol>
 
                   <!-- 👉 Name the API Key -->
                   <VCol cols="12">
-                    <VTextField label="Name the API key" />
+                    <VTextField
+                      label="Name the API key"
+                      placeholder="Name the API key"
+                    />
                   </VCol>
 
                   <!-- 👉 Create Key Button -->
@@ -289,42 +302,29 @@ const recentDevices = [
     <VCol cols="12">
       <!-- 👉 Table -->
       <VCard title="Recent Devices">
-        <VTable class="text-no-wrap">
-          <thead>
-            <tr>
-              <th scope="col">
-                BROWSER
-              </th>
-              <th scope="col">
-                DEVICE
-              </th>
-              <th scope="col">
-                LOCATION
-              </th>
-              <th scope="col">
-                RECENT ACTIVITIES
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              v-for="device in recentDevices"
-              :key="device.recentActivity"
-            >
-              <td>
-                <VIcon
-                  start
-                  :icon="device.deviceIcon.icon"
-                  :color="device.deviceIcon.color"
-                />
-                {{ device.browser }}
-              </td>
-              <td>{{ device.device }}</td>
-              <td>{{ device.location }}</td>
-              <td>{{ device.recentActivity }}</td>
-            </tr>
-          </tbody>
-        </VTable>
+
+        <VDataTable
+          :headers="recentDevicesHeaders"
+          :items="recentDevices"
+          hide-default-footer
+          class="text-no-wrap"
+        >
+          <template #item.browser="{ item }">
+            <div class="d-flex">
+              <VIcon
+                start
+                :icon="item.raw.deviceIcon.icon"
+                :color="item.raw.deviceIcon.color"
+              />
+              <span>
+                {{ item.raw.browser }}
+              </span>
+            </div>
+          </template>
+          <!-- TODO Refactor this after vuetify provides proper solution for removing default footer -->
+          <template #bottom />
+        </VDataTable>
+
       </VCard>
     </VCol>
     <!-- !SECTION -->

@@ -12,7 +12,7 @@ export default defineConfig({
     vue(),
     vueJsx(),
 
-    // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
+    // Docs: https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin
     vuetify({
       styles: {
         configFile: 'src/styles/variables/_vuetify.scss',
@@ -22,6 +22,8 @@ export default defineConfig({
       dirs: ['src/@core/components'],
       dts: true,
     }),
+
+    // Docs: https://github.com/antfu/unplugin-auto-import#unplugin-auto-import
     AutoImport({
       imports: ['vue', 'vue-router', '@vueuse/core', '@vueuse/math', 'pinia'],
       vueTemplate: true,

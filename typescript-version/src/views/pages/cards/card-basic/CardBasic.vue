@@ -83,7 +83,7 @@ const isCardDetailsVisible = ref(false)
                 v-for="avatar in avatars"
                 :key="avatar"
                 :image="avatar"
-                size="45"
+                size="40"
               />
             </div>
           </div>

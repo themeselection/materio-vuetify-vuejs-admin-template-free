@@ -8,8 +8,7 @@
     "composite": false,
     "strict": true,
     "moduleResolution": "node",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true
   },
   "exclude": [
     "./*.js"

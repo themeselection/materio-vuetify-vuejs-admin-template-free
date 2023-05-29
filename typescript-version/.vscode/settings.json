@@ -1,5 +1,6 @@
 {
     "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "[javascript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
