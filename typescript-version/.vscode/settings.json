@@ -31,11 +31,6 @@
     "volar.preview.port": 3000,
     "volar.completion.preferredTagNameCase": "pascal",
     // Extension: ESLint
-    "eslint.options": {
-        "rulePaths": [
-            "eslint-internal-rules"
-        ]
-    },
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true,
         "source.fixAll.stylelint": true,
