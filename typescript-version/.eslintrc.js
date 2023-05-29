@@ -180,8 +180,6 @@ module.exports = {
     // }],
 
     // Internal Rules
-    'valid-appcardcode-code-prop': 'error',
-    'valid-appcardcode-demo-sfc': 'error',
 
     // https://github.com/gmullerb/eslint-plugin-regex
     'regex/invalid': [
