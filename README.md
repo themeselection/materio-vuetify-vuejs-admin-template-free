@@ -1,181 +1,99 @@
 <p align="center"></p>
 
 <p align="center">
-   <a href="https://themeselection.com/products/materio-free-vuetify-vuejs-admin-template" target="_blank">
-      <img src="https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free/blob/vue-2/src/assets/images/logos/logo.svg" alt="materio-logo" width="60px" height="auto">
+   <a href="https://themeselection.com/item/materio-free-vuetify-vuejs-admin-template/" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/themeselection/ts-assets/materio/materio-vuetify-vuejs-admin-template-free/logo/logo.png" alt="materio-vuetify-vuejs-admin-template-logo" width="40px" height="auto">
    </a>
 </p>
 
 <h1 align="center">
-   <a href="https://themeselection.com/products/materio-free-vuetify-vuejs-admin-template" target="_blank" align="center">
-      Materio - Vuetify VueJS 3 Free Admin Template
+   <a href="https://themeselection.com/item/materio-free-vuetify-vuejs-admin-template/" target="_blank" align="center">
+      Materio – Vuetify Vuejs Admin Template Free
    </a>
 </h1>
 
-<p align="center">Production ready carefully crafted most comprehensive admin template</p>
+<p align="center">Production Ready, Carefully Crafted, Extensive Vuetifty Admin Template</p>
 
-<p align="center">
-   <a href="https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/themeselection/materio-vuetify-vuejs-admin-template-free" alt="license">
-   </a>
-   <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/themeselection/materio-vuetify-vuejs-admin-template-free/Deploy">
-   <a href="https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free/releases">
-    <img src="https://img.shields.io/github/release/themeselection/materio-vuetify-vuejs-admin-template-free.svg" alt="GitHub release">
-  </a>
-   <a href="https://twitter.com/Theme_Selection" target="_blank">
-      <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/Theme_Selection">
-   </a>
-</p>
-
-<kbd>[![Materio - Vuetify VueJS Free Admin Template Demo Screenshot](https://user-images.githubusercontent.com/47495003/129342383-2816d6fe-3a88-4189-b08f-f30b9abac2b0.png)](https://themeselection.com/products/materio-free-vuetify-vuejs-admin-template)</kbd>
+[![Materio – Vuetify Vuejs Admin Template Demo Screenshot](https://cdn.jsdelivr.net/gh/themeselection/ts-assets/materio/materio-vuetify-vuejs-admin-template-free/banner/materio-vue-free.png)](https://themeselection.com/item/materio-free-vuetify-vuejs-admin-template/)
 
 ## Introduction
 
-If you’re a developer looking for an admin dashboard that is developer-friendly, rich with features, and highly customizable look no further than Materio. We’ve followed the highest industry standards to bring you one of the very best **[VueJS Admin Templates](https://themeselection.com/products/category/vuejs-admin-templates/)** that is not only fast and easy to use but highly scalable. Offering ultimate convenience and flexibility, you’ll be able to build whatever application you want with very little hassle.
-
-Build premium quality applications with ease. Use our innovative admin template to create eye-catching, high-quality, and high-performing single-page applications. Your apps will be completely responsive, ensuring they’ll look stunning and function flawlessly on desktops, tablets, and mobile devices.
+If you're a developer looking for an admin dashboard that is developer-friendly, rich with features, and highly customizable look no further than Materio. We've followed the highest industry standards to bring you one of the very best [VueJS Admin Templates](https://themeselection.com/products/category/vuejs-admin-templates/) that is not only fast and easy to use but highly scalable. Offering ultimate convenience and flexibility, you'll be able to build whatever application you want with very little hassle.
 
 - ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite 3](https://github.com/vitejs/vite) & [Vuetify 3](https://next.vuetifyjs.com/en/) - Uses the latest Vuetify 3
 - 🗂 [File based routing](https://github.com/hannoeru/vite-plugin-pages)
 - 📦 [Components auto importing](https://github.com/antfu/unplugin-vue-components)
 - 📑 [Layout system](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
 - 😃 Use icons from any icon sets with classes by [Iconify](https://iconify.design/)
+- 🌍 I18n ready
 - 🔥 Use the [`<script setup>`](https://vuejs.org/api/sfc-script-setup.html) syntax
 - 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Composition API and others directly
 - 🦾 TypeScript & JavaScript versions
 
-[View Demo](https://themeselection.com/demo/materio-vuetify-vuejs-admin-template-free/demo/)
+[View Demo](https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/landing/)
 
 ## Installation ⚒️
 
-> We recommend you use yarn
-
-1. Install all packages
-
-   ```bash
-   yarn
-
-   # npm install [for npm]
-   ```
-
-2. Run development server
-
-   ```bash
-   yarn serve
-
-   # npm run serve [for npm]
-   ```
-
-3. Generate build files for deployment
-
-   ```bash
-   yarn build
-
-   # npm run build [for npm]
-   ```
-
-## What's Included 📦
-
-- Dashboard
-- Account Settings
-- Pages
-  - Login
-  - Register
-  - Error
-- User Interface
-  - Typography
-  - Icons
-  - Basic Cards
-  - Tables
-  - Form Layouts
-
-## What's in Premium Version 💎
-
-| Materio Free Version                                                                             | Materio Premium Version                                                                        |
-| ------------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------- |
-| [Demo](https://themeselection.com/demo/materio-vuetify-vuejs-admin-template-free/demo/)          | [Demo](https://themeselection.com/demo/materio-vuetify-vuejs-admin-template/landing)           |
-| [Download](https://themeselection.com/products/materio-free-vuetify-vuejs-admin-template)        | [Purchase](https://themeselection.com/products/materio-vuetify-vuejs-admin-template)           |
-| Single vertical menu                                                                             | Vertical (+ vertical collapsed) & Horizontal menu                                              |
-| Simple Light/Dark theme                                                                          | 3 Skin variants w/ light/dark theme support: Default, Bordered & Semi-dark                     |
-| 1 Simple Dashboard                                                                               | 3 Niche Dashboards                                                                             |
-| -                                                                                                | 5 API ready applications                                                                       |
-| Simple From Elements                                                                             | Advance form elemens, validation & form wizard                                                 |
-| Basic Cards                                                                                      | Basic Cards + Advanced Cards + Statistics Cards                                                |
-| -                                                                                                | API ready JWT Authentication flow                                                              |
-| -                                                                                                | Access Control (even on CRUD operations)                                                       |
-| -                                                                                                | Quick Search - Quickly navigate between pages (w/ hotkey support)                              |
-| Basic Pages                                                                                      | Authentication Pages in 2 variants + Ready to use pages like Pricing, FAQ, Knowledge base, etc |
-| -                                                                                                | 3D Characters + Illustrations                                                                  |
-| Basic tables                                                                                     | Advanced tables                                                                                |
-| Manual customization                                                                             | Quick customization using theme config file                                                    |
-| -                                                                                                | Advanced Charts                                                                                |
-| 1 Chart Library                                                                                  | 2 Chart Libraries                                                                              |
-| -                                                                                                | Multiple Navbar & Menu Options                                                                 |
-| -                                                                                                | Starter-kit                                                                                    |
-| -                                                                                                | Internationalization support in components                                                     |
-| Regular Support                                                                                  | Priority Support                                                                               |
-| Basic Documentation                                                                              | Detailed Documentation                                                                         |
+Please [visit](https://demos.themeselection.com/materio-vuetify-vuejs-admin-template-vue2/documentation/guide/development/installation.html) our docs for installation guide.
 
 ## Documentation 📜
 
-Check GitHub [Wiki](https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free/wiki) of this repo
+Check out our live [Documentation](https://demos.themeselection.com/materio-vuetify-vuejs-admin-template-vue2/documentation/)
 
-## Browser Support 🖥️
+## Support 👨‍💻
 
-- Materio Vuetify VueJS Free Admin Template is built to work best in the latest desktop and mobile and tablet browsers
+We use GitHub issues as support tickets to manage Item support.
 
-- Chrome (latest)
-- FireFox (latest)
-- Safari (latest)
-- Opera (latest)
+1. In order to raise the GitHub issue, you must have our Premium Item repository access. [Get repo access](https://tools.themeselection.com/github/github-access).
+2. Make sure you use our [Raise Support](https://tools.themeselection.com/github/raise-support) form to create an issue.
+
+## Why forking is disabled? 🔒
+
+You will lose repository access when your support expires. If you have forked the repo and you lose the access to our repo then your fork also got deleted by GitHub.
+
+Hence, as precautions we disabled forking our repo.
+
+**Solution**
+
+However, you can still keep your repo even after your support expires by setting our repo as upstream:
+
+1. Create a new **private repo** in your GitHub. Make sure it's a private repo. You can't share our code publicly as per license.
+2. Clone our repo: `git clone $product_repo_url`
+3. Navigate to cloned directory
+4. Remove our repo as origin by running command: `git remote remove origin`
+5. Add your newly created repo as origin by running command: `git remote add origin YOUR_NEWLY_CREATE_REPO_GIT_URL`
+6. Add our repo as upstream by running command: `git remote add upstream $product_repo_url`
+7. Push the code to GitHub by running command: `git push -u origin main`
+
+Now, whenever you want to pull the latest changes from our repo just pull the changes by running command: `git pull upstream main`
+
+Cheers 🥂
 
 ## Contributing 🦸
 
-Contribution are always welcome and recommended! Here is how:
+Contributions are always welcome and recommended! Here is how:
 
-- Fork the repository ([here is the guide](https://docs.github.com/en/get-started/quickstart/fork-a-repo)).
-- Clone to your machine `git clone https://github.com/YOUR_USERNAME/REPO_URL` Make your changes
-- Create a pull request
+- Clone our repo `git clone $product_repo_url`
+- create a new branch based on branch you want to make Pull request to. For example if you want to make pull request to main branch, create new branch based on main branch.
+- Push your changes to new branch
+- Create pull request
 
 ### Contribution Requirements 🧰
 
 - When you contribute, you agree to give a non-exclusive license to ThemeSelection to use that contribution in any context as we (ThemeSelection) see appropriate.
 - If you use content provided by another party, it must be appropriately licensed using an open source license.
 - Contributions are only accepted through Github pull requests.
-- Finally, contributed code must work in all supported browsers (see above for browser support).
+- Finally, contributed code must work in all supported browsers.
 
 ## Creators 😇
 
-- [ThemeSelection](https://themeselection.com)
+- [ThemeSelection](https://themeselection.com/)
 
-## Changelog 📆
+## Useful Links 🎁
 
-Please refer to the [CHANGELOG](CHANGELOG.md) file. We will add a detailed release notes to each new release.
-
-## Credits 🙏
-
-- [Vuetify](https://vuetifyjs.com/)
-- [Material Design Icons](https://materialdesignicons.com/)
-- [ApexCharts](https://apexcharts.com/)
-- [Humans Illustrations](https://humans.wannathis.one/)
-- [Freepik](https://www.freepik.com/)
-- [Unsplash](https://unsplash.com/)
-
-## NOTE 🏷️
-
-**We request you to keep ThemeSelection credit link in the footer section.**
-
-## Looking For Premium Admin Templates ?? 👀
-
-**[ThemeSelection](https://themeselection.com/)** provides Selected high quality, modern design, professional and easy-to-use Free and Premium [Bootstrap Admin Templates](https://themeselection.com/products/category/bootstrap-admin-templates/), [VueJS Admin Templates](https://themeselection.com/products/category/vuejs-admin-templates/), [Laravel Admin Templates](https://themeselection.com/products/category/laravel-admin-templates/), HTML Themes, and [Free UI Kits](https://themeselection.com/products/category/free-ui-kits/) to create your applications faster!.
-
-If you want to [Download Free Admin Templates](https://themeselection.com/products/category/download-free-admin-templates/) like Materio then do visit [ThemeSelection](https://themeselection.com/).
-
-## Useful Links 🔗
-
-- More products from [ThemeSelection](https://themeselection.com)
-- Freebies from [ThemeSelection](https://themeselection.com/products/category/download-free-admin-templates/)
-- [Blog](https://themeselection.com/blog/)
+- [Freebies](https://themeselection.com/products/category/download-free-admin-templates/)
+- [Download Free Admin Templates](https://themeselection.com/products/category/download-free-admin-templates/)
+- [Bootstrap 5 CheatSheet](https://bootstrap-cheatsheet.themeselection.com/)
 
 ## Social Media 🌍
 
