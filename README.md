@@ -30,15 +30,15 @@ If you're a developer looking for an admin dashboard that is developer-friendly,
 - 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Composition API and others directly
 - 🦾 TypeScript & JavaScript versions
 
-[View Demo](https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/landing/)
+[View Demo](https://demos.themeselection.com/materio-vuetify-vuejs-admin-template-free/demo/dashboard)
 
 ## Installation ⚒️
 
-Please [visit](https://demos.themeselection.com/materio-vuetify-vuejs-admin-template-vue2/documentation/guide/development/installation.html) our docs for installation guide.
+Please [visit](https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/documentation/guide/installation.html) our docs for installation guide.
 
 ## Documentation 📜
 
-Check out our live [Documentation](https://demos.themeselection.com/materio-vuetify-vuejs-admin-template-vue2/documentation/)
+Check out our live [Documentation](https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/documentation/)
 
 ## Support 👨‍💻
 
