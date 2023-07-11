@@ -2,7 +2,7 @@
 
 <p align="center">
    <a href="https://themeselection.com/item/materio-free-vuetify-vuejs-admin-template/" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/themeselection/ts-assets/materio/materio-vuetify-vuejs-admin-template-free/logo/logo.png" alt="materio-logo" width="60px" height="auto">
+      <img src="https://cdn.jsdelivr.net/gh/themeselection/ts-assets/materio/logo/logo.png" alt="materio-logo" width="60px" height="auto">
    </a>
 </p>
 
@@ -27,7 +27,7 @@
    </a>
 </p>
 
-<kbd>[![Materio – Vuetify Vuejs Admin Template Demo Screenshot](https://cdn.jsdelivr.net/gh/themeselection/ts-assets/materio/materio-vuetify-vuejs-admin-template-free/banner/materio-vue-free.png)](https://themeselection.com/item/materio-free-vuetify-vuejs-admin-template/))</kbd>
+<kbd>[![Materio – Vuetify Vuejs Admin Template Demo Screenshot](https://cdn.jsdelivr.net/gh/themeselection/ts-assets/materio/materio-vuetify-vuejs-admin-template-free/banner/materio-vuetify-vuejs-admin-template-free-main.png)](https://themeselection.com/item/materio-free-vuetify-vuejs-admin-template/))</kbd>
 
 ## Introduction 🚀
 
