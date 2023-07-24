@@ -27,7 +27,7 @@
    </a>
 </p>
 
-<kbd>[![Materio – Vuetify Vuejs Admin Template Demo Screenshot](https://cdn.jsdelivr.net/gh/themeselection/ts-assets/materio/materio-vuetify-vuejs-admin-template-free/banner/materio-vuetify-vuejs-admin-template-free-main.png)](https://themeselection.com/item/materio-free-vuetify-vuejs-admin-template/))</kbd>
+<kbd>[![Materio – Vuetify Vuejs Admin Template Demo Screenshot](https://cdn.jsdelivr.net/gh/themeselection/ts-assets/materio/materio-vuetify-vuejs-admin-template-free/banner/banner.png)](https://themeselection.com/item/materio-free-vuetify-vuejs-admin-template/)</kbd>
 
 ## Introduction 🚀
 
