@@ -1,24 +1,18 @@
-/* eslint-disable import/order */
-import '@/@iconify/icons-bundle'
+import { createApp } from 'vue'
+
 import App from '@/App.vue'
-import vuetify from '@/plugins/vuetify'
-import { loadFonts } from '@/plugins/webfontloader'
-import router from '@/router'
+import { registerPlugins } from '@core/utils/plugins'
+
+// Styles
 import '@core/scss/template/index.scss'
 import '@layouts/styles/index.scss'
 import '@styles/styles.scss'
-import { createPinia } from 'pinia'
-import { createApp } from 'vue'
-
-loadFonts()
 
 // Create vue app
 const app = createApp(App)
 
-// Use plugins
-app.use(vuetify)
-app.use(createPinia())
-app.use(router)
+// Register plugins
+registerPlugins(app)
 
 // Mount vue app
 app.mount('#app')

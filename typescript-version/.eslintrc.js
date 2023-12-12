@@ -216,14 +216,6 @@ module.exports = {
             inspect: '^(?!.*(@core|@layouts)).*',
           },
         },
-        {
-          regex: 'import axios from \'axios\'',
-          replacement: 'import axios from \'@axios\'',
-          message: 'Use axios instances created in \'src/plugin/axios.ts\' instead of unconfigured axios',
-          files: {
-            ignore: '^.*plugins/axios.ts.*',
-          },
-        },
       ],
 
       // Ignore files

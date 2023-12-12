@@ -31,4 +31,4 @@ dist-ssr
 .yarn
 
 # iconify dist files
-src/@iconify/*.js
+src/plugins/iconify/icons.css
