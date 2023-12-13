@@ -12,18 +12,13 @@
     "postinstall": "npm run build:icons"
   },
   "dependencies": {
-    "@floating-ui/dom": "1.2.8",
     "@vueuse/core": "^10.1.2",
-    "@vueuse/math": "^10.1.2",
     "apexcharts": "^3.28.5",
-    "jwt-decode": "^3.1.2",
     "pinia": "^2.1.3",
-    "prismjs": "^1.29.0",
     "roboto-fontface": "^0.10.0",
     "sass": "^1.59.3",
     "vue": "^3.3.4",
     "vue-flatpickr-component": "11.0.3",
-    "vue-prism-component": "^2.0.0",
     "vue-router": "^4.2.1",
     "vue3-apexcharts": "^1.4.1",
     "vue3-perfect-scrollbar": "^1.6.0",
