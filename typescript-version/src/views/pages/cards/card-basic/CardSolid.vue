@@ -26,7 +26,7 @@ const solidCardData = [
   },
   {
     cardBg: '#007BB6',
-    title: 'Linkedin Card',
+    title: 'LinkedIn Card',
     icon: 'mdi-linkedin',
     text: 'With the Internet spreading like wildfire and reaching every part of our daily life, more and more traffic is directed.',
     avatarImg: avatar8,

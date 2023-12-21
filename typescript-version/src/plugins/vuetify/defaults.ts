@@ -19,6 +19,10 @@ export default {
       size: 24,
     },
   },
+
+  // VImg: {
+  //   eager: true,
+  // },
   VBadge: {
     // set v-badge default color to primary
     color: 'primary',
@@ -83,6 +87,9 @@ export default {
   },
   VProgressCircular: {
     // set v-progress-circular default color to primary
+    color: 'primary',
+  },
+  VProgressLinear: {
     color: 'primary',
   },
   VSlider: {

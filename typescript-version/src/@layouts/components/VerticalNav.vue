@@ -56,7 +56,7 @@ const handleNavScroll = (evt: Event) => {
       <slot name="nav-header">
         <RouterLink
           to="/"
-          class="app-logo d-flex align-center gap-x-3 app-title-wrapper"
+          class="app-logo app-title-wrapper"
         >
           <div
             class="d-flex"
@@ -90,6 +90,21 @@ const handleNavScroll = (evt: Event) => {
   </Component>
 </template>
 
+<style lang="scss" scoped>
+.app-logo {
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+
+  .app-logo-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+    text-transform: uppercase;
+  }
+}
+</style>
+
 <style lang="scss">
 @use "@configured-variables" as variables;
 @use "@layouts/styles/mixins";
@@ -104,7 +119,7 @@ const handleNavScroll = (evt: Event) => {
   inline-size: variables.$layout-vertical-nav-width;
   inset-block-start: 0;
   inset-inline-start: 0;
-  transition: transform 0.25s ease-in-out, inline-size 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  transition: inline-size 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
   will-change: transform, inline-size;
 
   .nav-header {
@@ -113,6 +128,15 @@ const handleNavScroll = (evt: Event) => {
 
     .header-action {
       cursor: pointer;
+
+      @at-root {
+        #{variables.$selector-vertical-nav-mini} .nav-header .header-action {
+          &.nav-pin,
+          &.nav-unpin {
+            display: none !important;
+          }
+        }
+      }
     }
   }
 
@@ -143,9 +167,11 @@ const handleNavScroll = (evt: Event) => {
       inline-size: variables.$layout-vertical-nav-collapsed-width;
     }
   }
+}
 
-  // 👉 Overlay nav
-  &.overlay-nav {
+// Small screen vertical nav transition
+@media (max-width:1279px) {
+  .layout-vertical-nav {
     &:not(.visible) {
       transform: translateX(-#{variables.$layout-vertical-nav-width});
 
@@ -153,6 +179,8 @@ const handleNavScroll = (evt: Event) => {
         transform: translateX(variables.$layout-vertical-nav-width);
       }
     }
+
+    transition: transform 0.25s ease-in-out;
   }
 }
 </style>

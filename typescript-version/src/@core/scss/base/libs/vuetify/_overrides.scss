@@ -5,7 +5,7 @@
 // ℹ️ We need accurate vh in mobile devices as well
 .v-application__wrap {
   /* stylelint-disable-next-line liberty/use-logical-spec */
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: 100dvh;
 }
 
 // 👉 Typography
@@ -27,7 +27,7 @@ h6,
   color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity));
 }
 
-.v-application,
+body,
 .text-body-1,
 .text-body-2,
 .text-subtitle-1,
@@ -197,7 +197,6 @@ h6,
 }
 
 // 👉 DataTable
-// 👉 DataTable
 .v-data-table {
   /* stylelint-disable-next-line no-descending-specificity */
   .v-checkbox-btn .v-selection-control__wrapper {
@@ -241,7 +240,7 @@ h6,
 // 👉 VMessages
 .v-messages {
   color: rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity));
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 // 👉 Alert close btn

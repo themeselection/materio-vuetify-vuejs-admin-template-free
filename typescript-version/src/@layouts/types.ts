@@ -1,32 +1,34 @@
-import type { Component, Ref, VNode } from 'vue'
 import type { RouteLocationRaw } from 'vue-router'
-import { ContentWidth, FooterType, NavbarType } from './enums'
+import type { AppContentLayoutNav, ContentWidth, FooterType, HorizontalNavType, NavbarType } from '@layouts/enums'
 
-export interface UserConfig {
+export interface LayoutConfig {
   app: {
     title: Lowercase<string>
     logo: VNode
     contentWidth: typeof ContentWidth[keyof typeof ContentWidth]
     contentLayoutNav: typeof AppContentLayoutNav[keyof typeof AppContentLayoutNav]
     overlayNavFromBreakpoint: number
-    enableI18n: boolean
-    isRtl: boolean
-    iconRenderer?: Component
+
+    // isRTL: boolean
+    i18n: {
+      enable: boolean
+    }
+    iconRenderer: Component
   }
   navbar: {
     type: typeof NavbarType[keyof typeof NavbarType]
     navbarBlur: boolean
   }
   footer: {
-    type:typeof FooterType[keyof typeof FooterType]
+    type: typeof FooterType[keyof typeof FooterType]
   }
   verticalNav: {
     isVerticalNavCollapsed: boolean
     defaultNavItemIconProps: unknown
   }
   horizontalNav: {
-    type: 'sticky' | 'static' | 'hidden'
-    transition?: string | Component
+    type: typeof HorizontalNavType[keyof typeof HorizontalNavType]
+    transition: string | Component
   }
   icons: {
     chevronDown: any
@@ -38,47 +40,7 @@ export interface UserConfig {
   }
 }
 
-/*
-  TODO: use MergeDeep for DRY
-   Waiting for https://github.com/sindresorhus/type-fest/issues/150
-*/
-export interface Config {
-  app: {
-    title: UserConfig['app']['title']
-    logo: UserConfig['app']['logo']
-    contentWidth: Ref<UserConfig['app']['contentWidth']>
-    contentLayoutNav: Ref<UserConfig['app']['contentLayoutNav']>
-    overlayNavFromBreakpoint: UserConfig['app']['overlayNavFromBreakpoint']
-    enableI18n: UserConfig['app']['enableI18n']
-    isRtl: Ref<UserConfig['app']['isRtl']>
-    iconRenderer?: UserConfig['app']['iconRenderer']
-  }
-  navbar: {
-    type: Ref<UserConfig['navbar']['type']>
-    navbarBlur: Ref<UserConfig['navbar']['navbarBlur']>
-  }
-  footer: {
-    type: Ref<UserConfig['footer']['type']>
-  }
-  verticalNav: {
-    isVerticalNavCollapsed: Ref<UserConfig['verticalNav']['isVerticalNavCollapsed']>
-    defaultNavItemIconProps: UserConfig['verticalNav']['defaultNavItemIconProps']
-  }
-  horizontalNav: {
-    type: Ref<UserConfig['horizontalNav']['type']>
-    transition?: UserConfig['horizontalNav']['transition']
-  }
-  icons: {
-    chevronDown: UserConfig['icons']['chevronDown']
-    chevronRight: UserConfig['icons']['chevronRight']
-    close: UserConfig['icons']['close']
-    verticalNavPinned: UserConfig['icons']['verticalNavPinned']
-    verticalNavUnPinned: UserConfig['icons']['verticalNavUnPinned']
-    sectionTitlePlaceholder: UserConfig['icons']['sectionTitlePlaceholder']
-  }
-}
-
-interface AclProperties {
+export interface AclProperties {
   action: string
   subject: string
 }
@@ -135,15 +97,16 @@ export declare type HorizontalNavItems = (NavLink | NavGroup)[]
 
 // 👉 Components ========================
 
-interface I18nLanguage {
+export interface I18nLanguage {
   label: string
   i18nLang: string
+  isRTL: boolean
 }
 
 // avatar | text | icon
 // Thanks: https://stackoverflow.com/a/60617060/10796681
-type Notification = {
-  id:number
+export type Notification = {
+  id: number
   title: string
   subtitle: string
   time: string
@@ -155,7 +118,7 @@ type Notification = {
   | { img?: never; text?: never; icon: string }
 )
 
-interface ThemeSwitcherTheme {
+export interface ThemeSwitcherTheme {
   name: string
   icon: string
 }

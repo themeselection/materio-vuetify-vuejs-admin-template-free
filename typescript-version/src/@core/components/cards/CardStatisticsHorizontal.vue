@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { kFormatter } from '@core/utils/formatters'
-
 interface Props {
   title: string
   color?: string

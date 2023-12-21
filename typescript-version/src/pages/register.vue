@@ -60,6 +60,7 @@ const isPasswordVisible = ref(false)
               <VTextField
                 v-model="form.username"
                 label="Username"
+                placeholder="Johndoe"
               />
             </VCol>
             <!-- email -->
@@ -67,6 +68,7 @@ const isPasswordVisible = ref(false)
               <VTextField
                 v-model="form.email"
                 label="Email"
+                placeholder="johndoe@email.com"
                 type="email"
               />
             </VCol>
@@ -76,6 +78,7 @@ const isPasswordVisible = ref(false)
               <VTextField
                 v-model="form.password"
                 label="Password"
+                placeholder="············"
                 :type="isPasswordVisible ? 'text' : 'password'"
                 :append-inner-icon="isPasswordVisible ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
                 @click:append-inner="isPasswordVisible = !isPasswordVisible"

@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-interface Props {
+const props = defineProps<{
   menuList?: unknown[]
   itemProps?: boolean
-}
-
-const props = defineProps<Props>()
+}>()
 </script>
 
 <template>

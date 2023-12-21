@@ -16,6 +16,8 @@ dist-ssr
 /cypress/videos/
 /cypress/screenshots/
 
+# 👉 Custom Git ignores
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -31,4 +33,11 @@ dist-ssr
 .yarn
 
 # iconify dist files
-src/@iconify/*.js
+src/plugins/iconify/icons.css
+
+# Ignore MSW script
+public/mockServiceWorker.js
+
+# Env files
+.env*
+!.env.example

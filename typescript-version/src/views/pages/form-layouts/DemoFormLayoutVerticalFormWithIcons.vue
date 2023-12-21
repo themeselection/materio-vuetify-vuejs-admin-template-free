@@ -14,7 +14,7 @@ const checkbox = ref(false)
           v-model="firstName"
           prepend-inner-icon="mdi-account-outline"
           label="First Name"
-          placeholder="First Name"
+          placeholder="John"
         />
       </VCol>
 
@@ -24,7 +24,7 @@ const checkbox = ref(false)
           prepend-inner-icon="mdi-email-outline"
           label="Email"
           type="email"
-          placeholder="Email"
+          placeholder="johndoe@example.com"
         />
       </VCol>
 
@@ -33,8 +33,8 @@ const checkbox = ref(false)
           v-model="mobile"
           prepend-inner-icon="mdi-cellphone"
           label="Mobile"
+          placeholder="+1 123 456 7890"
           type="number"
-          placeholder="Number"
         />
       </VCol>
 
@@ -43,8 +43,9 @@ const checkbox = ref(false)
           v-model="password"
           prepend-inner-icon="mdi-lock-outline"
           label="Password"
+          autocomplete="on"
           type="password"
-          placeholder="password"
+          placeholder="············"
         />
       </VCol>
 

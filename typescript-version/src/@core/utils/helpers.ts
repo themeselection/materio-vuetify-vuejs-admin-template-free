@@ -20,14 +20,13 @@ export const isEmptyArray = (arr: unknown): boolean => {
 export const isObject = (obj: unknown): obj is Record<string, unknown> =>
   obj !== null && !!obj && typeof obj === 'object' && !Array.isArray(obj)
 
+// 👉 IsToday
 export const isToday = (date: Date) => {
   const today = new Date()
 
   return (
-    /* eslint-disable operator-linebreak */
-    date.getDate() === today.getDate() &&
-    date.getMonth() === today.getMonth() &&
-    date.getFullYear() === today.getFullYear()
-    /* eslint-enable */
+    date.getDate() === today.getDate()
+    && date.getMonth() === today.getMonth()
+    && date.getFullYear() === today.getFullYear()
   )
 }
