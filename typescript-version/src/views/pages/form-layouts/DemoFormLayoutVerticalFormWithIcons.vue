@@ -43,6 +43,7 @@ const checkbox = ref(false)
           v-model="password"
           prepend-inner-icon="mdi-lock-outline"
           label="Password"
+          autocomplete="on"
           type="password"
           placeholder="············"
         />

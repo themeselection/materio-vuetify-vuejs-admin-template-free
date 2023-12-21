@@ -103,6 +103,7 @@ const checkbox = ref(false)
               id="passwordHorizontalIcons"
               v-model="password"
               prepend-inner-icon="mdi-lock-outline"
+              autocomplete="on"
               type="password"
               placeholder="············"
               persistent-placeholder

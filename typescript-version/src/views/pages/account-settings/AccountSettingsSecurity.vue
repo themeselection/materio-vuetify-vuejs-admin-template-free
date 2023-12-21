@@ -32,7 +32,6 @@ const serverKeys = [
     permission: 'Full Access',
   },
 ]
-
 const recentDevicesHeaders = [
   { title: 'BROWSER', key: 'browser' },
   { title: 'DEVICE', key: 'device' },
@@ -63,7 +62,7 @@ const recentDevices = [
     deviceIcon: { icon: 'mdi-android', color: 'success' },
   },
   {
-    browser: 'Chrome on MacOS',
+    browser: 'Chrome on macOS',
     device: 'Apple iMac',
     location: 'New York, NY',
     recentActivity: '28 Apr 2022, 18:20',
@@ -104,6 +103,7 @@ const recentDevices = [
                   v-model="currentPassword"
                   :type="isCurrentPasswordVisible ? 'text' : 'password'"
                   :append-inner-icon="isCurrentPasswordVisible ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
+                  autocomplete="on"
                   label="Current Password"
                   placeholder="············"
                   @click:append-inner="isCurrentPasswordVisible = !isCurrentPasswordVisible"
@@ -123,6 +123,7 @@ const recentDevices = [
                   :type="isNewPasswordVisible ? 'text' : 'password'"
                   :append-inner-icon="isNewPasswordVisible ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
                   label="New Password"
+                  autocomplete="on"
                   placeholder="············"
                   @click:append-inner="isNewPasswordVisible = !isNewPasswordVisible"
                 />
@@ -137,6 +138,7 @@ const recentDevices = [
                   v-model="confirmPassword"
                   :type="isConfirmPasswordVisible ? 'text' : 'password'"
                   :append-inner-icon="isConfirmPasswordVisible ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
+                  autocomplete="on"
                   label="Confirm New Password"
                   placeholder="············"
                   @click:append-inner="isConfirmPasswordVisible = !isConfirmPasswordVisible"
@@ -303,6 +305,7 @@ const recentDevices = [
     <VCol cols="12">
       <!-- 👉 Table -->
       <VCard title="Recent Devices">
+
         <VDataTable
           :headers="recentDevicesHeaders"
           :items="recentDevices"
@@ -313,17 +316,18 @@ const recentDevices = [
             <div class="d-flex">
               <VIcon
                 start
-                :icon="item.raw.deviceIcon.icon"
-                :color="item.raw.deviceIcon.color"
+                :icon="item.deviceIcon.icon"
+                :color="item.deviceIcon.color"
               />
               <span>
-                {{ item.raw.browser }}
+                {{ item.browser }}
               </span>
             </div>
           </template>
           <!-- TODO Refactor this after vuetify provides proper solution for removing default footer -->
           <template #bottom />
         </VDataTable>
+
       </VCard>
     </VCol>
     <!-- !SECTION -->

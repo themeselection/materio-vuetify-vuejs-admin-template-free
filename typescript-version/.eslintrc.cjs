@@ -11,6 +11,7 @@ module.exports = {
     'plugin:promise/recommended',
     'plugin:sonarjs/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:case-police/recommended',
 
     // 'plugin:unicorn/recommended',
   ],
@@ -25,7 +26,7 @@ module.exports = {
     '@typescript-eslint',
     'regex',
   ],
-  ignorePatterns: ['src/@iconify/*.js', 'node_modules', 'dist', '*.d.ts'],
+  ignorePatterns: ['src/plugins/iconify/*.js', 'node_modules', 'dist', '*.d.ts', 'vendor'],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -33,6 +34,8 @@ module.exports = {
     // indentation (Already present in TypeScript)
     'comma-spacing': ['error', { before: false, after: true }],
     'key-spacing': ['error', { afterColon: true }],
+    'n/prefer-global/process': ['off'],
+    'sonarjs/cognitive-complexity': ['off'],
 
     'vue/first-attribute-linebreak': ['error', {
       singleline: 'beside',
@@ -40,6 +43,7 @@ module.exports = {
     }],
 
     'antfu/top-level-function': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
 
     // indentation (Already present in TypeScript)
     'indent': ['error', 2],
@@ -49,6 +53,9 @@ module.exports = {
 
     // Enforce consistent spacing inside braces of object (Already present in TypeScript)
     'object-curly-spacing': ['error', 'always'],
+
+    // Enforce camelCase naming convention
+    'camelcase': 'error',
 
     // Disable max-len
     'max-len': 'off',
@@ -72,11 +79,14 @@ module.exports = {
         allowClassStart: true,
         allowObjectStart: true,
         allowArrayStart: true,
+
+        // We don't want to add extra space above closing SECTION
+        ignorePattern: '!SECTION',
       },
     ],
 
     // Ignore _ as unused variable
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
+    '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^_+$', argsIgnorePattern: '^_+$' }],
 
     'array-element-newline': ['error', 'consistent'],
     'array-bracket-newline': ['error', 'consistent'],
@@ -94,7 +104,10 @@ module.exports = {
     // Plugin: eslint-plugin-import
     'import/prefer-default-export': 'off',
     'import/newline-after-import': ['error', { count: 1 }],
-    'no-restricted-imports': ['error', 'vuetify/components'],
+    'no-restricted-imports': ['error', 'vuetify/components', {
+      name: 'vue3-apexcharts',
+      message: 'apexcharts are autoimported',
+    }],
 
     // For omitting extension for ts files
     'import/extensions': [
@@ -132,7 +145,7 @@ module.exports = {
     // ESLint plugin vue
     'vue/block-tag-newline': 'error',
     'vue/component-api-style': 'error',
-    'vue/component-name-in-template-casing': ['error', 'PascalCase', { registeredComponentsOnly: false }],
+    'vue/component-name-in-template-casing': ['error', 'PascalCase', { registeredComponentsOnly: false, ignores: ['/^swiper-/'] }],
     'vue/custom-event-name-casing': ['error', 'camelCase', {
       ignores: [
         '/^(click):[a-z]+((\d)|([A-Z0-9][a-z0-9]+))*([A-Z])?/',
@@ -146,8 +159,7 @@ module.exports = {
     'vue/no-child-content': 'error',
     'vue/require-default-prop': 'off',
 
-    // NOTE this rule only supported in SFC,  Users of the unplugin-vue-define-options should disable that rule: https://github.com/vuejs/eslint-plugin-vue/issues/1886
-    // 'vue/no-duplicate-attr-inheritance': 'error',
+    'vue/no-duplicate-attr-inheritance': 'error',
     'vue/no-empty-component-block': 'error',
     'vue/no-multiple-objects-in-class': 'error',
     'vue/no-reserved-component-names': 'error',
@@ -191,9 +203,9 @@ module.exports = {
           message: 'Use \'@images\' path alias for image imports',
         },
         {
-          regex: '@/styles',
+          regex: '@/assets/styles',
           replacement: '@styles',
-          message: 'Use \'@styles\' path alias for importing styles from \'src/styles\'',
+          message: 'Use \'@styles\' path alias for importing styles from \'src/assets/styles\'',
         },
 
         // {
@@ -219,14 +231,12 @@ module.exports = {
       ],
 
       // Ignore files
-      '\.eslintrc\.js',
+      '\.eslintrc\.cjs',
     ],
   },
   settings: {
     'import/resolver': {
-      node: {
-        extensions: ['.ts', '.js', '.tsx', '.jsx', '.mjs', '.png', '.jpg'],
-      },
+      node: true,
       typescript: {},
     },
   },

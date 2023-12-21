@@ -39,6 +39,7 @@ const checkbox = ref(false)
         <VTextField
           v-model="password"
           label="Password"
+          autocomplete="on"
           type="password"
           placeholder="············"
         />

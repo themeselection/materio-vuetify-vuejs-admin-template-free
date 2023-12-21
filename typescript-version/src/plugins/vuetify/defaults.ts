@@ -17,6 +17,10 @@ export default {
     // ℹ️ Remove after next release
     variant: 'flat',
   },
+
+  // VImg: {
+  //   eager: true,
+  // },
   VBadge: {
     // set v-badge default color to primary
     color: 'primary',
@@ -80,6 +84,9 @@ export default {
   },
   VProgressCircular: {
     // set v-progress-circular default color to primary
+    color: 'primary',
+  },
+  VProgressLinear: {
     color: 'primary',
   },
   VSlider: {

@@ -2,22 +2,12 @@
 import { useTheme } from 'vuetify'
 
 import NavItems from '@/layouts/components/NavItems.vue'
-import upgradeBannerDark from '@images/pro/upgrade-banner-dark.png'
-import upgradeBannerLight from '@images/pro/upgrade-banner-light.png'
 import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
 
 // Components
 import Footer from '@/layouts/components/Footer.vue'
 import NavbarThemeSwitcher from '@/layouts/components/NavbarThemeSwitcher.vue'
 import UserProfile from '@/layouts/components/UserProfile.vue'
-
-// Banner
-
-const vuetifyTheme = useTheme()
-
-const upgradeBanner = computed(() => {
-  return vuetifyTheme.global.name.value === 'light' ? upgradeBannerLight : upgradeBannerDark
-})
 </script>
 
 <template>
@@ -71,7 +61,7 @@ const upgradeBanner = computed(() => {
     </template>
 
     <template #vertical-nav-content>
-      <NavItems />
+      <NavItems></NavItems>
     </template>
 
     <!-- 👉 Pages -->

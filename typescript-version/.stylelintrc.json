@@ -1,34 +1,45 @@
 {
-    "extends": [
-        "stylelint-config-standard-scss",
-        "stylelint-config-idiomatic-order"
-    ],
-    "plugins": [
-        "stylelint-use-logical-spec"
-    ],
-    "overrides": [
-        {
-            "files": [
-                "**/*.scss"
-            ],
-            "customSyntax": "postcss-scss"
-        },
-        {
-            "files": [
-                "**/*.vue"
-            ],
-            "customSyntax": "postcss-html"
-        }
-    ],
-    "rules": {
-        "max-line-length": [
-            120,
-            {
-                "ignore": "comments"
-            }
-        ],
-        "liberty/use-logical-spec": true,
-        "selector-class-pattern": null,
-        "color-function-notation": null
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-idiomatic-order"
+  ],
+  "plugins": [
+    "stylelint-use-logical-spec",
+    "stylelint-codeguide"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/*.scss"
+      ],
+      "customSyntax": "postcss-scss"
+    },
+    {
+      "files": [
+        "**/*.vue"
+      ],
+      "customSyntax": "postcss-html"
     }
+  ],
+  "rules": {
+    "codeguide/max-line-length": [
+      120,
+      {
+        "ignore": "comments"
+      }
+    ],
+    "codeguide/indentation": 2,
+    "liberty/use-logical-spec": true,
+    "selector-class-pattern": null,
+    "color-function-notation": null,
+    "annotation-no-unknown": [
+      true,
+      {
+        "ignoreAnnotations": [
+          "default"
+        ]
+      }
+    ],
+    "media-feature-range-notation": null
+  }
 }

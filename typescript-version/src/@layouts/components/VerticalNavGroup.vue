@@ -49,17 +49,14 @@ const isOpen = ref(false)
       align-items: center;
       cursor: pointer;
     }
-
     .nav-group-children-wrapper {
       display: grid;
       grid-template-rows: 0fr;
       transition: grid-template-rows 0.3s ease-in-out;
-
       .nav-group-children {
         overflow: hidden;
       }
     }
-
     &.open {
       .nav-group-children-wrapper {
         grid-template-rows: 1fr;

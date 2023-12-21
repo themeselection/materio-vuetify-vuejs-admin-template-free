@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     padding: 1.25rem;
-    min-block-size: calc(var(--vh, 1vh) * 100);
+    min-block-size: 100dvh;
   }
 
   .misc-avatar {

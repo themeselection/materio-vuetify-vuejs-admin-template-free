@@ -2,7 +2,7 @@
 @use "@layouts/styles/mixins" as layoutsMixins;
 @use "@core/scss/base/mixins";
 
-.v-application .apexcharts-canvas {
+body .apexcharts-canvas {
   &line[stroke="transparent"] {
     display: "none";
   }

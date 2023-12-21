@@ -99,6 +99,7 @@ const checkbox = ref(false)
             <VTextField
               id="password"
               v-model="password"
+              autocomplete="on"
               type="password"
               placeholder="············"
               persistent-placeholder

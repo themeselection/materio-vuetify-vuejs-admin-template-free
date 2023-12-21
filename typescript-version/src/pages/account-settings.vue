@@ -1,9 +1,7 @@
 <script lang="ts" setup>
-import { useRoute } from 'vue-router'
-
-import AccountSettingsAccount from '@/views/pages/account-settings/AccountSettingsAccount.vue'
-import AccountSettingsNotification from '@/views/pages/account-settings/AccountSettingsNotification.vue'
-import AccountSettingsSecurity from '@/views/pages/account-settings/AccountSettingsSecurity.vue'
+import AccountSettingsAccount from '@/views/pages/account-settings/AccountSettingsAccount.vue';
+import AccountSettingsNotification from '@/views/pages/account-settings/AccountSettingsNotification.vue';
+import AccountSettingsSecurity from '@/views/pages/account-settings/AccountSettingsSecurity.vue';
 
 const route = useRoute()
 

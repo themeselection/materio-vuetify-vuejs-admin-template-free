@@ -1,6 +1,6 @@
 .layout-blank {
   .auth-wrapper {
-    min-block-size: calc(var(--vh, 1vh) * 100);
+    min-block-size: 100dvh;
   }
 
   .auth-card {
