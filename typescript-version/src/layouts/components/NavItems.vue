@@ -23,7 +23,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
     <VerticalNavLink
       :item="{
         title: 'CRM',
-        href: 'https://demos.themeselection.com/master-vuetify-vuejs-admin-template/dashboards/crm',
+        href: 'https://demos.themeselection.com/master-vuetify-vuejs-admin-template/demo-1/dashboards/crm',
         target: '_blank',
         badgeContent: 'PRO',
         badgeClass: 'bg-light-primary text-primary',
@@ -32,7 +32,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
     <VerticalNavLink
       :item="{
         title: 'ECommerce',
-        href: 'https://demos.themeselection.com/master-vuetify-vuejs-admin-template/dashboards/ecommerce',
+        href: 'https://demos.themeselection.com/master-vuetify-vuejs-admin-template/demo-1/dashboards/ecommerce',
         target: '_blank',
         badgeContent: 'PRO',
         badgeClass: 'bg-light-primary text-primary',
@@ -41,7 +41,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
     <VerticalNavLink
       :item="{
         title: 'Academy',
-        href: 'https://demos.themeselection.com/master-vuetify-vuejs-admin-template/dashboards/academy',
+        href: 'https://demos.themeselection.com/master-vuetify-vuejs-admin-template/demo-1/dashboards/academy',
         target: '_blank',
         badgeContent: 'PRO',
         badgeClass: 'bg-light-primary text-primary',
@@ -50,7 +50,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
     <VerticalNavLink
       :item="{
         title: 'Logistics',
-        href: 'https://demos.themeselection.com/master-vuetify-vuejs-admin-template/dashboards/logistics',
+        href: 'https://demos.themeselection.com/master-vuetify-vuejs-admin-template/demo-1/dashboards/logistics',
         target: '_blank',
         badgeContent: 'PRO',
         badgeClass: 'bg-light-primary text-primary',
