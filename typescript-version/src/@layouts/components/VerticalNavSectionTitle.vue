@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { NavSectionTitle } from '@layouts/types';
+import type { NavSectionTitle } from '@layouts/types'
 
 defineProps<{
   item: NavSectionTitle

@@ -26,6 +26,8 @@ const isPasswordVisible = ref(false)
 </script>
 
 <template>
+  <!-- eslint-disable vue/no-v-html -->
+
   <div class="auth-wrapper d-flex align-center justify-center pa-4">
     <VCard
       class="auth-card pa-4 pt-7"

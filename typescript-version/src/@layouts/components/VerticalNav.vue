@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import logo from '@images/logo.svg?raw'
 import type { Component } from 'vue'
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 import { useDisplay } from 'vuetify'
+import logo from '@images/logo.svg?raw'
 
 interface Props {
   tag?: string | Component
@@ -39,6 +39,7 @@ const handleNavScroll = (evt: Event) => {
 </script>
 
 <template>
+  <!-- eslint-disable vue/no-v-html -->
   <Component
     :is="props.tag"
     ref="refNav"
