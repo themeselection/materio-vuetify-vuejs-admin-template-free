@@ -20,7 +20,7 @@ const authProviders = [
     colorInDark: '#fff',
   },
   {
-    icon: 'bxl-linkedin',
+    icon: 'bxl-google',
     color: '#db4437',
     colorInDark: '#db4437',
   },
