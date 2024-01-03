@@ -87,4 +87,3 @@ const desserts = [
   color: rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity))
 }
 </style>
-

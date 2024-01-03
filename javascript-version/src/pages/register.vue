@@ -1,6 +1,6 @@
 <script setup>
-import AuthProvider from '@/views/pages/authentication/AuthProvider.vue'
 import { useTheme } from 'vuetify'
+import AuthProvider from '@/views/pages/authentication/AuthProvider.vue'
 import logo from '@images/logo.svg?raw'
 import authV1MaskDark from '@images/pages/auth-v1-mask-dark.png'
 import authV1MaskLight from '@images/pages/auth-v1-mask-light.png'
@@ -24,6 +24,8 @@ const isPasswordVisible = ref(false)
 </script>
 
 <template>
+  <!-- eslint-disable vue/no-v-html -->
+
   <div class="auth-wrapper d-flex align-center justify-center pa-4">
     <VCard
       class="auth-card pa-4 pt-7"
@@ -58,6 +60,7 @@ const isPasswordVisible = ref(false)
               <VTextField
                 v-model="form.username"
                 label="Username"
+                placeholder="Johndoe"
               />
             </VCol>
             <!-- email -->
@@ -65,6 +68,7 @@ const isPasswordVisible = ref(false)
               <VTextField
                 v-model="form.email"
                 label="Email"
+                placeholder="johndoe@email.com"
                 type="email"
               />
             </VCol>
@@ -74,8 +78,9 @@ const isPasswordVisible = ref(false)
               <VTextField
                 v-model="form.password"
                 label="Password"
+                placeholder="············"
                 :type="isPasswordVisible ? 'text' : 'password'"
-                :append-inner-icon="isPasswordVisible ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
+                :append-inner-icon="isPasswordVisible ? 'ri-eye-off-line' : 'ri-eye-line'"
                 @click:append-inner="isPasswordVisible = !isPasswordVisible"
               />
               <div class="d-flex align-center mt-1 mb-4">

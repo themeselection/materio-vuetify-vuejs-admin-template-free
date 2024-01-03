@@ -11,17 +11,17 @@ const activeTab = ref(route.params.tab)
 const tabs = [
   {
     title: 'Account',
-    icon: 'mdi-account-outline',
+    icon: 'ri-group-line',
     tab: 'account',
   },
   {
     title: 'Security',
-    icon: 'mdi-lock-open-outline',
+    icon: 'ri-lock-line',
     tab: 'security',
   },
   {
     title: 'Notifications',
-    icon: 'mdi-bell-outline',
+    icon: 'ri-notification-3-line',
     tab: 'notification',
   },
 ]
@@ -46,7 +46,6 @@ const tabs = [
         {{ item.title }}
       </VTab>
     </VTabs>
-    <VDivider />
 
     <VWindow
       v-model="activeTab"

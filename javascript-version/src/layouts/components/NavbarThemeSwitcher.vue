@@ -2,11 +2,11 @@
 const themes = [
   {
     name: 'light',
-    icon: 'mdi-weather-sunny',
+    icon: 'ri-sun-line',
   },
   {
     name: 'dark',
-    icon: 'mdi-weather-night',
+    icon: 'ri-moon-clear-line',
   },
 ]
 </script>

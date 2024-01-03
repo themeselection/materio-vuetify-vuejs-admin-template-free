@@ -1,6 +1,10 @@
 @use "sass:map";
 @use "@core/scss/base";
 
+// layouts
+@use "vertical-nav";
+@use "default-layout-w-vertical-nav";
+
 // Components
 @use "components";
 

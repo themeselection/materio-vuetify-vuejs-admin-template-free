@@ -26,7 +26,7 @@ const checkbox = ref(false)
             <VTextField
               id="firstNameHorizontalIcons"
               v-model="firstName"
-              prepend-inner-icon="mdi-account-outline"
+              prepend-inner-icon="ri-user-line"
               placeholder="First Name"
               persistent-placeholder
             />
@@ -51,7 +51,7 @@ const checkbox = ref(false)
             <VTextField
               id="emailHorizontalIcons"
               v-model="email"
-              prepend-inner-icon="mdi-email-outline"
+              prepend-inner-icon="ri-mail-line"
               placeholder="Email"
               persistent-placeholder
             />
@@ -77,7 +77,7 @@ const checkbox = ref(false)
               id="mobileHorizontalIcons"
               v-model="mobile"
               type="number"
-              prepend-inner-icon="mdi-cellphone"
+              prepend-inner-icon="ri-smartphone-line"
               placeholder="Number"
               persistent-placeholder
             />
@@ -102,7 +102,7 @@ const checkbox = ref(false)
             <VTextField
               id="passwordHorizontalIcons"
               v-model="password"
-              prepend-inner-icon="mdi-lock-outline"
+              prepend-inner-icon="ri-lock-line"
               type="password"
               placeholder="Password"
               persistent-placeholder
@@ -136,7 +136,7 @@ const checkbox = ref(false)
         <VBtn
           color="secondary"
           type="reset"
-          variant="tonal"
+          variant="outlined"
         >
           Reset
         </VBtn>

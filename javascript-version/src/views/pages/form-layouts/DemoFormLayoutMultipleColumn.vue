@@ -19,7 +19,7 @@ const checkbox = ref(false)
         <VTextField
           v-model="firstName"
           label="First Name"
-          placeholder="First Name"
+          placeholder="John"
         />
       </VCol>
 
@@ -31,7 +31,7 @@ const checkbox = ref(false)
         <VTextField
           v-model="lastName"
           label="Last Name"
-          placeholder="Last Name"
+          placeholder="Doe"
         />
       </VCol>
 
@@ -43,7 +43,7 @@ const checkbox = ref(false)
         <VTextField
           v-model="email"
           label="Email"
-          placeholder="Email"
+          placeholder="johndoe@email.com"
         />
       </VCol>
 
@@ -55,7 +55,7 @@ const checkbox = ref(false)
         <VTextField
           v-model="city"
           label="City"
-          placeholder="City"
+          placeholder="New York"
         />
       </VCol>
 
@@ -67,7 +67,7 @@ const checkbox = ref(false)
         <VTextField
           v-model="country"
           label="Country"
-          placeholder="Country"
+          placeholder="United States"
         />
       </VCol>
 
@@ -79,7 +79,7 @@ const checkbox = ref(false)
         <VTextField
           v-model="company"
           label="Company"
-          placeholder="Company"
+          placeholder="Pixinvent"
         />
       </VCol>
 
@@ -102,7 +102,7 @@ const checkbox = ref(false)
         <VBtn
           type="reset"
           color="secondary"
-          variant="tonal"
+          variant="outlined"
         >
           Reset
         </VBtn>

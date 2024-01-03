@@ -121,7 +121,7 @@ const currencies = [
                 @click="refInputEl?.click()"
               >
                 <VIcon
-                  icon="mdi-cloud-upload-outline"
+                  icon="ri-upload-cloud-line"
                   class="d-sm-none"
                 />
                 <span class="d-none d-sm-block">Upload new photo</span>
@@ -139,12 +139,12 @@ const currencies = [
               <VBtn
                 type="reset"
                 color="error"
-                variant="tonal"
+                variant="outlined"
                 @click="resetAvatar"
               >
                 <span class="d-none d-sm-block">Reset</span>
                 <VIcon
-                  icon="mdi-refresh"
+                  icon="ri-refresh-line"
                   class="d-sm-none"
                 />
               </VBtn>
@@ -169,6 +169,7 @@ const currencies = [
               >
                 <VTextField
                   v-model="accountDataLocal.firstName"
+                  placeholder="John"
                   label="First Name"
                 />
               </VCol>
@@ -180,6 +181,7 @@ const currencies = [
               >
                 <VTextField
                   v-model="accountDataLocal.lastName"
+                  placeholder="Doe"
                   label="Last Name"
                 />
               </VCol>
@@ -192,6 +194,7 @@ const currencies = [
                 <VTextField
                   v-model="accountDataLocal.email"
                   label="E-mail"
+                  placeholder="johndoe@gmail.com"
                   type="email"
                 />
               </VCol>
@@ -204,6 +207,7 @@ const currencies = [
                 <VTextField
                   v-model="accountDataLocal.org"
                   label="Organization"
+                  placeholder="ThemeSelection"
                 />
               </VCol>
 
@@ -215,6 +219,7 @@ const currencies = [
                 <VTextField
                   v-model="accountDataLocal.phone"
                   label="Phone Number"
+                  placeholder="+1 (917) 543-9876"
                 />
               </VCol>
 
@@ -226,6 +231,7 @@ const currencies = [
                 <VTextField
                   v-model="accountDataLocal.address"
                   label="Address"
+                  placeholder="123 Main St, New York, NY 10001"
                 />
               </VCol>
 
@@ -237,6 +243,7 @@ const currencies = [
                 <VTextField
                   v-model="accountDataLocal.state"
                   label="State"
+                  placeholder="New York"
                 />
               </VCol>
 
@@ -248,6 +255,7 @@ const currencies = [
                 <VTextField
                   v-model="accountDataLocal.zip"
                   label="Zip Code"
+                  placeholder="10001"
                 />
               </VCol>
 
@@ -260,6 +268,7 @@ const currencies = [
                   v-model="accountDataLocal.country"
                   label="Country"
                   :items="['USA', 'Canada', 'UK', 'India', 'Australia']"
+                  placeholder="Select Country"
                 />
               </VCol>
 
@@ -271,6 +280,7 @@ const currencies = [
                 <VSelect
                   v-model="accountDataLocal.language"
                   label="Language"
+                  placeholder="Select Language"
                   :items="['English', 'Spanish', 'Arabic', 'Hindi', 'Urdu']"
                 />
               </VCol>
@@ -283,6 +293,7 @@ const currencies = [
                 <VSelect
                   v-model="accountDataLocal.timezone"
                   label="Timezone"
+                  placeholder="Select Timezone"
                   :items="timezones"
                   :menu-props="{ maxHeight: 200 }"
                 />
@@ -296,6 +307,7 @@ const currencies = [
                 <VSelect
                   v-model="accountDataLocal.currency"
                   label="Currency"
+                  placeholder="Select Currency"
                   :items="currencies"
                   :menu-props="{ maxHeight: 200 }"
                 />
@@ -310,7 +322,7 @@ const currencies = [
 
                 <VBtn
                   color="secondary"
-                  variant="tonal"
+                  variant="outlined"
                   type="reset"
                   @click.prevent="resetForm"
                 >

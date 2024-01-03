@@ -1,14 +1,17 @@
 <script setup>
 const props = defineProps({
-  errorCode: {
+  statusCode: {
+    type: [
+      String,
+      Number,
+    ],
+    required: false,
+  },
+  title: {
     type: String,
     required: false,
   },
-  errorTitle: {
-    type: String,
-    required: false,
-  },
-  errorDescription: {
+  description: {
     type: String,
     required: false,
   },
@@ -19,19 +22,19 @@ const props = defineProps({
   <div class="text-center mb-4">
     <!-- 👉 Title and subtitle -->
     <h1
-      v-if="props.errorCode"
+      v-if="props.statusCode"
       class="text-h1 font-weight-medium"
     >
-      {{ props.errorCode }}
+      {{ props.statusCode }}
     </h1>
     <h5
-      v-if="props.errorTitle"
+      v-if="props.title"
       class="text-h5 font-weight-medium mb-3"
     >
-      {{ props.errorTitle }}
+      {{ props.title }}
     </h5>
-    <p v-if="props.errorDescription">
-      {{ props.errorDescription }}
+    <p v-if="props.description">
+      {{ props.description }}
     </p>
   </div>
 </template>

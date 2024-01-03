@@ -3,75 +3,76 @@ const statistics = [
   {
     title: 'Sales',
     stats: '245k',
-    icon: 'mdi-trending-up',
+    icon: 'ri-pie-chart-2-line',
     color: 'primary',
   },
   {
     title: 'Customers',
     stats: '12.5k',
-    icon: 'mdi-account-outline',
+    icon: 'ri-group-line',
     color: 'success',
   },
   {
     title: 'Product',
     stats: '1.54k',
-    icon: 'mdi-cellphone-link',
+    icon: 'ri-macbook-line',
     color: 'warning',
   },
   {
     title: 'Revenue',
     stats: '$88k',
-    icon: 'mdi-currency-usd',
+    icon: 'ri-money-dollar-circle-line',
     color: 'info',
   },
 ]
 </script>
 
 <template>
-  <VCard>
-    <VCardItem>
-      <VCardTitle>Transactions</VCardTitle>
+  <VCard title="Transactions">
+    <template #subtitle>
+      <p class="text-body-1 mb-0">
+        <span class="d-inline-block font-weight-medium text-high-emphasis">Total 48.5% Growth</span> <span class="text-high-emphasis">😎</span> this month
+      </p>
+    </template>
 
-      <template #append>
-        <div class="me-n3">
-          <MoreBtn />
-        </div>
-      </template>
-    </VCardItem>
+    <template #append>
+      <IconBtn class="mt-n5">
+        <VIcon
+          color="high-emphasis"
+          icon="ri-more-2-line"
+        />
+      </IconBtn>
+    </template>
 
-    <VCardText>
-      <h6 class="text-sm font-weight-medium mb-12">
-        <span>Total 48.5% Growth 😎</span>
-        <span class="font-weight-regular"> this month</span>
-      </h6>
-
+    <VCardText class="pt-10">
       <VRow>
         <VCol
           v-for="item in statistics"
           :key="item.title"
-          cols="6"
-          sm="3"
+          cols="12"
+          sm="6"
+          md="3"
         >
-          <div class="d-flex align-center">
-            <div class="me-3">
-              <VAvatar
-                :color="item.color"
-                rounded
-                size="42"
-                class="elevation-1"
-              >
-                <VIcon
-                  size="24"
-                  :icon="item.icon"
-                />
-              </VAvatar>
-            </div>
+          <div class="d-flex align-center gap-x-3">
+            <VAvatar
+              :color="item.color"
+              rounded
+              size="40"
+              class="elevation-2"
+            >
+              <VIcon
+                size="24"
+                :icon="item.icon"
+              />
+            </VAvatar>
 
             <div class="d-flex flex-column">
-              <span class="text-caption">
+              <div class="text-body-1">
                 {{ item.title }}
-              </span>
-              <span class="text-h6">{{ item.stats }}</span>
+              </div>
+              <h5 class="text-h5">
+                {{ item.stats }}
+              </h5>
             </div>
           </div>
         </VCol>

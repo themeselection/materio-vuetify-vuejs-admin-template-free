@@ -40,23 +40,26 @@ const earnings = [
       </template>
     </VCardItem>
 
-    <VCardText class="pt-4">
+    <VCardText>
       <div class="d-flex align-center">
-        <h4 class="text-h4 me-2">
+        <h3 class="text-h3">
           $24,895
-        </h4>
+        </h3>
 
-        <span class="text-success">
-          <VIcon
-            size="30"
-            icon="mdi-menu-up"
-          />
-          <span>10%</span>
-        </span>
+        <VIcon
+          size="24"
+          icon="ri-arrow-up-s-line"
+          color="success"
+        />
+        <div class="text-success">
+          10%
+        </div>
       </div>
-      <span class="text-xs">Compared to $84,325 last year</span>
+      <div class="text-body-1 mb-12">
+        Compared to $84,325 last year
+      </div>
 
-      <VList class="card-list mt-9">
+      <VList class="card-list">
         <VListItem
           v-for="earning in earnings"
           :key="earning.title"
@@ -65,24 +68,27 @@ const earnings = [
             <VAvatar
               rounded
               :image="earning.avatar"
+              variant="tonal"
             />
           </template>
 
-          <VListItemTitle class="text-sm font-weight-medium mb-1">
+          <VListItemTitle class="font-weight-medium">
             {{ earning.title }}
           </VListItemTitle>
-          <VListItemSubtitle class="text-xs">
+          <VListItemSubtitle class="text-body-1">
             {{ earning.subtitle }}
           </VListItemSubtitle>
 
           <template #append>
             <div>
-              <h6 class="text-sm font-weight-medium mb-2">
+              <h6 class="text-h6 mb-2">
                 {{ earning.amount }}
               </h6>
               <VProgressLinear
                 :color="earning.progress"
                 model-value="80"
+                rounded-bar
+                rounded
               />
             </div>
           </template>
@@ -94,6 +100,6 @@ const earnings = [
 
 <style lang="scss" scoped>
 .card-list {
-  --v-card-list-gap: 2.625rem;
+  --v-card-list-gap: 1.5rem;
 }
 </style>

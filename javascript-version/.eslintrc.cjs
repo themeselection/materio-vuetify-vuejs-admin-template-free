@@ -9,6 +9,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:promise/recommended',
     'plugin:sonarjs/recommended',
+    'plugin:case-police/recommended',
 
     // 'plugin:unicorn/recommended',
   ],
@@ -21,7 +22,7 @@ module.exports = {
     'vue',
     'regex',
   ],
-  ignorePatterns: ['src/@iconify/*.js', 'node_modules', 'dist'],
+  ignorePatterns: ['src/plugins/iconify/*.js', 'node_modules', 'dist', '*.d.ts', 'vendor'],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -29,6 +30,8 @@ module.exports = {
     // indentation (Already present in TypeScript)
     'comma-spacing': ['error', { before: false, after: true }],
     'key-spacing': ['error', { afterColon: true }],
+    'n/prefer-global/process': ['off'],
+    'sonarjs/cognitive-complexity': ['off'],
 
     'vue/first-attribute-linebreak': ['error', {
       singleline: 'beside',
@@ -44,6 +47,9 @@ module.exports = {
 
     // Enforce consistent spacing inside braces of object (Already present in TypeScript)
     'object-curly-spacing': ['error', 'always'],
+
+    // Enforce camelCase naming convention
+    'camelcase': 'error',
 
     // Disable max-len
     'max-len': 'off',
@@ -67,6 +73,9 @@ module.exports = {
         allowClassStart: true,
         allowObjectStart: true,
         allowArrayStart: true,
+
+        // We don't want to add extra space above closing SECTION
+        ignorePattern: '!SECTION',
       },
     ],
 
@@ -88,7 +97,10 @@ module.exports = {
     // Plugin: eslint-plugin-import
     'import/prefer-default-export': 'off',
     'import/newline-after-import': ['error', { count: 1 }],
-    'no-restricted-imports': ['error', 'vuetify/components'],
+    'no-restricted-imports': ['error', 'vuetify/components', {
+      name: 'vue3-apexcharts',
+      message: 'apexcharts are autoimported',
+    }],
 
     // For omitting extension for ts files
     'import/extensions': [
@@ -124,7 +136,7 @@ module.exports = {
     // ESLint plugin vue
     'vue/block-tag-newline': 'error',
     'vue/component-api-style': 'error',
-    'vue/component-name-in-template-casing': ['error', 'PascalCase', { registeredComponentsOnly: false }],
+    'vue/component-name-in-template-casing': ['error', 'PascalCase', { registeredComponentsOnly: false, ignores: ['/^swiper-/'] }],
     'vue/custom-event-name-casing': ['error', 'camelCase', {
       ignores: [
         '/^(click):[a-z]+((\d)|([A-Z0-9][a-z0-9]+))*([A-Z])?/',
@@ -138,8 +150,7 @@ module.exports = {
     'vue/no-child-content': 'error',
     'vue/require-default-prop': 'off',
 
-    // NOTE this rule only supported in SFC,  Users of the unplugin-vue-define-options should disable that rule: https://github.com/vuejs/eslint-plugin-vue/issues/1886
-    // 'vue/no-duplicate-attr-inheritance': 'error',
+    'vue/no-duplicate-attr-inheritance': 'error',
     'vue/no-empty-component-block': 'error',
     'vue/no-multiple-objects-in-class': 'error',
     'vue/no-reserved-component-names': 'error',
@@ -171,6 +182,8 @@ module.exports = {
     //   },
     // }],
 
+    // Internal Rules
+
     // https://github.com/gmullerb/eslint-plugin-regex
     'regex/invalid': [
       'error',
@@ -181,16 +194,16 @@ module.exports = {
           message: 'Use \'@images\' path alias for image imports',
         },
         {
-          regex: '@/styles',
+          regex: '@/assets/styles',
           replacement: '@styles',
-          message: 'Use \'@styles\' path alias for importing styles from \'src/styles\'',
+          message: 'Use \'@styles\' path alias for importing styles from \'src/assets/styles\'',
         },
 
-        // {
-        //   id: 'Disallow icon of icon library',
-        //   regex: 'tabler-\\w',
-        //   message: 'Only \'mdi\' icons are allowed',
-        // },
+        {
+          id: 'Disallow icon of icon library',
+          regex: 'mdi-\\w',
+          message: 'Only \'remix\' icons are allowed',
+        },
 
         {
           regex: '@core/\\w',
@@ -206,25 +219,33 @@ module.exports = {
             inspect: '^(?!.*(@core|@layouts)).*',
           },
         },
-        {
-          regex: 'import axios from \'axios\'',
-          replacement: 'import axios from \'@axios\'',
-          message: 'Use axios instances created in \'src/plugin/axios.js\' instead of unconfigured axios',
-          files: {
-            ignore: '^.*plugins/axios.js.*',
-          },
-        },
       ],
 
       // Ignore files
-      '\.eslintrc\.js',
+      '\.eslintrc\.cjs',
     ],
   },
   settings: {
     'import/resolver': {
-      node: {
-        extensions: ['.js', '.js', '.jsx', '.jsx', '.mjs', '.png', '.jpg'],
-      }, alias: { 'extensions': ['.ts', '.js', '.tsx', '.jsx', '.mjs'], 'map': [["@", "./src"], ["@core", "./src/@core"], ["@layouts", "./src/@layouts"], ["@images", "./src/assets/images/"], ["@styles", "./src/styles/"], ["@configured-variables", "./src/styles/variables/_template.scss"], ["@axios", "./src/plugins/axios"], ["apexcharts", "node_modules/apexcharts-clevision"]] },
+      node: true,
+      'eslint-import-resolver-custom-alias': {
+        'alias': {
+          "@": "./src",
+          "@core": "./src/@core",
+          "@layouts": "./src/@layouts",
+          "@images": "./src/assets/images/",
+          "@styles": "./src/assets/styles/",
+          "@configured-variables": "./src/assets/styles/variables/_template.scss",
+        },
+        'extensions': [
+          '.ts',
+          '.js',
+          '.tsx',
+          '.jsx',
+          '.mjs',
+        ],
+      },
+      typescript: {},
     },
   },
 }

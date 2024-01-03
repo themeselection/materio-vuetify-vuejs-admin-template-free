@@ -12,7 +12,7 @@ const checkbox = ref(false)
       <VCol cols="12">
         <VTextField
           v-model="firstName"
-          prepend-inner-icon="mdi-account-outline"
+          prepend-inner-icon="ri-user-line"
           label="First Name"
           placeholder="First Name"
         />
@@ -21,7 +21,7 @@ const checkbox = ref(false)
       <VCol cols="12">
         <VTextField
           v-model="email"
-          prepend-inner-icon="mdi-email-outline"
+          prepend-inner-icon="ri-mail-line"
           label="Email"
           type="email"
           placeholder="Email"
@@ -31,7 +31,7 @@ const checkbox = ref(false)
       <VCol cols="12">
         <VTextField
           v-model="mobile"
-          prepend-inner-icon="mdi-cellphone"
+          prepend-inner-icon="ri-smartphone-line"
           label="Mobile"
           type="number"
           placeholder="Number"
@@ -41,7 +41,7 @@ const checkbox = ref(false)
       <VCol cols="12">
         <VTextField
           v-model="password"
-          prepend-inner-icon="mdi-lock-outline"
+          prepend-inner-icon="ri-lock-line"
           label="Password"
           type="password"
           placeholder="password"
@@ -66,7 +66,7 @@ const checkbox = ref(false)
         <VBtn
           color="secondary"
           type="reset"
-          variant="tonal"
+          variant="outlined"
         >
           Reset
         </VBtn>

@@ -1,7 +1,8 @@
 @use "mixins";
-@use "vuetify/lib/styles/tools/_elevation" as mixins_elevation;
 @use "@layouts/styles/placeholders";
+@use "@layouts/styles/mixins" as layoutMixins;
 @use "@configured-variables" as variables;
+@use "@styles/variables/_vuetify.scss" as vuetify;
 
 // 👉 Avatar group
 .v-avatar-group {
@@ -65,6 +66,18 @@
   }
 }
 
+// 👉 Datatable
+.v-data-table-footer__pagination {
+  @include layoutMixins.rtl {
+    .v-btn {
+      .v-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+
 // Dialog responsive width
 .v-dialog {
   // dialog custom close btn
@@ -72,8 +85,8 @@
     position: absolute;
     z-index: 1;
     color: rgba(var(--v-theme-on-surface), var(--v-disabled-opacity)) !important;
-    inset-block-start: 0.9375rem;
-    inset-inline-end: 0.9375rem;
+    inset-block-start: 0.5rem;
+    inset-inline-end: 0.5rem;
 
     .v-btn__overlay {
       display: none;
@@ -116,8 +129,23 @@
   }
 }
 
-// v-tab with pill support
+// 👉 Expansion panel
+.v-expansion-panels.customized-panels {
+  border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
+  border-radius: vuetify.$border-radius-root;
 
+  .v-expansion-panel-title {
+    background-color: rgb(var(--v-theme-expansion-panel-text-custom-bg));
+    border-block-end: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
+    margin-block-end: -1px;
+  }
+
+  .v-expansion-panel-text__wrapper {
+    padding: 20px;
+  }
+}
+
+// v-tab with pill support
 .v-tabs.v-tabs-pill {
   .v-tab.v-btn {
     border-radius: 0.25rem !important;
@@ -148,10 +176,7 @@
   }
 }
 
-// 👉 Textarea
-
-.v-textarea .v-field__input {
-  /* stylelint-disable-next-line property-no-vendor-prefix */
-  -webkit-mask-image: none !important;
-  mask-image: none !important;
+// 👉 Switch
+.v-switch .v-selection-control:not(.v-selection-control--dirty) .v-switch__thumb {
+  color: #fff !important;
 }

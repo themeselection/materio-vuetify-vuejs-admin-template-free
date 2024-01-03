@@ -83,7 +83,7 @@ const isCardDetailsVisible = ref(false)
                 v-for="avatar in avatars"
                 :key="avatar"
                 :image="avatar"
-                size="45"
+                size="40"
               />
             </div>
           </div>
@@ -120,7 +120,7 @@ const isCardDetailsVisible = ref(false)
             size="small"
             @click="isCardDetailsVisible = !isCardDetailsVisible"
           >
-            <VIcon :icon="isCardDetailsVisible ? 'mdi-chevron-up' : 'mdi-chevron-down'" />
+            <VIcon :icon="isCardDetailsVisible ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line'" />
           </VBtn>
         </VCardActions>
 
@@ -167,13 +167,13 @@ const isCardDetailsVisible = ref(false)
 
             <VCardActions class="justify-space-between">
               <VBtn>
-                <VIcon icon="mdi-cart-plus" />
+                <VIcon icon="ri-shopping-cart-line" />
                 <span class="ms-2">Add to cart</span>
               </VBtn>
 
               <VBtn
                 color="secondary"
-                icon="mdi-share-variant-outline"
+                icon="ri-share-line"
               />
             </VCardActions>
           </div>
@@ -289,7 +289,7 @@ const isCardDetailsVisible = ref(false)
                 <p class="d-flex align-center mb-6">
                   <VIcon
                     color="primary"
-                    icon="mdi-lock-open-outline"
+                    icon="ri-lock-unlock-line"
                   />
                   <span class="ms-3">Full Access</span>
                 </p>
@@ -297,7 +297,8 @@ const isCardDetailsVisible = ref(false)
                 <p class="d-flex align-center mb-0">
                   <VIcon
                     color="primary"
-                    icon="mdi-account-outline"
+
+                    icon="ri-user-line"
                   />
                   <span class="ms-3">15 Members</span>
                 </p>
@@ -313,7 +314,7 @@ const isCardDetailsVisible = ref(false)
                 <p class="d-flex align-center mb-6">
                   <VIcon
                     color="primary"
-                    icon="mdi-star-outline"
+                    icon="ri-star-line"
                   />
                   <span class="ms-3">Access all Features</span>
                 </p>
@@ -321,7 +322,7 @@ const isCardDetailsVisible = ref(false)
                 <p class="d-flex align-center mb-0">
                   <VIcon
                     color="primary"
-                    icon="mdi-trending-up"
+                    icon="ri-pie-chart-2-line"
                   />
                   <span class="ms-3">Lifetime Free Update</span>
                 </p>
@@ -421,13 +422,13 @@ const isCardDetailsVisible = ref(false)
         <VCardText class="d-flex flex-column justify-center align-center">
           <VAvatar
             color="primary"
-            variant="tonal"
+            variant="outlined"
             size="50"
             class="mb-4"
           >
             <VIcon
               size="2rem"
-              icon="mdi-help-circle-outline"
+              icon="ri-question-line"
             />
           </VAvatar>
 

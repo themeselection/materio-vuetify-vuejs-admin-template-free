@@ -6,7 +6,7 @@
       {{ new Date().getFullYear() }}
       Made With
       <VIcon
-        icon="mdi-heart-outline"
+        icon="ri-heart-line"
         color="error"
         size="1.25rem"
         class="mx-1"

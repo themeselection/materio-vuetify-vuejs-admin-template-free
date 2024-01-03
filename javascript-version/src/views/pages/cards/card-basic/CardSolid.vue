@@ -7,7 +7,7 @@ const solidCardData = [
   {
     cardBg: '#16B1FF',
     title: 'Twitter Card',
-    icon: 'mdi-twitter',
+    icon: 'ri-twitter-line',
     text: '"Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."',
     avatarImg: avatar4,
     avatarName: 'Mary Vaughn',
@@ -17,7 +17,7 @@ const solidCardData = [
   {
     cardBg: '#3B5998',
     title: 'Facebook Card',
-    icon: 'mdi-facebook',
+    icon: 'ri-facebook-circle-line',
     text: 'You\'ve read about the importance of being courageous, rebellious and imaginative. These are all vital ingredients.',
     avatarImg: avatar1,
     avatarName: 'Eugene Clarke',
@@ -26,8 +26,8 @@ const solidCardData = [
   },
   {
     cardBg: '#007BB6',
-    title: 'Linkedin Card',
-    icon: 'mdi-linkedin',
+    title: 'LinkedIn Card',
+    icon: 'ri-linkedin-box-line',
     text: 'With the Internet spreading like wildfire and reaching every part of our daily life, more and more traffic is directed.',
     avatarImg: avatar8,
     avatarName: 'Anne Burke1',
@@ -77,14 +77,14 @@ const solidCardData = [
 
           <div class="d-flex align-center">
             <IconBtn
-              icon="mdi-heart"
+              icon="ri-heart-line"
               color="white"
               class="me-1"
             />
             <span class="text-subtitle-2 text-white me-4">{{ data.likes }}</span>
 
             <IconBtn
-              icon="mdi-share-variant"
+              icon="ri-share-line"
               color="white"
               class="me-1"
             />

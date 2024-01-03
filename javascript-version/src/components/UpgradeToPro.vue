@@ -1,12 +1,14 @@
 <template>
-  <VBtn
+  <a
     color="error"
-    class="product-upgrade-to-pro"
+    class="buy-now-button"
     href="https://themeselection.com/item/materio-vuetify-vuejs-admin-template/"
     target="_blank"
     rel="noopener noreferrer"
   >
     Upgrade to Pro
+
+    <span class="button-inner" />
 
     <VMenu
       open-on-hover
@@ -17,7 +19,7 @@
       transition="slide-y-reverse-transition"
     >
       <VCard>
-        <VImg src="https://cdn.jsdelivr.net/gh/themeselection/ts-assets/materio/materio-vuetify-vuejs-admin-template-free/banner/materio-vuetify-vuejs-admin-template-free.png" />
+        <VImg src="https://cdn.jsdelivr.net/gh/themeselection/ts-assets/materio/materio-vuetify-vuejs-admin-template/banner/banner.png" />
         <VCardTitle>Materio - Vuetify Admin Template</VCardTitle>
         <VCardText>
           Materio Admin is the most developer friendly & highly customisable Admin Dashboard Template based on Vuetify.
@@ -43,24 +45,74 @@
         </VCardText>
       </VCard>
     </VMenu>
-  </VBtn>
+  </a>
 </template>
 
 <style lang="scss" scoped>
-.product-upgrade-to-pro {
-  position: fixed;
+.buy-now-button,
+.button-inner {
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 6px;
+  margin: 0;
+  animation: anime 12s linear infinite;
+  appearance: none;
+  background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
+  background-size: 600%;
+  color: rgba(255, 255, 255, 90%);
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.43px;
+  line-height: 1.2;
+  min-inline-size: 50px;
+  outline: 0;
+  padding-block: 0.625rem;
+  padding-inline: 1.25rem;
+  text-decoration: none;
+  text-transform: none;
+  vertical-align: middle;
+}
 
-  // To keep upgrade to pro button on top of v-layout
+.buy-now-button {
+  position: fixed;
   z-index: 999;
   inset-block-end: 5%;
   inset-inline-end: 79px;
 
-  .v-application &.v-btn.v-btn--elevated {
-    box-shadow: 0 1px 20px 1px rgb(var(--v-theme-error)) !important;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
 
-    &:hover {
-      box-shadow: none !important;
-    }
+  .button-inner {
+    position: absolute;
+    z-index: -1;
+    filter: blur(12px);
+    inset: 0;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+  }
+
+  &:not(:hover) .button-inner {
+    opacity: 0.8;
+  }
+}
+
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
 </style>

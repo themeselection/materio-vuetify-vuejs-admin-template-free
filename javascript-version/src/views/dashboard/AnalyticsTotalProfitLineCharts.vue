@@ -1,11 +1,10 @@
+<!-- eslint-disable no-restricted-imports -->
 <script setup>
-import { hexToRgb } from '@layouts/utils'
 import VueApexCharts from 'vue3-apexcharts'
 import { useTheme } from 'vuetify'
+import { hexToRgb } from '@layouts/utils'
 
 const vuetifyTheme = useTheme()
-const currentTheme = controlledComputed(() => vuetifyTheme.name.value, () => vuetifyTheme.current.value.colors)
-const variableTheme = controlledComputed(() => vuetifyTheme.name.value, () => vuetifyTheme.current.value.variables)
 
 const series = [{
   data: [
@@ -18,7 +17,10 @@ const series = [{
   ],
 }]
 
-const chartOptions = controlledComputed(() => vuetifyTheme.name.value, () => {
+const chartOptions = computed(() => {
+  const currentTheme = vuetifyTheme.current.value.colors
+  const variableTheme = vuetifyTheme.current.value.variables
+  
   return {
     chart: {
       parentHeightOffset: 0,
@@ -26,7 +28,7 @@ const chartOptions = controlledComputed(() => vuetifyTheme.name.value, () => {
     },
     tooltip: { enabled: false },
     grid: {
-      borderColor: `rgba(${ hexToRgb(String(variableTheme.value['border-color'])) },${ variableTheme.value['border-opacity'] })`,
+      borderColor: `rgba(${ hexToRgb(String(variableTheme['border-color'])) },${ variableTheme['border-opacity'] })`,
       strokeDashArray: 6,
       xaxis: { lines: { show: true } },
       yaxis: { lines: { show: false } },
@@ -42,7 +44,7 @@ const chartOptions = controlledComputed(() => vuetifyTheme.name.value, () => {
       lineCap: 'butt',
       curve: 'straight',
     },
-    colors: [currentTheme.value.primary],
+    colors: [currentTheme.primary],
     markers: {
       size: 6,
       offsetY: 4,
@@ -53,8 +55,8 @@ const chartOptions = controlledComputed(() => vuetifyTheme.name.value, () => {
       discrete: [{
         size: 5.5,
         seriesIndex: 0,
-        strokeColor: currentTheme.value.primary,
-        fillColor: currentTheme.value.surface,
+        strokeColor: currentTheme.primary,
+        fillColor: currentTheme.surface,
         dataPointIndex: series[0].data.length - 1,
       }],
       hover: { size: 7 },
@@ -72,19 +74,20 @@ const chartOptions = controlledComputed(() => vuetifyTheme.name.value, () => {
 <template>
   <VCard>
     <VCardText>
-      <h6 class="text-h6">
+      <h4 class="text-h4">
         $86.4k
-      </h6>
+      </h4>
       <VueApexCharts
         type="line"
         :options="chartOptions"
         :series="series"
-        :height="100"
+        :height="80"
+        class="my-1"
       />
 
-      <p class="text-center font-weight-medium mb-0">
+      <h6 class="text-h6 text-center">
         Total Profit
-      </p>
+      </h6>
     </VCardText>
   </VCard>
 </template>

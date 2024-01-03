@@ -1,6 +1,6 @@
 <script>
-import VerticalNav from '@layouts/components/VerticalNav.vue'
 import { useDisplay } from 'vuetify'
+import VerticalNav from '@layouts/components/VerticalNav.vue'
 
 export default defineComponent({
   setup(props, { slots }) {
@@ -80,9 +80,13 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    min-block-size: calc(var(--vh, 1vh) * 100);
+    min-block-size: 100dvh;
     transition: padding-inline-start 0.2s ease-in-out;
     will-change: padding-inline-start;
+
+    @media screen and (min-width: 1280px) {
+      padding-inline-start: variables.$layout-vertical-nav-width;
+    }
   }
 
   .layout-navbar {
@@ -138,10 +142,6 @@ export default defineComponent({
     }
   }
 
-  &:not(.layout-overlay-nav) .layout-content-wrapper {
-    padding-inline-start: variables.$layout-vertical-nav-width;
-  }
-
   // Adjust right column pl when vertical nav is collapsed
   &.layout-vertical-nav-collapsed .layout-content-wrapper {
     padding-inline-start: variables.$layout-vertical-nav-collapsed-width;
@@ -150,7 +150,7 @@ export default defineComponent({
   // 👉 Content height fixed
   &.layout-content-height-fixed {
     .layout-content-wrapper {
-      max-block-size: calc(var(--vh) * 100);
+      max-block-size: 100dvh;
     }
 
     .layout-page-content {

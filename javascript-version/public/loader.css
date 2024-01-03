@@ -9,27 +9,23 @@ html {
 
 #loading-bg {
   position: absolute;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: var(--initial-loader-bg, #fff);
   block-size: 100%;
+  gap: 1rem 0;
   inline-size: 100%;
 }
 
-.loading-logo {
-  position: absolute;
-  inset-block-start: 40%;
-  inset-inline-start: calc(50% - 45px);
-}
-
 .loading {
-  position: absolute;
+  position: relative;
   box-sizing: border-box;
   border: 3px solid transparent;
-  block-size: 55px;
   border-radius: 50%;
+  block-size: 55px;
   inline-size: 55px;
-  inset-block-start: 50%;
-  inset-inline-start: calc(50% - 35px);
 }
 
 .loading .effect-1,
@@ -38,9 +34,9 @@ html {
   position: absolute;
   box-sizing: border-box;
   border: 3px solid transparent;
+  border-radius: 50%;
   block-size: 100%;
   border-inline-start: 3px solid var(--initial-loader-color, #eee);
-  border-radius: 50%;
   inline-size: 100%;
 }
 

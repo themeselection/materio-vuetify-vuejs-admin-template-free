@@ -1,6 +1,4 @@
 <script setup>
-import { kFormatter } from '@core/utils/formatters'
-
 const props = defineProps({
   title: {
     type: String,
@@ -52,8 +50,13 @@ const isPositive = controlledComputed(() => props.change, () => Math.sign(props.
             v-if="props.change"
             :class="`${isPositive ? 'text-success' : 'text-error'} mt-1`"
           >
-            <VIcon :icon="isPositive ? 'mdi-chevron-up' : 'mdi-chevron-down'" />
-            <span class="text-caption font-weight-semibold">{{ Math.abs(props.change) }}%</span>
+            <VIcon
+              :icon="isPositive ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line'"
+              size="24"
+            />
+            <span class="text-base">
+              {{ Math.abs(props.change) }}%
+            </span>
           </div>
         </div>
       </div>

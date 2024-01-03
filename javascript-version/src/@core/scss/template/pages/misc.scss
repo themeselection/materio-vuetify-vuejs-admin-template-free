@@ -5,18 +5,29 @@
     align-items: center;
     justify-content: center;
     padding: 1.25rem;
-    min-block-size: calc(var(--vh, 1vh) * 100);
+    min-block-size: 100dvh;
 
     .misc-footer-img {
       position: absolute;
       inline-size: 100%;
       inset-block-end: 0;
+      inset-inline-start: 0;
     }
 
-    .misc-footer-tree {
+    .misc-footer-tree, .misc-footer-tree-1 {
       position: absolute;
-      z-index: 1;
     }
+    
+    .misc-footer-tree {
+      inset-block-end: 3.75rem;
+      inset-inline-start: 3.75rem;
+    }
+    
+    .misc-footer-tree-1 {
+      inset-block-end: 5rem;
+      inset-inline-end: 4.75rem;
+    }
+
   }
 
   .misc-avatar {

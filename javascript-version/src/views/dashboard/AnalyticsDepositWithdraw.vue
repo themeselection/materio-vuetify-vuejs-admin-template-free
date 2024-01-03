@@ -46,12 +46,12 @@ const deposits = [
 const withdraws = [
   {
     title: 'Google Adsense',
-    subtitle: 'Paypal deposit',
+    subtitle: 'PayPal deposit',
     amount: '-$145',
     logo: google,
   },
   {
-    title: 'Github Enterprise',
+    title: 'GitHub Enterprise',
     subtitle: 'Security & compliance',
     amount: '-$1870',
     logo: github,
@@ -63,7 +63,7 @@ const withdraws = [
     logo: slack,
   },
   {
-    title: 'Digital Ocean',
+    title: 'DigitalOcean',
     subtitle: 'Cloud Hosting',
     amount: '-$540',
     logo: digitalOcean,
@@ -88,10 +88,12 @@ const withdraws = [
           <VCardTitle>Deposit</VCardTitle>
 
           <template #append>
-            <a
-              href="javascript:void(0)"
-              class="text-sm font-weight-medium"
-            >View All</a>
+            <h6 class="text-h6">
+              <a
+                href="javascript:void(0)"
+                class="text-primary"
+              >View All</a>
+            </h6>
           </template>
         </VCardItem>
 
@@ -102,22 +104,19 @@ const withdraws = [
               :key="deposit.logo"
             >
               <template #prepend>
-                <VAvatar
-                  start
-                  rounded
-                >
+                <div class="me-4">
                   <VImg
-                    :height="29"
-                    :width="28"
+                    :height="30"
+                    :width="30"
                     :src="deposit.logo"
                   />
-                </VAvatar>
+                </div>
               </template>
 
-              <VListItemTitle class="text-sm font-weight-medium mb-1">
+              <VListItemTitle class="font-weight-medium mb-1">
                 {{ deposit.title }}
               </VListItemTitle>
-              <VListItemSubtitle class="text-xs">
+              <VListItemSubtitle class="text-body-1">
                 {{ deposit.subtitle }}
               </VListItemSubtitle>
 
@@ -131,10 +130,7 @@ const withdraws = [
         </VCardText>
       </VCol>
 
-      <VDivider
-        :vertical="$vuetify.display.mdAndUp"
-        :inset="$vuetify.display.mdAndUp"
-      />
+      <VDivider :vertical="$vuetify.display.mdAndUp" />
 
       <VCol
         cols="12"
@@ -144,10 +140,12 @@ const withdraws = [
           <VCardTitle>Withdraw</VCardTitle>
 
           <template #append>
-            <a
-              href="javascript:void(0)"
-              class="text-sm font-weight-medium"
-            >View All</a>
+            <h6 class="text-h6">
+              <a
+                href="javascript:void(0)"
+                class="text-primary"
+              >View All</a>
+            </h6>
           </template>
         </VCardItem>
 
@@ -158,28 +156,27 @@ const withdraws = [
               :key="withdraw.logo"
             >
               <template #prepend>
-                <VAvatar
-                  start
-                  rounded
-                >
+                <div class="me-4">
                   <VImg
-                    :height="29"
-                    :width="28"
+                    :height="30"
+                    :width="30"
                     :src="withdraw.logo"
                   />
-                </VAvatar>
+                </div>
               </template>
 
-              <VListItemTitle class="text-sm font-weight-medium mb-1">
+              <VListItemTitle class="font-weight-medium mb-1">
                 {{ withdraw.title }}
               </VListItemTitle>
-              <VListItemSubtitle class="text-xs">
+              <VListItemSubtitle class="text-body-1">
                 {{ withdraw.subtitle }}
               </VListItemSubtitle>
 
               <template #append>
-                <VListItemAction class="text-error font-weight-medium">
-                  {{ withdraw.amount }}
+                <VListItemAction>
+                  <span class="text-error font-weight-medium">
+                    {{ withdraw.amount }}
+                  </span>
                 </VListItemAction>
               </template>
             </VListItem>
@@ -192,6 +189,6 @@ const withdraws = [
 
 <style lang="scss" scoped>
 .card-list {
-  --v-card-list-gap: 1.5rem;
+  --v-card-list-gap: 1.25rem;
 }
 </style>

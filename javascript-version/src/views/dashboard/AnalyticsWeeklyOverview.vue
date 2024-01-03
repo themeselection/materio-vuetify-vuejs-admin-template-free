@@ -1,11 +1,12 @@
+<!-- eslint-disable no-restricted-imports -->
 <script setup>
-import { hexToRgb } from '@layouts/utils'
 import VueApexCharts from 'vue3-apexcharts'
 import { useTheme } from 'vuetify'
+import { hexToRgb } from '@layouts/utils'
 
 const vuetifyTheme = useTheme()
 
-const options = controlledComputed(() => vuetifyTheme.name.value, () => {
+const options = computed(() => {
   const currentTheme = ref(vuetifyTheme.current.value.colors)
   const variableTheme = ref(vuetifyTheme.current.value.variables)
   const disabledColor = `rgba(${ hexToRgb(currentTheme.value['on-surface']) },${ variableTheme.value['disabled-opacity'] })`
@@ -13,16 +14,16 @@ const options = controlledComputed(() => vuetifyTheme.name.value, () => {
   
   return {
     chart: {
+      offsetY: -10,
+      offsetX: -15,
       parentHeightOffset: 0,
       toolbar: { show: false },
     },
     plotOptions: {
       bar: {
-        borderRadius: 9,
+        borderRadius: 6,
         distributed: true,
-        columnWidth: '40%',
-        endingShape: 'rounded',
-        startingShape: 'rounded',
+        columnWidth: '30%',
       },
     },
     stroke: {
@@ -33,21 +34,16 @@ const options = controlledComputed(() => vuetifyTheme.name.value, () => {
     grid: {
       borderColor,
       strokeDashArray: 7,
-      padding: {
-        top: -1,
-        right: 0,
-        left: -12,
-        bottom: 5,
-      },
+      xaxis: { lines: { show: false } },
     },
     dataLabels: { enabled: false },
     colors: [
-      currentTheme.value['grey-100'],
-      currentTheme.value['grey-100'],
-      currentTheme.value['grey-100'],
-      currentTheme.value.primary,
-      currentTheme.value['grey-100'],
-      currentTheme.value['grey-100'],
+      currentTheme.value['track-bg'],
+      currentTheme.value['track-bg'],
+      currentTheme.value['track-bg'],
+      'rgba(var(--v-theme-primary),1)',
+      currentTheme.value['track-bg'],
+      currentTheme.value['track-bg'],
     ],
     states: {
       hover: { filter: { type: 'none' } },
@@ -73,14 +69,23 @@ const options = controlledComputed(() => vuetifyTheme.name.value, () => {
       show: true,
       tickAmount: 4,
       labels: {
-        offsetX: -17,
         style: {
           colors: disabledColor,
-          fontSize: '12px',
+          fontSize: '13px',
         },
         formatter: value => `${ value > 999 ? `${ (value / 1000).toFixed(0) }` : value }k`,
       },
     },
+    responsive: [
+      {
+        breakpoint: 1560,
+        options: { plotOptions: { bar: { columnWidth: '35%' } } },
+      },
+      {
+        breakpoint: 1380,
+        options: { plotOptions: { bar: { columnWidth: '45%' } } },
+      },
+    ],
   }
 })
 
@@ -114,15 +119,15 @@ const series = [{
         type="bar"
         :options="options"
         :series="series"
-        :height="220"
+        :height="200"
       />
 
-      <div class="d-flex align-center mb-3">
-        <h5 class="text-h5 me-4">
+      <div class="d-flex align-center mb-5 gap-x-4">
+        <h4 class="text-h4">
           45%
-        </h5>
-        <p>
-          Your sales performance is 45% 😎 better compared to last month
+        </h4>
+        <p class="mb-0">
+          Your sales performance is 45% <span class="text-high-emphasis">😎</span> better compared to last month
         </p>
       </div>
 
