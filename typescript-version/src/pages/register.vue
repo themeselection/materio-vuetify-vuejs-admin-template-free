@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import AuthProvider from '@/views/pages/authentication/AuthProvider.vue'
 import { useTheme } from 'vuetify'
+import AuthProvider from '@/views/pages/authentication/AuthProvider.vue'
 
 import logo from '@images/logo.svg?raw'
 import authV1MaskDark from '@images/pages/auth-v1-mask-dark.png'
@@ -16,6 +16,7 @@ const form = ref({
 })
 
 const vuetifyTheme = useTheme()
+
 const authThemeMask = computed(() => {
   return vuetifyTheme.global.name.value === 'light'
     ? authV1MaskLight
@@ -80,7 +81,7 @@ const isPasswordVisible = ref(false)
                 label="Password"
                 placeholder="············"
                 :type="isPasswordVisible ? 'text' : 'password'"
-                :append-inner-icon="isPasswordVisible ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
+                :append-inner-icon="isPasswordVisible ? 'ri-eye-off-line' : 'ri-eye-line'"
                 @click:append-inner="isPasswordVisible = !isPasswordVisible"
               />
               <div class="d-flex align-center mt-1 mb-4">

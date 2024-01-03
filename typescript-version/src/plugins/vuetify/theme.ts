@@ -67,11 +67,11 @@ export const themes: Record<string, ThemeDefinition> = {
 
       // 👉 shadows
       'shadow-key-umbra-color': '#2E263D',
-      'shadow-xs': '0 2px 4px 0 rgba(var(--v-shadow-key-umbra-color), 0.16)',
-      'shadow-sm': '0 3px 6px 0 rgba(var(--v-shadow-key-umbra-color), 0.18)',
-      'shadow-md': '0 4px 10px 0 rgba(var(--v-shadow-key-umbra-color), 0.20)',
-      'shadow-lg': '0 6px 16px 0 rgba(var(--v-shadow-key-umbra-color), 0.22)',
-      'shadow-xl': '0 8px 28px 0 rgba(var(--v-shadow-key-umbra-color), 0.24)',
+      'shadow-xs-opacity': '0.16',
+      'shadow-sm-opacity': '0.18',
+      'shadow-md-opacity': '0.20',
+      'shadow-lg-opacity': '0.22',
+      'shadow-xl-opacity': '0.24',
     },
   },
 
@@ -138,11 +138,11 @@ export const themes: Record<string, ThemeDefinition> = {
 
       // 👉 Shadows
       'shadow-key-umbra-color': '#131120',
-      'shadow-xs': '0 2px 3px 0 rgba(var(--v-shadow-key-umbra-color), 0.20)',
-      'shadow-sm': '0 3px 6px 0 rgba(var(--v-shadow-key-umbra-color), 0.22)',
-      'shadow-md': '0 4px 8px 0 rgba(var(--v-shadow-key-umbra-color), 0.24)',
-      'shadow-lg': '0 6px 16px 0 rgba(var(--v-shadow-key-umbra-color), 0.26)',
-      'shadow-xl': '0 8px 28px 0 rgba(var(--v-shadow-key-umbra-color), 0.28)',
+      'shadow-xs-opacity': '0.20',
+      'shadow-sm-opacity': '0.22',
+      'shadow-md-opacity': '0.24',
+      'shadow-lg-opacity': '0.26',
+      'shadow-xl-opacity': '0.28',
     },
   },
 }

@@ -11,7 +11,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
       title: 'Dashboards',
       badgeContent: '5',
       badgeClass: 'bg-error',
-      icon: 'mdi-home-outline',
+      icon: 'ri-home-smile-line',
     }"
   >
     <VerticalNavLink
@@ -62,7 +62,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
   <VerticalNavGroup
     :item="{
       title: 'Front Pages',
-      icon: 'mdi-flip-to-front',
+      icon: 'ri-file-copy-line',
       badgeContent: 'PRO',
       badgeClass: 'bg-light-primary text-primary',
     }"
@@ -113,7 +113,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
   <VerticalNavLink
     :item="{
       title: 'Permissions',
-      icon: 'mdi-shield-account-outline',
+      icon: 'ri-lock-2-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/apps/permissions',
       target: '_blank',
       badgeContent: 'PRO',
@@ -123,7 +123,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
   <VerticalNavLink
     :item="{
       title: 'Email',
-      icon: 'mdi-email-outline',
+      icon: 'ri-mail-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/apps/email',
       target: '_blank',
       badgeContent: 'PRO',
@@ -133,7 +133,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
   <VerticalNavLink
     :item="{
       title: 'Chat',
-      icon: 'mdi-message-outline',
+      icon: 'ri-wechat-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/apps/chat',
       target: '_blank',
       badgeContent: 'PRO',
@@ -143,7 +143,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
   <VerticalNavLink
     :item="{
       title: 'Calendar',
-      icon: 'mdi-calendar-blank-outline',
+      icon: 'ri-calendar-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/apps/calendar',
       target: '_blank',
       badgeContent: 'PRO',
@@ -154,7 +154,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
   <VerticalNavLink
     :item="{
       title: 'Account Settings',
-      icon: 'mdi-account-cog-outline',
+      icon: 'ri-user-settings-line',
       to: '/account-settings',
     }"
   />
@@ -162,21 +162,21 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
   <VerticalNavLink
     :item="{
       title: 'Login',
-      icon: 'mdi-login',
+      icon: 'ri-login-box-line',
       to: '/login',
     }"
   />
   <VerticalNavLink
     :item="{
       title: 'Register',
-      icon: 'mdi-account-plus-outline',
+      icon: 'ri-user-add-line',
       to: '/register',
     }"
   />
   <VerticalNavLink
     :item="{
       title: 'Error',
-      icon: 'mdi-information-outline',
+      icon: 'ri-information-line',
       to: '/no-existence',
     }"
   />
@@ -190,21 +190,21 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
   <VerticalNavLink
     :item="{
       title: 'Typography',
-      icon: 'mdi-alpha-t-box-outline',
+      icon: 'ri-text',
       to: '/typography',
     }"
   />
   <VerticalNavLink
     :item="{
       title: 'Icons',
-      icon: 'mdi-eye-outline',
+      icon: 'ri-remixicon-line',
       to: '/icons',
     }"
   />
   <VerticalNavLink
     :item="{
       title: 'Cards',
-      icon: 'mdi-credit-card-outline',
+      icon: 'ri-bar-chart-box-line',
       to: '/cards',
     }"
   />
@@ -218,14 +218,14 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
   <VerticalNavLink
     :item="{
       title: 'Form Layouts',
-      icon: 'mdi-form-select',
+      icon: 'ri-layout-4-line',
       to: '/form-layouts',
     }"
   />
   <VerticalNavLink
     :item="{
       title: 'Form Validation',
-      icon: 'mdi-checkbox-marked-circle-outline',
+      icon: 'ri-checkbox-multiple-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/forms/form-validation',
       target: '_blank',
       badgeContent: 'PRO',
@@ -235,7 +235,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
   <VerticalNavLink
     :item="{
       title: 'Form Wizard',
-      icon: 'mdi-align-vertical-distribute',
+      icon: 'ri-git-commit-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/forms/form-wizard-numbered',
       target: '_blank',
       badgeContent: 'PRO',
@@ -245,7 +245,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
   <VerticalNavLink
     :item="{
       title: 'Tables',
-      icon: 'mdi-table',
+      icon: 'ri-table-alt-line',
       to: '/tables',
     }"
   />
@@ -259,7 +259,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
   <VerticalNavLink
     :item="{
       title: 'Access Control',
-      icon: 'mdi-shield-outline',
+      icon: 'ri-shield-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/access-control',
       target: '_blank',
       badgeContent: 'PRO',
@@ -269,7 +269,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
   <VerticalNavLink
     :item="{
       title: 'Documentation',
-      icon: 'mdi-file-document-outline',
+      icon: 'ri-article-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/documentation/',
       target: '_blank',
     }"
@@ -278,7 +278,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
     :item="{
       title: 'Raise Support',
       href: 'https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free/issues',
-      icon: 'mdi-lifebuoy',
+      icon: 'ri-lifebuoy-line',
       target: '_blank',
     }"
   />

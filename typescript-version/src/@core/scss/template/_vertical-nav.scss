@@ -1,0 +1,51 @@
+@use "@layouts/styles/mixins" as layoutsMixins;
+
+.layout-nav-type-vertical {
+  // 👉 Layout Vertical nav
+  .layout-vertical-nav {
+    .nav-items{
+      padding-block-start: .25rem;
+    }
+
+    // 👉 Vertical nav group
+    .nav-group {
+      .nav-group-arrow {
+        font-size: 1.375rem;
+      }
+    }
+
+    // 👉 Nav group & Link
+    .nav-link,
+    .nav-group {
+      // shadow cut issue fix
+      margin-block-end: -0.5rem;
+      padding-block-end: 0.5rem;
+
+      a {
+        outline: none;
+      }
+    }
+
+    // 👉 Nav section title
+    .nav-section-title {
+      .placeholder-icon {
+        transform: translateX(-3px);
+
+        @include layoutsMixins.rtl {
+          transform: translateX(3px);
+        }
+      }
+    }
+
+    // 👉 Nav header
+    .nav-header {
+      padding-block: 1.25rem;
+      padding-inline: 23px 0;
+    }
+  }
+}
+
+//  👉 Overlay 
+.layout-overlay{
+  touch-action: none;
+}

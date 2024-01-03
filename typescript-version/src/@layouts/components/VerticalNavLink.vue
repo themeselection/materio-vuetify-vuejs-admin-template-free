@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { NavLink } from '@layouts/types';
+import type { NavLink } from '@layouts/types'
 
 defineProps<{
   item: NavLink
@@ -18,7 +18,7 @@ defineProps<{
       :target="item.target"
     >
       <VIcon
-        :icon="item.icon || 'mdi-circle-outline'"
+        :icon="item.icon || 'ri-checkbox-blank-circle-line'"
         class="nav-item-icon"
       />
       <!-- 👉 Title -->

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import avatar1 from '@images/avatars/avatar-1.png';
+import avatar1 from '@images/avatars/avatar-1.png'
 </script>
 
 <template>
@@ -59,7 +59,7 @@ import avatar1 from '@images/avatars/avatar-1.png';
             <template #prepend>
               <VIcon
                 class="me-2"
-                icon="mdi-account-outline"
+                icon="ri-user-line"
                 size="22"
               />
             </template>
@@ -72,7 +72,7 @@ import avatar1 from '@images/avatars/avatar-1.png';
             <template #prepend>
               <VIcon
                 class="me-2"
-                icon="mdi-cog-outline"
+                icon="ri-settings-4-line"
                 size="22"
               />
             </template>
@@ -85,7 +85,7 @@ import avatar1 from '@images/avatars/avatar-1.png';
             <template #prepend>
               <VIcon
                 class="me-2"
-                icon="mdi-currency-usd"
+                icon="ri-money-dollar-circle-line"
                 size="22"
               />
             </template>
@@ -98,7 +98,7 @@ import avatar1 from '@images/avatars/avatar-1.png';
             <template #prepend>
               <VIcon
                 class="me-2"
-                icon="mdi-help-circle-outline"
+                icon="ri-question-line"
                 size="22"
               />
             </template>
@@ -114,7 +114,7 @@ import avatar1 from '@images/avatars/avatar-1.png';
             <template #prepend>
               <VIcon
                 class="me-2"
-                icon="mdi-logout"
+                icon="ri-logout-box-r-line"
                 size="22"
               />
             </template>

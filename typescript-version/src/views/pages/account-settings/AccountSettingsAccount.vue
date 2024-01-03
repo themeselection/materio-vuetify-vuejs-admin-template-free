@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import avatar1 from '@images/avatars/avatar-1.png';
+import avatar1 from '@images/avatars/avatar-1.png'
 
 const accountData = {
   avatarImg: avatar1,
@@ -124,7 +124,7 @@ const currencies = [
                 @click="refInputEl?.click()"
               >
                 <VIcon
-                  icon="mdi-cloud-upload-outline"
+                  icon="ri-upload-cloud-line"
                   class="d-sm-none"
                 />
                 <span class="d-none d-sm-block">Upload new photo</span>
@@ -147,7 +147,7 @@ const currencies = [
               >
                 <span class="d-none d-sm-block">Reset</span>
                 <VIcon
-                  icon="mdi-refresh"
+                  icon="ri-refresh-line"
                   class="d-sm-none"
                 />
               </VBtn>

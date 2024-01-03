@@ -3,25 +3,25 @@ const statistics = [
   {
     title: 'Sales',
     stats: '245k',
-    icon: 'mdi-trending-up',
+    icon: 'ri-pie-chart-2-line',
     color: 'primary',
   },
   {
     title: 'Customers',
     stats: '12.5k',
-    icon: 'mdi-account-outline',
+    icon: 'ri-user-line',
     color: 'success',
   },
   {
     title: 'Product',
     stats: '1.54k',
-    icon: 'mdi-cellphone-link',
+    icon: 'ri-macbook-line',
     color: 'warning',
   },
   {
     title: 'Revenue',
     stats: '$88k',
-    icon: 'mdi-currency-usd',
+    icon: 'ri-money-dollar-circle-line',
     color: 'info',
   },
 ]

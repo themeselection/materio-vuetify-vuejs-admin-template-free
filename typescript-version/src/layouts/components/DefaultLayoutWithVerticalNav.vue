@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { useTheme } from 'vuetify'
-
 import NavItems from '@/layouts/components/NavItems.vue'
 import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
 
@@ -20,7 +18,7 @@ import UserProfile from '@/layouts/components/UserProfile.vue'
           class="ms-n3 d-lg-none"
           @click="toggleVerticalOverlayNavActive(true)"
         >
-          <VIcon icon="mdi-menu" />
+          <VIcon icon="ri-menu-line" />
         </IconBtn>
 
         <!-- 👉 Search -->
@@ -30,7 +28,7 @@ import UserProfile from '@/layouts/components/UserProfile.vue'
         >
           <!-- 👉 Search Trigger button -->
           <IconBtn>
-            <VIcon icon="mdi-magnify" />
+            <VIcon icon="ri-search-line" />
           </IconBtn>
 
           <span class="d-none d-md-flex align-center text-disabled">
@@ -47,11 +45,11 @@ import UserProfile from '@/layouts/components/UserProfile.vue'
           target="_blank"
           rel="noopener noreferrer"
         >
-          <VIcon icon="mdi-github" />
+          <VIcon icon="ri-github-fill" />
         </IconBtn>
 
         <IconBtn class="me-2">
-          <VIcon icon="mdi-bell-outline" />
+          <VIcon icon="ri-notification-line" />
         </IconBtn>
 
         <NavbarThemeSwitcher class="me-2" />
@@ -61,7 +59,7 @@ import UserProfile from '@/layouts/components/UserProfile.vue'
     </template>
 
     <template #vertical-nav-content>
-      <NavItems></NavItems>
+      <NavItems />
     </template>
 
     <!-- 👉 Pages -->

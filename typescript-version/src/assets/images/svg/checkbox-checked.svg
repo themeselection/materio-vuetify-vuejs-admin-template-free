@@ -1,0 +1,4 @@
+<svg width="24" height="24" class="custom-checkbox-checked" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Z" fill="currentColor"/>
+  <path d="m11 13.586 4.596-4.597.707.707L11 15l-3.182-3.182.707-.707L11 13.586Z" fill="#fff"/>
+</svg>

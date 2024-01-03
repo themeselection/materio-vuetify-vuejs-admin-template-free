@@ -80,7 +80,7 @@ const salesByCountries = [
               :color="data.change.charAt(0) === '+' ? 'success' : 'error'"
               class="mx-1"
             >
-              {{ data.change.charAt(0) === '+' ? 'mdi-chevron-up' : 'mdi-chevron-down' }}
+              {{ data.change.charAt(0) === '+' ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line' }}
             </VIcon>
             <span :class="`text-xs ${data.change.charAt(0) === '+' ? 'text-success' : 'text-error'}`">
               {{ data.change.slice(1) }}
