@@ -1,25 +1,27 @@
+<!-- eslint-disable no-restricted-imports -->
 <script setup lang="ts">
 import VueApexCharts from 'vue3-apexcharts'
 import { useTheme } from 'vuetify'
 
 const vuetifyTheme = useTheme()
 
-const currentTheme = controlledComputed(() => vuetifyTheme.name.value, () => vuetifyTheme.current.value.colors)
+const currentTheme = computed(() => vuetifyTheme.current.value.colors)
 
 const series = [
   {
     name: '2020',
-    data: [45, 85, 65, 50, 70],
+    data: [35, 85, 55, 50, 70],
   },
 ]
 
-const chartOptions = controlledComputed(() => vuetifyTheme.name.value, () => {
-  const backgroundColor = currentTheme.value.background
+const chartOptions = computed(() => {
+  const backgroundColor = currentTheme.value['track-bg']
 
   return {
     chart: {
       type: 'bar',
       stacked: false,
+      width: 200,
       parentHeightOffset: 0,
       toolbar: {
         show: false,
@@ -28,10 +30,10 @@ const chartOptions = controlledComputed(() => vuetifyTheme.name.value, () => {
     grid: {
       show: false,
       padding: {
-        top: -10,
+        top: -20,
         left: -7,
         right: 0,
-        bottom: 5,
+        bottom: -5,
       },
     },
     colors: [currentTheme.value.error, currentTheme.value.primary, currentTheme.value.error, currentTheme.value.primary, currentTheme.value.primary],
@@ -40,8 +42,6 @@ const chartOptions = controlledComputed(() => vuetifyTheme.name.value, () => {
         horizontal: false,
         columnWidth: '20%',
         borderRadius: 4,
-        startingShape: 'rounded',
-        endingShape: 'rounded',
         distributed: true,
         colors: {
           backgroundBarColors: [backgroundColor, backgroundColor, backgroundColor, backgroundColor, backgroundColor],
@@ -72,6 +72,41 @@ const chartOptions = controlledComputed(() => vuetifyTheme.name.value, () => {
     tooltip: {
       enabled: false,
     },
+    responsive: [
+      {
+        breakpoint: 1628,
+        options: {
+          plotOptions: {
+            bar: {
+              columnWidth: '20%',
+              borderRadius: 2,
+            },
+          },
+        },
+      },
+      {
+        breakpoint: 960,
+        options: {
+          plotOptions: {
+            bar: {
+              columnWidth: '15%',
+              borderRadius: 6,
+            },
+          },
+        },
+      },
+      {
+        breakpoint: 725,
+        options: {
+          plotOptions: {
+            bar: {
+              columnWidth: '15%',
+              borderRadius: 4,
+            },
+          },
+        },
+      },
+    ],
   }
 })
 </script>
@@ -79,19 +114,20 @@ const chartOptions = controlledComputed(() => vuetifyTheme.name.value, () => {
 <template>
   <VCard>
     <VCardText>
-      <h6 class="text-h6">
+      <h4 class="text-h4">
         2,856
-      </h6>
+      </h4>
 
       <VueApexCharts
         :options="chartOptions"
         :series="series"
-        :height="95"
+        :height="80"
+        class="my-1"
       />
 
-      <p class="text-center font-weight-medium mb-0">
+      <h6 class="text-h6 text-center">
         Sessions
-      </p>
+      </h6>
     </VCardText>
   </VCard>
 </template>

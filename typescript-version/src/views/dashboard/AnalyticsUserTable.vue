@@ -1,204 +1,217 @@
-<script lang="ts" setup>
-interface DataItem {
-  responsiveId: string
-  id: number
-  fullName: string
-  post: string
-  email: string
-  city: string
-  start_date: string
-  salary: number
-  age: string
-  experience: string
-  status: number
-}
-
-const data: DataItem[] = [
-  {
-    responsiveId: '',
-    id: 95,
-    fullName: 'Edwina Ebsworth',
-    post: 'Human Resources Assistant',
-    email: 'eebsworth2m@sbwire.com',
-    city: 'Puzi',
-    start_date: '09/27/2018',
-    salary: 19586.23,
-    age: '27',
-    experience: '2 Years',
-    status: 1,
-  },
-  {
-    responsiveId: '',
-    id: 1,
-    fullName: 'Korrie O\'Crevy',
-    post: 'Nuclear Power Engineer',
-    email: 'kocrevy0@thetimes.co.uk',
-    city: 'Krasnosilka',
-    start_date: '09/23/2016',
-    salary: 23896.35,
-    age: '61',
-    experience: '1 Year',
-    status: 2,
-  },
-  {
-    responsiveId: '',
-    id: 7,
-    fullName: 'Eileen Diehn',
-    post: 'Environmental Specialist',
-    email: 'ediehn6@163.com',
-    city: 'Lampuyang',
-    start_date: '10/15/2017',
-    salary: 18991.67,
-    age: '59',
-    experience: '9 Years',
-    status: 3,
-  },
-  {
-    responsiveId: '',
-    id: 11,
-    fullName: 'De Falloon',
-    post: 'Sales Representative',
-    email: 'dfalloona@ifeng.com',
-    city: 'Colima',
-    start_date: '06/12/2018',
-    salary: 19252.12,
-    age: '30',
-    experience: '0 Year',
-    status: 4,
-  },
-  {
-    responsiveId: '',
-    id: 3,
-    fullName: 'Stella Ganderton',
-    post: 'Operator',
-    email: 'sganderton2@tuttocitta.it',
-    city: 'Golcowa',
-    start_date: '03/24/2018',
-    salary: 13076.28,
-    age: '66',
-    experience: '6 Years',
-    status: 5,
-  },
-  {
-    responsiveId: '',
-    id: 5,
-    fullName: 'Harmonia Nisius',
-    post: 'Senior Cost Accountant',
-    email: 'hnisius4@gnu.org',
-    city: 'Lucan',
-    start_date: '08/25/2017',
-    salary: 10909.52,
-    age: '33',
-    experience: '3 Years',
-    status: 2,
-  },
-  {
-    responsiveId: '',
-    id: 6,
-    fullName: 'Genevra Honeywood',
-    post: 'Geologist',
-    email: 'ghoneywood5@narod.ru',
-    city: 'Maofan',
-    start_date: '06/01/2017',
-    salary: 17803.8,
-    age: '61',
-    experience: '1 Year',
-    status: 1,
-  },
-  {
-    responsiveId: '',
-    id: 4,
-    fullName: 'Dorolice Crossman',
-    post: 'Cost Accountant',
-    email: 'dcrossman3@google.co.jp',
-    city: 'Paquera',
-    start_date: '12/03/2017',
-    salary: 12336.17,
-    age: '22',
-    experience: '2 Years',
-    status: 2,
-  },
-]
-
-const status: Record<DataItem['status'], string> = {
-  1: 'Current',
-  2: 'Professional',
-  3: 'Rejected',
-  4: 'Resigned',
-  5: 'Applied',
-}
-
-const statusColor: Record<typeof status[number], string> = {
-  Current: 'primary',
-  Professional: 'success',
-  Rejected: 'error',
-  Resigned: 'warning',
-  Applied: 'info',
-}
+<script setup lang="ts">
+import avatar1 from '@images/avatars/avatar-1.png'
+import avatar2 from '@images/avatars/avatar-2.png'
+import avatar3 from '@images/avatars/avatar-3.png'
+import avatar4 from '@images/avatars/avatar-4.png'
+import avatar5 from '@images/avatars/avatar-5.png'
+import avatar6 from '@images/avatars/avatar-6.png'
+import avatar7 from '@images/avatars/avatar-7.png'
+import avatar8 from '@images/avatars/avatar-8.png'
 
 const headers = [
-  'NAME',
-  'EMAIL',
-  'DATE',
-  'SALARY',
-  'AGE',
-  'STATUS',
+  { title: 'User', key: 'username' },
+  { title: 'Email', key: 'email' },
+  { title: 'Role', key: 'role' },
+  { title: 'Status', key: 'status' },
 ]
 
-const usreList = data
+const userData = [
+  {
+    id: 1,
+    fullName: 'Galasasen Slixby',
+    company: 'Yotz PVT LTD',
+    role: 'editor',
+    username: 'gslixby0',
+    country: 'El Salvador',
+    contact: '(479) 232-9151',
+    email: 'gslixby0@abc.net.au',
+    currentPlan: 'enterprise',
+    status: 'inactive',
+    avatar: avatar1,
+  },
+  {
+    id: 2,
+    fullName: 'Halsey Redmore',
+    company: 'Skinder PVT LTD',
+    role: 'author',
+    username: 'hredmore1',
+    country: 'Albania',
+    contact: '(472) 607-9137',
+    email: 'hredmore1@imgur.com',
+    currentPlan: 'team',
+    status: 'pending',
+    avatar: avatar2,
+  },
+  {
+    id: 3,
+    fullName: 'Marjory Sicely',
+    company: 'Oozz PVT LTD',
+    role: 'maintainer',
+    username: 'msicely2',
+    country: 'Russia',
+    contact: '(321) 264-4599',
+    email: 'msicely2@who.int',
+    currentPlan: 'enterprise',
+    status: 'active',
+    avatar: avatar3,
+  },
+  {
+    id: 4,
+    fullName: 'Cyrill Risby',
+    company: 'Oozz PVT LTD',
+    role: 'Admin',
+    username: 'crisby3',
+    country: 'China',
+    contact: '(923) 690-6806',
+    email: 'crisby3@wordpress.com',
+    currentPlan: 'team',
+    status: 'inactive',
+    avatar: avatar4,
+  },
+  {
+    id: 5,
+    fullName: 'Maggy Hurran',
+    company: 'Aimbo PVT LTD',
+    role: 'subscriber',
+    username: 'mhurran4',
+    country: 'Pakistan',
+    contact: '(669) 914-1078',
+    email: 'mhurran4@yahoo.co.jp',
+    currentPlan: 'enterprise',
+    status: 'pending',
+    avatar: avatar5,
+  },
+  {
+    id: 6,
+    fullName: 'Silvain Halstead',
+    company: 'Jaxbean PVT LTD',
+    role: 'author',
+    username: 'shalstead5',
+    country: 'China',
+    contact: '(958) 973-3093',
+    email: 'shalstead5@shinystat.com',
+    currentPlan: 'company',
+    status: 'active',
+    avatar: avatar6,
+  },
+  {
+    id: 7,
+    fullName: 'Breena Gallemore',
+    company: 'Jazzy PVT LTD',
+    role: 'subscriber',
+    username: 'bgallemore6',
+    country: 'Canada',
+    contact: '(825) 977-8152',
+    email: 'bgallemore6@boston.com',
+    currentPlan: 'company',
+    status: 'pending',
+    avatar: avatar7,
+  },
+  {
+    id: 8,
+    fullName: 'Kathryne Liger',
+    company: 'Pixoboo PVT LTD',
+    role: 'author',
+    username: 'kliger7',
+    country: 'France',
+    contact: '(187) 440-0934',
+    email: 'kliger7@vinaora.com',
+    currentPlan: 'enterprise',
+    status: 'pending',
+    avatar: avatar8,
+  },
+]
+
+const resolveUserRoleVariant = (role: string) => {
+  const roleLowerCase = role.toLowerCase()
+
+  if (roleLowerCase === 'subscriber')
+    return { color: 'success', icon: 'ri-user-line' }
+  if (roleLowerCase === 'author')
+    return { color: 'error', icon: 'ri-computer-line' }
+  if (roleLowerCase === 'maintainer')
+    return { color: 'info', icon: 'ri-pie-chart-line' }
+  if (roleLowerCase === 'editor')
+    return { color: 'warning', icon: 'ri-edit-box-line' }
+  if (roleLowerCase === 'admin')
+    return { color: 'primary', icon: 'ri-vip-crown-line' }
+
+  return { color: 'success', icon: 'ri-user-line' }
+}
+
+const resolveUserStatusVariant = (stat: string) => {
+  const statLowerCase = stat.toLowerCase()
+  if (statLowerCase === 'pending')
+    return 'warning'
+  if (statLowerCase === 'active')
+    return 'success'
+  if (statLowerCase === 'inactive')
+    return 'secondary'
+
+  return 'primary'
+}
 </script>
 
 <template>
   <VCard>
-    <VTable
+    <VDataTable
       :headers="headers"
-      :items="usreList"
-      item-key="fullName"
-      class="table-rounded"
-      hide-default-footer
-      disable-sort
+      :items="userData"
+      item-value="id"
+      class="text-no-wrap"
     >
-      <thead>
-        <tr>
-          <th
-            v-for="header in headers"
-            :key="header"
+      <!-- User -->
+      <template #item.username="{ item }">
+        <div class="d-flex align-center gap-x-4">
+          <VAvatar
+            size="34"
+            :variant="!item.avatar ? 'tonal' : undefined"
+            :color="!item.avatar ? resolveUserRoleVariant(item.role).color : undefined"
           >
-            {{ header }}
-          </th>
-        </tr>
-      </thead>
+            <VImg
+              v-if="item.avatar"
+              :src="item.avatar"
+            />
+          </VAvatar>
 
-      <tbody>
-        <tr
-          v-for="row in data"
-          :key="row.fullName"
+          <div class="d-flex flex-column">
+            <h6 class="text-h6 font-weight-medium user-list-name">
+              {{ item.fullName }}
+            </h6>
+
+            <span class="text-sm text-medium-emphasis">@{{ item.username }}</span>
+          </div>
+        </div>
+      </template>
+      <!-- Role -->
+      <template #item.role="{ item }">
+        <div class="d-flex gap-4">
+          <VIcon
+            :icon="resolveUserRoleVariant(item.role).icon"
+            :color="resolveUserRoleVariant(item.role).color"
+            size="22"
+          />
+          <div class="text-capitalize text-high-emphasis">
+            {{ item.role }}
+          </div>
+        </div>
+      </template>
+      <!-- Plan -->
+      <template #item.plan="{ item }">
+        <span class="text-capitalize text-high-emphasis">{{ item.currentPlan }}</span>
+      </template>
+      <!-- Status -->
+      <template #item.status="{ item }">
+        <VChip
+          :color="resolveUserStatusVariant(item.status)"
+          size="small"
+          class="text-capitalize"
         >
-          <!-- name -->
+          {{ item.status }}
+        </VChip>
+      </template>
 
-          <td>
-            <div class="d-flex flex-column">
-              <h6 class="text-sm font-weight-medium">{{ row.fullName }}</h6>
-              <span class="text-xs">{{ row.post }}</span>
-            </div>
-          </td>
-
-          <td class="text-sm" v-text="row.email" />
-          <td class="text-sm" v-text="row.start_date" />
-          <td class="text-sm" v-text="`$${row.salary}`" />
-          <td class="text-sm" v-text="row.age" />
-          <!-- status -->
-          <td>
-            <VChip
-              size="small"
-              :color="statusColor[status[row.status]]"
-              class="text-capitalize"
-            >
-              {{ status[row.status] }}
-            </VChip>
-          </td>
-        </tr>
-      </tbody>
-    </VTable>
+      <template #bottom />
+    </VDataTable>
   </VCard>
 </template>
