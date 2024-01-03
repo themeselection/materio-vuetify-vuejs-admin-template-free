@@ -58,6 +58,20 @@ interface BundleScriptConfig {
 
 const sources: BundleScriptConfig = {
 
+  svg: [
+    // {
+    //   dir: 'src/assets/images/iconify-svg',
+    //   monotone: true,
+    //   prefix: 'custom',
+    // },
+
+    // {
+    //   dir: 'emojis',
+    //   monotone: false,
+    //   prefix: 'emoji',
+    // },
+  ],
+
   icons: [
     // 'mdi:home',
     // 'mdi:account',

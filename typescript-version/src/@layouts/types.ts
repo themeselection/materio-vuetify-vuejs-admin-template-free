@@ -1,3 +1,4 @@
+import type { OffsetOptions } from '@floating-ui/dom'
 import type { RouteLocationRaw } from 'vue-router'
 import type { AppContentLayoutNav, ContentWidth, FooterType, HorizontalNavType, NavbarType } from '@layouts/enums'
 
@@ -29,6 +30,7 @@ export interface LayoutConfig {
   horizontalNav: {
     type: typeof HorizontalNavType[keyof typeof HorizontalNavType]
     transition: string | Component
+    popoverOffset?: OffsetOptions
   }
   icons: {
     chevronDown: any

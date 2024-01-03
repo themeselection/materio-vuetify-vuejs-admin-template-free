@@ -58,7 +58,8 @@
         "stylelint",
         "touchless",
         "triggerer",
-        "vuetify"
+        "vuetify",
+        "nuxt"
     ],
     // Extension: Comment Anchors
     "commentAnchors.tags.anchors": {
