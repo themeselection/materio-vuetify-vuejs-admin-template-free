@@ -34,12 +34,6 @@ export default {
   VChip: {
     elevation: 0,
   },
-  VList: {
-    activeColor: 'primary',
-  },
-  VPagination: {
-    activeColor: 'primary',
-  },
   VTabs: {
     // set v-tabs default color to primary
     color: 'primary',
@@ -79,11 +73,6 @@ export default {
     density: 'comfortable',
     thumbLabel: true,
     hideDetails: 'auto',
-  },
-  VRating: {
-    // set v-rating default color to primary
-    color: 'rgba(var(--v-theme-on-background),0.23)',
-    activeColor: 'warning',
   },
   VProgressCircular: {
     // set v-progress-circular default color to primary
