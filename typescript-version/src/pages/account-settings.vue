@@ -39,6 +39,7 @@ const tabs = [
     <VWindow
       v-model="activeTab"
       class="mt-5 disable-tab-transition"
+      :touch="false"
     >
       <!-- Account -->
       <VWindowItem value="account">
