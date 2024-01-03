@@ -131,7 +131,7 @@ const checkbox = ref(false)
         </VBtn>
         <VBtn
           color="secondary"
-          variant="tonal"
+          variant="outlined"
           type="reset"
         >
           Reset
@@ -140,4 +140,3 @@ const checkbox = ref(false)
     </VRow>
   </VForm>
 </template>
-

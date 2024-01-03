@@ -102,7 +102,7 @@ const selectedNotification = ref('Only when I\'m online')
           </VBtn>
           <VBtn
             color="secondary"
-            variant="tonal"
+            variant="outlined"
             type="reset"
           >
             Reset

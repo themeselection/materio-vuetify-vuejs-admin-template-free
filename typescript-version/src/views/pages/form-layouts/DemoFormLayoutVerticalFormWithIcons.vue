@@ -67,7 +67,7 @@ const checkbox = ref(false)
         <VBtn
           color="secondary"
           type="reset"
-          variant="tonal"
+          variant="outlined"
         >
           Reset
         </VBtn>

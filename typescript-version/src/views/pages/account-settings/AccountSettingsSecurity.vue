@@ -179,7 +179,7 @@ const recentDevices = [
             <VBtn
               type="reset"
               color="secondary"
-              variant="tonal"
+              variant="outlined"
             >
               Reset
             </VBtn>
@@ -280,7 +280,6 @@ const recentDevices = [
                 {{ serverKey.name }}
               </h6>
               <VChip
-                label
                 color="primary"
                 size="small"
               >

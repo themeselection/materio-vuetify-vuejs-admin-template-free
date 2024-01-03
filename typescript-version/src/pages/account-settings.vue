@@ -35,7 +35,6 @@ const tabs = [
         {{ item.title }}
       </VTab>
     </VTabs>
-    <VDivider />
 
     <VWindow
       v-model="activeTab"

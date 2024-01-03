@@ -142,7 +142,7 @@ const currencies = [
               <VBtn
                 type="reset"
                 color="error"
-                variant="tonal"
+                variant="outlined"
                 @click="resetAvatar"
               >
                 <span class="d-none d-sm-block">Reset</span>
@@ -325,7 +325,7 @@ const currencies = [
 
                 <VBtn
                   color="secondary"
-                  variant="tonal"
+                  variant="outlined"
                   type="reset"
                   @click.prevent="resetForm"
                 >

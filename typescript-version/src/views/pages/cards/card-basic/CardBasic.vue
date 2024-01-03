@@ -422,7 +422,7 @@ const isCardDetailsVisible = ref(false)
         <VCardText class="d-flex flex-column justify-center align-center">
           <VAvatar
             color="primary"
-            variant="tonal"
+            variant="outlined"
             size="50"
             class="mb-4"
           >
