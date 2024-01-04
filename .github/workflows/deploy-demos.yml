@@ -12,12 +12,17 @@ jobs:
       - name: ⬇️ Checkout template
         uses: actions/checkout@v3
 
+      - name: ⚙️ Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: ⬇️ Install packages
-        run: yarn install
+        run: pnpm install
         working-directory: ./typescript-version
 
       - name: 📦 Generate demo
-        run: yarn build --base=/${{ env.BRAND_NAME }}-vuetify-vuejs-admin-template-free/demo/
+        run: pnpm build --base=/${{ env.BRAND_NAME }}-vuetify-vuejs-admin-template-free/demo/
         working-directory: ./typescript-version
 
       - name: 🚀 Upload demo
