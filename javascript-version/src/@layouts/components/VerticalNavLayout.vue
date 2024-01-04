@@ -18,7 +18,7 @@ export default defineComponent({
     return () => {
       // 👉 Vertical nav
       const verticalNav = h(VerticalNav, { isOverlayNavActive: isOverlayNavActive.value, toggleIsOverlayNavActive }, {
-        'nav-header': () => slots['vertical-nav-header']?.(),
+        'nav-header': () => slots['vertical-nav-header']?.({ toggleIsOverlayNavActive }),
         'before-nav-items': () => slots['before-vertical-nav-items']?.(),
         'default': () => slots['vertical-nav-content']?.(),
         'after-nav-items': () => slots['after-vertical-nav-items']?.(),
