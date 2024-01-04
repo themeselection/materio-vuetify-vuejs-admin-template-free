@@ -25,7 +25,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
         title: 'CRM',
         href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/dashboards/crm',
         target: '_blank',
-        badgeContent: 'PRO',
+        badgeContent: 'Pro',
         badgeClass: 'bg-light-primary text-primary',
       }"
     />
@@ -34,7 +34,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
         title: 'ECommerce',
         href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/dashboards/ecommerce',
         target: '_blank',
-        badgeContent: 'PRO',
+        badgeContent: 'Pro',
         badgeClass: 'bg-light-primary text-primary',
       }"
     />
@@ -43,7 +43,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
         title: 'Academy',
         href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/dashboards/academy',
         target: '_blank',
-        badgeContent: 'PRO',
+        badgeContent: 'Pro',
         badgeClass: 'bg-light-primary text-primary',
       }"
     />
@@ -52,7 +52,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
         title: 'Logistics',
         href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/dashboards/logistics',
         target: '_blank',
-        badgeContent: 'PRO',
+        badgeContent: 'Pro',
         badgeClass: 'bg-light-primary text-primary',
       }"
     />
@@ -63,7 +63,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
     :item="{
       title: 'Front Pages',
       icon: 'ri-file-copy-line',
-      badgeContent: 'PRO',
+      badgeContent: 'Pro',
       badgeClass: 'bg-light-primary text-primary',
     }"
   >
@@ -116,7 +116,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
       icon: 'ri-lock-2-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/apps/permissions',
       target: '_blank',
-      badgeContent: 'PRO',
+      badgeContent: 'Pro',
       badgeClass: 'bg-light-primary text-primary',
     }"
   />
@@ -126,7 +126,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
       icon: 'ri-mail-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/apps/email',
       target: '_blank',
-      badgeContent: 'PRO',
+      badgeContent: 'Pro',
       badgeClass: 'bg-light-primary text-primary',
     }"
   />
@@ -136,7 +136,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
       icon: 'ri-wechat-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/apps/chat',
       target: '_blank',
-      badgeContent: 'PRO',
+      badgeContent: 'Pro',
       badgeClass: 'bg-light-primary text-primary',
     }"
   />
@@ -146,7 +146,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
       icon: 'ri-calendar-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/apps/calendar',
       target: '_blank',
-      badgeContent: 'PRO',
+      badgeContent: 'Pro',
       badgeClass: 'bg-light-primary text-primary',
     }"
   />
@@ -228,7 +228,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
       icon: 'ri-checkbox-multiple-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/forms/form-validation',
       target: '_blank',
-      badgeContent: 'PRO',
+      badgeContent: 'Pro',
       badgeClass: 'bg-light-primary text-primary',
     }"
   />
@@ -238,7 +238,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
       icon: 'ri-git-commit-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/forms/form-wizard-numbered',
       target: '_blank',
-      badgeContent: 'PRO',
+      badgeContent: 'Pro',
       badgeClass: 'bg-light-primary text-primary',
     }"
   />
@@ -262,7 +262,7 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
       icon: 'ri-shield-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/access-control',
       target: '_blank',
-      badgeContent: 'PRO',
+      badgeContent: 'Pro',
       badgeClass: 'bg-light-primary text-primary',
     }"
   />

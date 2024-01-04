@@ -5,7 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  apexcharts: ^3
   stylelint-order: 6.0.3
 
 dependencies:
@@ -22,8 +21,8 @@ dependencies:
     specifier: ^10.5.0
     version: 10.7.1(vue@3.4.3)
   apexcharts:
-    specifier: ^3
-    version: 3.45.1
+    specifier: 3.37.0
+    version: 3.37.0
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(typescript@5.3.3)(vue@3.4.3)
@@ -47,7 +46,7 @@ dependencies:
     version: 4.2.5(vue@3.4.3)
   vue3-apexcharts:
     specifier: ^1.4.4
-    version: 1.4.4(apexcharts@3.45.1)(vue@3.4.3)
+    version: 1.4.4(apexcharts@3.37.0)(vue@3.4.3)
   vue3-perfect-scrollbar:
     specifier: ^1.6.1
     version: 1.6.1(postcss@8.4.32)
@@ -1570,10 +1569,6 @@ packages:
       - '@vue/composition-api'
       - vue
 
-  /@yr/monotone-cubic-spline@1.0.3:
-    resolution: {integrity: sha512-FQXkOta0XBSUPHndIKON2Y9JeQz5ZeMqLYZVVK93FliNBFm7LNMIZmY6FrMEB9XPcDbE2bekMbZD6kzDkxwYjA==}
-    dev: false
-
   /acorn-jsx@5.3.2(acorn@8.11.3):
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
@@ -1632,10 +1627,9 @@ packages:
       normalize-path: 3.0.0
       picomatch: 2.3.1
 
-  /apexcharts@3.45.1:
-    resolution: {integrity: sha512-pPjj/SA6dfPvR/IKRZF0STdfBGpBh3WRt7K0DFuW9P8erypYkX17EHu3/molPRfo2zSiQwTVpshHC5ncysqfkA==}
+  /apexcharts@3.37.0:
+    resolution: {integrity: sha512-0mg1gDKUo3JG00Q//LK0jEXBS6OLjpuglqZ8ec9cqfA5oP8owopD9n5EhfARbWROb5o8GSPzFuohTJiCm2ecWw==}
     dependencies:
-      '@yr/monotone-cubic-spline': 1.0.3
       svg.draggable.js: 2.2.2
       svg.easing.js: 2.0.0
       svg.filter.js: 2.0.2
@@ -5775,13 +5769,13 @@ packages:
       typescript: 5.3.3
     dev: true
 
-  /vue3-apexcharts@1.4.4(apexcharts@3.45.1)(vue@3.4.3):
+  /vue3-apexcharts@1.4.4(apexcharts@3.37.0)(vue@3.4.3):
     resolution: {integrity: sha512-TH89uZrxGjaDvkaYAISvj8+k6Bf1rUKFillc8oJirs5XZEPiwM1ELKZQ786wz0rfPqkSHHny2lqqUCK7Rw+LcQ==}
     peerDependencies:
-      apexcharts: ^3
+      apexcharts: '> 3.0.0'
       vue: '> 3.0.0'
     dependencies:
-      apexcharts: 3.45.1
+      apexcharts: 3.37.0
       vue: 3.4.3(typescript@5.3.3)
     dev: false
 
