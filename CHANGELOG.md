@@ -4,6 +4,13 @@
 
 All notable changes to this template will be documented in this file
 
+## v2.2.1 (2024-01-05)
+
+### Added
+
+- Added Hire Us file
+- Added Documentation File
+
 ## v2.2.0 (2024-01-04)
 
 ### Updated
