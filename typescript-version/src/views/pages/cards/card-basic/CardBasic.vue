@@ -443,11 +443,11 @@ const isCardDetailsVisible = ref(false)
           </p>
         </VCardText>
 
-        <VCardActions class="justify-center">
+        <VCardText class="justify-center">
           <VBtn variant="elevated">
             Contact Now
           </VBtn>
-        </VCardActions>
+        </VCardText>
       </VCard>
     </VCol>
   </VRow>
