@@ -1,7 +1,5 @@
-<!-- eslint-disable no-restricted-imports -->
 <script setup>
-import VueApexCharts from 'vue3-apexcharts'
-import { useTheme } from 'vuetify'
+import { useTheme } from 'vuetify';
 
 const vuetifyTheme = useTheme()
 const currentTheme = computed(() => vuetifyTheme.current.value.colors)
