@@ -62,10 +62,13 @@ import UserProfile from '@/layouts/components/UserProfile.vue'
         to="/"
         class="app-logo app-title-wrapper"
       >
+
+        <!-- eslint-disable vue/no-v-html -->
         <div
           class="d-flex"
           v-html="logo"
         />
+        <!-- eslint-enable -->
 
         <h1 class="font-weight-medium leading-normal text-xl text-uppercase">
           Materio
