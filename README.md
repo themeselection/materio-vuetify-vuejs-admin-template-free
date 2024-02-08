@@ -182,6 +182,7 @@ If you want to [Download Free Admin Templates](https://themeselection.com/item/c
 
 ## Useful Links 🎁
 
+* [Vue CheatSheet](https://vue-cheatsheet.themeselection.com/)
 * [Freebies](https://themeselection.com/item/category/freebies/)
 * [Download Free Admin Templates](https://themeselection.com/item/category/download-free-admin-templates/)
 * [Bootstrap 5 CheatSheet](https://bootstrap-cheatsheet.themeselection.com/)
