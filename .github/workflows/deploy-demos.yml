@@ -6,24 +6,37 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: ⚙️ Set BRAND_NAME environment variable from repo name
-        run: echo BRAND_NAME=${{ github.event.repository.name }} | cut -d '-' -f1 >> $GITHUB_ENV
-
-      - name: ⬇️ Checkout template
-        uses: actions/checkout@v3
-
       - name: ⚙️ Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
           version: 8
 
-      - name: ⬇️ Install packages
+      - name: ⚙️ Set BRAND_NAME environment variable from repo name
+        run: echo BRAND_NAME=${{ github.event.repository.name }} | cut -d '-' -f1 >> $GITHUB_ENV
+
+      - name: ⬇️ Clone current repo under /<brand-name>/vue-free
+        uses: actions/checkout@v4
+        with:
+          path: ${{ env.BRAND_NAME }}/vue-free
+
+      - name: ⬇️ Clone automation scripts repo under /automation-scripts
+        uses: actions/checkout@v4
+        with:
+          repository: themeselection/automation-scripts
+          token: ${{ secrets.GH_PAT }}
+          path: automation-scripts
+      
+      - name: ⬇️ Install packages in automation-scripts dir
+        working-directory: automation-scripts/vue
         run: pnpm install
-        working-directory: ./typescript-version
+
+      - name: ⚙️ Prepare free demo
+        working-directory: automation-scripts/vue
+        run: pnpm tsx src/templates/${{ env.BRAND_NAME }}/scripts/prepareVueFreeDemo.ts
 
       - name: 📦 Generate demo
-        run: pnpm build --base=/${{ env.BRAND_NAME }}-vuetify-vuejs-admin-template-free/demo/
-        working-directory: ./typescript-version
+        working-directory: ${{ env.BRAND_NAME }}/vue-free/typescript-version
+        run: pnpm i && pnpm build --base=/${{ env.BRAND_NAME }}-vuetify-vuejs-admin-template-free/demo/
 
       - name: 🚀 Upload demo
         uses: appleboy/scp-action@master
@@ -32,11 +45,7 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
-          source: ./typescript-version/dist
+          source: ${{ env.BRAND_NAME }}/vue-free/typescript-version/dist
           target: ${{ secrets.PROD_DIR }}/demo
-
-          # remove target folder before uploading data 
           rm: true
-
-          # Setting it to `1` will upload all the files inside "dist" dir instead of "dist" dir itself
-          strip_components: 3
+          strip_components: 4
