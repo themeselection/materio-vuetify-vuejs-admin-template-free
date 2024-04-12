@@ -62,7 +62,6 @@ import UserProfile from '@/layouts/components/UserProfile.vue'
         to="/"
         class="app-logo app-title-wrapper"
       >
-
         <!-- eslint-disable vue/no-v-html -->
         <div
           class="d-flex"

@@ -228,24 +228,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: true,
-      'eslint-import-resolver-custom-alias': {
-        'alias': {
-          "@": "./src",
-          "@core": "./src/@core",
-          "@layouts": "./src/@layouts",
-          "@images": "./src/assets/images/",
-          "@styles": "./src/assets/styles/",
-          "@configured-variables": "./src/assets/styles/variables/_template.scss",
-        },
-        'extensions': [
-          '.ts',
-          '.js',
-          '.tsx',
-          '.jsx',
-          '.mjs',
-        ],
-      },
-      typescript: {},
+      typescript: { project: './jsconfig.json' },
     },
   },
 }
