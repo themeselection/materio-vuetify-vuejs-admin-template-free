@@ -12,6 +12,7 @@ module.exports = {
     'plugin:sonarjs/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:case-police/recommended',
+    'plugin:regexp/recommended',
 
     // 'plugin:unicorn/recommended',
   ],
@@ -25,8 +26,9 @@ module.exports = {
     'vue',
     '@typescript-eslint',
     'regex',
+    'regexp',
   ],
-  ignorePatterns: ['src/plugins/iconify/*.js', 'node_modules', 'dist', '*.d.ts', 'vendor'],
+  ignorePatterns: ['src/plugins/iconify/*.js', 'node_modules', 'dist', '*.d.ts', 'vendor', '*.json'],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -106,7 +108,7 @@ module.exports = {
     'import/newline-after-import': ['error', { count: 1 }],
     'no-restricted-imports': ['error', 'vuetify/components', {
       name: 'vue3-apexcharts',
-      message: 'apexcharts are autoimported',
+      message: 'apexcharts are auto imported',
     }],
 
     // For omitting extension for ts files
@@ -126,6 +128,8 @@ module.exports = {
       ignore: [
         '~pages$',
         'virtual:generated-layouts',
+        '#auth$',
+        '#components$',
 
         // Ignore vite's ?raw imports
         '.*\?raw',
@@ -208,11 +212,11 @@ module.exports = {
           message: 'Use \'@styles\' path alias for importing styles from \'src/assets/styles\'',
         },
 
-        // {
-        //   id: 'Disallow icon of icon library',
-        //   regex: 'tabler-\\w',
-        //   message: 'Only \'mdi\' icons are allowed',
-        // },
+        {
+          id: 'Disallow icon of icon library',
+          regex: 'tabler-\\w',
+          message: 'Only \'mdi\' icons are allowed',
+        },
 
         {
           regex: '@core/\\w',

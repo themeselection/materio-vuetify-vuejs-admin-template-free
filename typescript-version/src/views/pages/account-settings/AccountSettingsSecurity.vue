@@ -32,6 +32,7 @@ const serverKeys = [
     permission: 'Full Access',
   },
 ]
+
 const recentDevicesHeaders = [
   { title: 'BROWSER', key: 'browser' },
   { title: 'DEVICE', key: 'device' },
@@ -305,7 +306,6 @@ const recentDevices = [
     <VCol cols="12">
       <!-- 👉 Table -->
       <VCard title="Recent Devices">
-
         <VDataTable
           :headers="recentDevicesHeaders"
           :items="recentDevices"
@@ -327,7 +327,6 @@ const recentDevices = [
           <!-- TODO Refactor this after vuetify provides proper solution for removing default footer -->
           <template #bottom />
         </VDataTable>
-
       </VCard>
     </VCol>
     <!-- !SECTION -->

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import misc404 from '@images/pages/404.png';
+import misc404 from '@images/pages/404.png'
 </script>
 
 <template>

@@ -11,17 +11,18 @@ const alertTypeIcon = {
 const modifiedAliases = Object.assign(aliases, alertTypeIcon)
 
 export const iconify = {
-  component: (props: any) => h(
-    props.tag,
-    {
-      ...props,
-      class: [props.class, props.icon],
+  component: (props: any) => {
+    // Extract icon & tag from props to avoid passing them to the component
+    const { icon, tag, ...restProps } = props
 
-      // Remove used props from DOM rendering
-      tag: undefined,
-      icon: undefined,
-    },
-  ),
+    return h(
+      tag,
+      {
+        ...restProps,
+        class: [props.class, icon],
+      },
+    )
+  },
 }
 
 export const icons = {

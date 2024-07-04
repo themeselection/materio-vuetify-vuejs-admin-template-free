@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import { useTheme } from 'vuetify'
-
 import NavItems from '@/layouts/components/NavItems.vue'
+import logo from '@images/logo.svg?raw'
 import VerticalNavLayout from '@layouts/components/VerticalNavLayout.vue'
 
 // Components
@@ -60,8 +59,33 @@ import UserProfile from '@/layouts/components/UserProfile.vue'
       </div>
     </template>
 
+    <template #vertical-nav-header="{ toggleIsOverlayNavActive }">
+      <RouterLink
+        to="/"
+        class="app-logo app-title-wrapper"
+      >
+        <!-- eslint-disable vue/no-v-html -->
+        <div
+          class="d-flex"
+          v-html="logo"
+        />
+        <!-- eslint-enable -->
+
+        <h1 class="font-weight-medium leading-normal text-xl text-uppercase">
+          Materio
+        </h1>
+      </RouterLink>
+
+      <IconBtn
+        class="d-block d-lg-none"
+        @click="toggleIsOverlayNavActive(false)"
+      >
+        <VIcon icon="mdi-close" />
+      </IconBtn>
+    </template>
+
     <template #vertical-nav-content>
-      <NavItems></NavItems>
+      <NavItems />
     </template>
 
     <!-- 👉 Pages -->
@@ -82,5 +106,18 @@ import UserProfile from '@/layouts/components/UserProfile.vue'
   line-height: 1.3125rem;
   padding-block: 0.125rem;
   padding-inline: 0.25rem;
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+
+  .app-logo-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+    text-transform: uppercase;
+  }
 }
 </style>
