@@ -89,6 +89,14 @@ body .apexcharts-canvas {
     box-shadow: none;
   }
 
+  .apexcharts-tooltip-marker {
+    margin-inline-end: 0.625rem;
+
+    @include layoutsMixins.rtl {
+      margin-inline: 0 0.625rem !important;
+    }
+  }
+
   .apexcharts-legend-marker {
     margin-inline-end: 0.3875rem !important;
 

@@ -1,11 +1,12 @@
 {
   "extends": [
     "stylelint-config-standard-scss",
-    "stylelint-config-idiomatic-order"
+    "stylelint-config-idiomatic-order",
+    "@stylistic/stylelint-config"
   ],
   "plugins": [
     "stylelint-use-logical-spec",
-    "stylelint-codeguide"
+    "@stylistic/stylelint-plugin"
   ],
   "overrides": [
     {
@@ -22,13 +23,13 @@
     }
   ],
   "rules": {
-    "codeguide/max-line-length": [
-      120,
+    "@stylistic/max-line-length": [
+      220,
       {
         "ignore": "comments"
       }
     ],
-    "codeguide/indentation": 2,
+    "@stylistic/indentation": 2,
     "liberty/use-logical-spec": true,
     "selector-class-pattern": null,
     "color-function-notation": null,

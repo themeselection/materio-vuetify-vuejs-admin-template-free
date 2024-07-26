@@ -1,109 +1,109 @@
 {
-    "editor.formatOnSave": true,
-    "files.insertFinalNewline": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "[javascript]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.autoClosingBrackets": "always"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  // SCSS
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  // JSON
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  // Vue
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  },
+  // Extension: Volar
+  "volar.preview.port": 3000,
+  "volar.completion.preferredTagNameCase": "pascal",
+  // Extension: ESLint
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "eslint.packageManager": "pnpm",
+  // Extension: Stylelint
+  "stylelint.packageManager": "pnpm",
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "vue"
+  ],
+  // Extension: Spell Checker
+  "cSpell.words": [
+    "Composables",
+    "Customizer",
+    "destr",
+    "flagpack",
+    "Iconify",
+    "ofetch",
+    "psudo",
+    "stylelint",
+    "touchless",
+    "triggerer",
+    "vuetify",
+    "nuxt"
+  ],
+  // Extension: Comment Anchors
+  "commentAnchors.tags.anchors": {
+    "ℹ️": {
+      "scope": "hidden",
+      // This color is taken from "Better Comments" Extension (?)
+      "highlightColor": "#3498DB",
+      "styleComment": true,
+      "isItalic": false,
     },
-    "[typescript]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-        "editor.autoClosingBrackets": "always"
+    "👉": {
+      "scope": "file",
+      // This color is taken from "Better Comments" Extension (*)
+      "highlightColor": "#98C379",
+      "styleComment": true,
+      "isItalic": false
     },
-    "[markdown]": {
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    "❗": {
+      "scope": "hidden",
+      // This color is taken from "Better Comments" Extension (*)
+      "highlightColor": "#FF2D00",
+      "styleComment": true,
+      "isItalic": false,
     },
-    // SCSS
-    "[scss]": {
-        "editor.defaultFormatter": "stylelint.vscode-stylelint"
-    },
-    // JSON
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    // Vue
-    "[vue]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    },
-    // Extension: Volar
-    "volar.preview.port": 3000,
-    "volar.completion.preferredTagNameCase": "pascal",
-    // Extension: ESLint
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit",
-        "source.fixAll.stylelint": "explicit",
-        "source.organizeImports": "explicit"
-    },
-    "eslint.alwaysShowStatus": true,
-    "eslint.format.enable": true,
-    "eslint.packageManager": "pnpm",
-    // Extension: Stylelint
-    "stylelint.packageManager": "pnpm",
-    "stylelint.validate": [
-        "css",
-        "scss",
-        "vue"
+  },
+  // Extension: fabiospampinato.vscode-highlight
+  "highlight.regexFlags": "gi",
+  "highlight.regexes": {
+    // We flaged this for enforcing logical CSS properties
+    "(100vh|translate|margin:|padding:|margin-left|margin-right|rotate|text-align|border-top|border-right|border-bottom|border-left|float|background-position|transform|width|height|top|left|bottom|right|float|clear|(p|m)(l|r)-|border-(start|end)-(start|end)-radius)": [
+      {
+        // "rangeBehavior": 1,
+        "borderWidth": "1px",
+        "borderColor": "tomato",
+        "borderStyle": "solid"
+      }
     ],
-    // Extension: Spell Checker
-    "cSpell.words": [
-        "Composables",
-        "Customizer",
-        "destr",
-        "flagpack",
-        "Iconify",
-        "ofetch",
-        "psudo",
-        "stylelint",
-        "touchless",
-        "triggerer",
-        "vuetify",
-        "nuxt"
-    ],
-    // Extension: Comment Anchors
-    "commentAnchors.tags.anchors": {
-        "ℹ️": {
-            "scope": "hidden",
-            // This color is taken from "Better Comments" Extension (?)
-            "highlightColor": "#3498DB",
-            "styleComment": true,
-            "isItalic": false,
-        },
-        "👉": {
-            "scope": "file",
-            // This color is taken from "Better Comments" Extension (*)
-            "highlightColor": "#98C379",
-            "styleComment": true,
-            "isItalic": false
-        },
-        "❗": {
-            "scope": "hidden",
-            // This color is taken from "Better Comments" Extension (*)
-            "highlightColor": "#FF2D00",
-            "styleComment": true,
-            "isItalic": false,
-        },
-    },
-    // Extension: fabiospampinato.vscode-highlight
-    "highlight.regexFlags": "gi",
-    "highlight.regexes": {
-        // We flaged this for enforcing logical CSS properties
-        "(100vh|translate|margin:|padding:|margin-left|margin-right|rotate|text-align|border-top|border-right|border-bottom|border-left|float|background-position|transform|width|height|top|left|bottom|right|float|clear|(p|m)(l|r)-|border-(start|end)-(start|end)-radius)": [
-            {
-                // "rangeBehavior": 1,
-                "borderWidth": "1px",
-                "borderColor": "tomato",
-                "borderStyle": "solid"
-            }
-        ],
-        "(overflow-x:|overflow-y:)": [
-            {
-                // "rangeBehavior": 1,
-                "borderWidth": "1px",
-                "borderColor": "green",
-                "borderStyle": "solid"
-            }
-        ]
-    }
+    "(overflow-x:|overflow-y:)": [
+      {
+        // "rangeBehavior": 1,
+        "borderWidth": "1px",
+        "borderColor": "green",
+        "borderStyle": "solid"
+      }
+    ]
+  }
 }

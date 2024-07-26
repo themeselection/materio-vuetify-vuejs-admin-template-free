@@ -25,7 +25,7 @@ jobs:
           repository: themeselection/automation-scripts
           token: ${{ secrets.GH_PAT }}
           path: automation-scripts
-      
+
       - name: ⬇️ Install packages in automation-scripts dir
         working-directory: automation-scripts/vue
         run: pnpm install

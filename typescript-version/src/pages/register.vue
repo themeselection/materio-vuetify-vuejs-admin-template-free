@@ -86,7 +86,7 @@ const isPasswordVisible = ref(false)
                 :append-inner-icon="isPasswordVisible ? 'ri-eye-off-line' : 'ri-eye-line'"
                 @click:append-inner="isPasswordVisible = !isPasswordVisible"
               />
-              <div class="d-flex align-center mt-1 mb-4">
+              <div class="d-flex align-center my-6">
                 <VCheckbox
                   id="privacy-policy"
                   v-model="form.privacyPolicies"

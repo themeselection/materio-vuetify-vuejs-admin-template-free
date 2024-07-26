@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useTheme } from 'vuetify'
 import AuthProvider from '@/views/pages/authentication/AuthProvider.vue'
+import { useTheme } from 'vuetify'
 
 import logo from '@images/logo.svg?raw'
 import authV1MaskDark from '@images/pages/auth-v1-mask-dark.png'
@@ -78,14 +78,14 @@ const isPasswordVisible = ref(false)
               />
 
               <!-- remember me checkbox -->
-              <div class="d-flex align-center justify-space-between flex-wrap mt-1 mb-4">
+              <div class="d-flex align-center justify-space-between flex-wrap my-6">
                 <VCheckbox
                   v-model="form.remember"
                   label="Remember me"
                 />
 
                 <a
-                  class="ms-2 mb-1"
+                  class="text-primary"
                   href="javascript:void(0)"
                 >
                   Forgot Password?
