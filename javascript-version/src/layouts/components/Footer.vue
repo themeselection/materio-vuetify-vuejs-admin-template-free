@@ -1,5 +1,5 @@
 <template>
-  <div class="h-100 d-flex align-center justify-space-between">
+  <div class="h-100 d-flex align-center justify-md-space-between justify-center">
     <!-- 👉 Footer: left content -->
     <span class="d-flex align-center">
       &copy;
@@ -32,6 +32,10 @@
         href="https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/documentation/"
         target="noopener noreferrer"
       >Documentation</a>
+      <a
+        href="https://themeselection.com/support/"
+        target="noopener noreferrer"
+      >Support</a>
     </span>
   </div>
 </template>

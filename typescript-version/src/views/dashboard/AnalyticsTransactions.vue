@@ -25,6 +25,12 @@ const statistics = [
     color: 'info',
   },
 ]
+
+const moreList = [
+  { title: 'Share', value: 'Share' },
+  { title: 'Refresh', value: 'Refresh' },
+  { title: 'Update', value: 'Update' },
+]
 </script>
 
 <template>
@@ -36,12 +42,7 @@ const statistics = [
     </template>
 
     <template #append>
-      <IconBtn class="mt-n5">
-        <VIcon
-          color="high-emphasis"
-          icon="ri-more-2-line"
-        />
-      </IconBtn>
+      <MoreBtn :menu-list="moreList" />
     </template>
 
     <VCardText class="pt-10">

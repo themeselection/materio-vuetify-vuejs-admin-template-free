@@ -1,0 +1,18 @@
+// 👉 Otp input
+
+.v-otp-input {
+  justify-content: unset !important;
+
+  .v-otp-input__content {
+    max-inline-size: 100%;
+
+    .v-field.v-field--focused {
+      .v-field__outline {
+        .v-field__outline__start,
+        .v-field__outline__end {
+          border-color: rgb(var(--v-theme-primary)) !important;
+        }
+      }
+    }
+  }
+}

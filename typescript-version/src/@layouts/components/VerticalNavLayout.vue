@@ -1,6 +1,6 @@
 <script lang="ts">
-import VerticalNav from '@layouts/components/VerticalNav.vue'
 import { useDisplay } from 'vuetify'
+import VerticalNav from '@layouts/components/VerticalNav.vue'
 
 export default defineComponent({
   setup(props, { slots }) {

@@ -29,7 +29,7 @@ const aliases: Partial<IconAliases> = {
   clear: 'ri-close-line',
   prev: 'ri-arrow-left-s-line',
   next: 'ri-arrow-right-s-line',
-  delimiter: 'ri-checkbox-blank-circle-line',
+  delimiter: 'ri-circle-line',
   sort: 'ri-arrow-up-line',
   expand: 'ri-arrow-down-s-line',
   menu: 'ri-menu-line',

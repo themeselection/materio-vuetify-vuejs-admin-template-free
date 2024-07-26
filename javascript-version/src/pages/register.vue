@@ -32,15 +32,19 @@ const isPasswordVisible = ref(false)
       max-width="448"
     >
       <VCardItem class="justify-center">
-        <template #prepend>
-          <div class="d-flex">
-            <div v-html="logo" />
-          </div>
-        </template>
-
-        <VCardTitle class="font-weight-semibold text-2xl text-uppercase">
-          Materio
-        </VCardTitle>
+        <RouterLink
+          to="/"
+          class="d-flex align-center gap-3"
+        >
+          <!-- eslint-disable vue/no-v-html -->
+          <div
+            class="d-flex"
+            v-html="logo"
+          />
+          <h2 class="font-weight-medium text-2xl text-uppercase">
+            Materio
+          </h2>
+        </RouterLink>
       </VCardItem>
 
       <VCardText class="pt-2">
@@ -83,7 +87,7 @@ const isPasswordVisible = ref(false)
                 :append-inner-icon="isPasswordVisible ? 'ri-eye-off-line' : 'ri-eye-line'"
                 @click:append-inner="isPasswordVisible = !isPasswordVisible"
               />
-              <div class="d-flex align-center mt-1 mb-4">
+              <div class="d-flex align-center my-6">
                 <VCheckbox
                   id="privacy-policy"
                   v-model="form.privacyPolicies"

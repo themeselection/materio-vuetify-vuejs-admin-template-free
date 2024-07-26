@@ -15,6 +15,7 @@
   "dependencies": {
     "@floating-ui/dom": "1.6.8",
     "@iconify-json/bxl": "^1.1.10",
+    "@stylistic/stylelint-config": "^1.0.1",
     "@vueuse/core": "^10.5.0",
     "@vueuse/math": "^10.5.0",
     "apexcharts": "3.51.0",
@@ -50,6 +51,7 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-regex": "^1.10.0",
+    "eslint-plugin-regexp": "^2.6.0",
     "eslint-plugin-sonarjs": "^0.24.0",
     "eslint-plugin-unicorn": "^51.0.1",
     "eslint-plugin-vue": "^9.19.2",

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { NavGroup } from '@layouts/types';
+import type { NavGroup } from '@layouts/types'
 
 defineProps<{
   item: Omit<NavGroup, 'children'>

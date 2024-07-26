@@ -112,16 +112,6 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
   />
   <VerticalNavLink
     :item="{
-      title: 'Permissions',
-      icon: 'ri-lock-2-line',
-      href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/apps/permissions',
-      target: '_blank',
-      badgeContent: 'Pro',
-      badgeClass: 'bg-light-primary text-primary',
-    }"
-  />
-  <VerticalNavLink
-    :item="{
       title: 'Email',
       icon: 'ri-mail-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/apps/email',
@@ -145,6 +135,16 @@ import VerticalNavLink from '@layouts/components/VerticalNavLink.vue'
       title: 'Calendar',
       icon: 'ri-calendar-line',
       href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/apps/calendar',
+      target: '_blank',
+      badgeContent: 'Pro',
+      badgeClass: 'bg-light-primary text-primary',
+    }"
+  />
+  <VerticalNavLink
+    :item="{
+      title: 'Kanban',
+      icon: 'ri-drag-drop-line',
+      href: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/apps/kanban',
       target: '_blank',
       badgeContent: 'Pro',
       badgeClass: 'bg-light-primary text-primary',

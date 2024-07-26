@@ -12,7 +12,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "jsx": "preserve",
     "paths": {
       "@/*": [

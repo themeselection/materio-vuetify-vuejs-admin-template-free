@@ -41,6 +41,12 @@ const salesByCountries = [
     color: 'error',
   },
 ]
+
+const moreList = [
+  { title: 'Yesterday', value: 'Yesterday' },
+  { title: 'Last Week', value: 'Last Week' },
+  { title: 'Last Month', value: 'Last Month' },
+]
 </script>
 
 <template>
@@ -50,7 +56,7 @@ const salesByCountries = [
 
       <template #append>
         <div class="me-n3">
-          <MoreBtn />
+          <MoreBtn :menu-list="moreList" />
         </div>
       </template>
     </VCardItem>

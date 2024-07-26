@@ -87,7 +87,6 @@ const handleNavScroll = evt => {
         <slot />
       </PerfectScrollbar>
     </slot>
-
     <slot name="after-nav-items" />
   </Component>
 </template>
@@ -172,7 +171,7 @@ const handleNavScroll = evt => {
 }
 
 // Small screen vertical nav transition
-@media (max-width:1279px) {
+@media (max-width: 1279px) {
   .layout-vertical-nav {
     &:not(.visible) {
       transform: translateX(-#{variables.$layout-vertical-nav-width});

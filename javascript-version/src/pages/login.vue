@@ -31,15 +31,19 @@ const isPasswordVisible = ref(false)
       max-width="448"
     >
       <VCardItem class="justify-center">
-        <template #prepend>
-          <div class="d-flex">
-            <div v-html="logo" />
-          </div>
-        </template>
-
-        <VCardTitle class="font-weight-semibold text-2xl text-uppercase">
-          Materio
-        </VCardTitle>
+        <RouterLink
+          to="/"
+          class="d-flex align-center gap-3"
+        >
+          <!-- eslint-disable vue/no-v-html -->
+          <div
+            class="d-flex"
+            v-html="logo"
+          />
+          <h2 class="font-weight-medium text-2xl text-uppercase">
+            Materio
+          </h2>
+        </RouterLink>
       </VCardItem>
 
       <VCardText class="pt-2">
@@ -75,14 +79,14 @@ const isPasswordVisible = ref(false)
               />
 
               <!-- remember me checkbox -->
-              <div class="d-flex align-center justify-space-between flex-wrap mt-1 mb-4">
+              <div class="d-flex align-center justify-space-between flex-wrap my-6">
                 <VCheckbox
                   v-model="form.remember"
                   label="Remember me"
                 />
 
                 <a
-                  class="ms-2 mb-1"
+                  class="text-primary"
                   href="javascript:void(0)"
                 >
                   Forgot Password?

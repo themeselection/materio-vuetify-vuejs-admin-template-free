@@ -23,7 +23,7 @@ const props = defineProps({
     <!-- 👉 Title and subtitle -->
     <h1
       v-if="props.statusCode"
-      class="text-h1 font-weight-medium"
+      class="header-title font-weight-medium"
     >
       {{ props.statusCode }}
     </h1>
@@ -38,3 +38,10 @@ const props = defineProps({
     </p>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.header-title {
+  font-size: clamp(3rem, 5vw, 6rem);
+  line-height: clamp(3rem, 5vw, 6rem);
+}
+</style>

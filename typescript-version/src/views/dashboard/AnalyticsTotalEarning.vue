@@ -26,6 +26,12 @@ const earnings = [
     progress: 'secondary',
   },
 ]
+
+const moreList = [
+  { title: 'Share', value: 'Share' },
+  { title: 'Refresh', value: 'Refresh' },
+  { title: 'Update', value: 'Update' },
+]
 </script>
 
 <template>
@@ -35,7 +41,7 @@ const earnings = [
 
       <template #append>
         <div class="me-n3">
-          <MoreBtn />
+          <MoreBtn :menu-list="moreList" />
         </div>
       </template>
     </VCardItem>

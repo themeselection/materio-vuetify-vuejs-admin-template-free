@@ -1,0 +1,10 @@
+// 👉 snackbar
+
+.v-snackbar {
+  .v-snackbar__actions {
+    .v-btn {
+      padding-block: 0;
+      padding-inline: 10px;
+    }
+  }
+}

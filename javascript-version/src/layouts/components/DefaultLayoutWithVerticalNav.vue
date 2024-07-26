@@ -39,7 +39,6 @@ import UserProfile from '@/layouts/components/UserProfile.vue'
         <VSpacer />
 
         <IconBtn
-          class="me-2"
           href="https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free"
           target="_blank"
           rel="noopener noreferrer"
@@ -47,7 +46,7 @@ import UserProfile from '@/layouts/components/UserProfile.vue'
           <VIcon icon="ri-github-fill" />
         </IconBtn>
 
-        <IconBtn class="me-2">
+        <IconBtn>
           <VIcon icon="ri-notification-line" />
         </IconBtn>
 

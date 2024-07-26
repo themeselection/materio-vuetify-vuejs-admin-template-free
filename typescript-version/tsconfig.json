@@ -44,7 +44,6 @@
     "skipLibCheck": true,
     "types": [
       "vite/client",
-      "unplugin-vue-router/client",
       "vite-plugin-vue-layouts/client"
     ]
   },

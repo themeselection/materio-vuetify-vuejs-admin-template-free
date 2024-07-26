@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { ThemeSwitcherTheme } from '@layouts/types';
-import { useTheme } from 'vuetify';
+import { useTheme } from 'vuetify'
+import type { ThemeSwitcherTheme } from '@layouts/types'
 
 const props = defineProps<{
   themes: ThemeSwitcherTheme[]

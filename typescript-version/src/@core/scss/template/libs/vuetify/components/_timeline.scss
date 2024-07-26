@@ -1,0 +1,52 @@
+@use "@configured-variables" as variables;
+@use "sass:map";
+@use "@styles/variables/vuetify";
+@use "@core/scss/base/mixins";
+@use "@core/scss/base/utils";
+
+// 👉 Timeline
+
+.v-timeline {
+  &:not(.v-timeline--variant-outlined) .v-timeline-divider__dot {
+    background: none !important;
+
+    .v-timeline-divider__inner-dot {
+      box-shadow: 0 0 0 0.1875rem rgb(var(--v-theme-on-surface-variant));
+
+      @each $color-name in variables.$theme-colors-name {
+
+        &.bg-#{$color-name} {
+          box-shadow: 0 0 0 0.1875rem rgba(var(--v-theme-#{$color-name}), 0.12);
+        }
+      }
+    }
+  }
+
+  .v-timeline-item {
+    .timeline-chip {
+      border-radius: 6px;
+      background: rgba(var(--v-theme-on-surface), var(--v-hover-opacity));
+      padding-block: 5px;
+      padding-inline: 10px;
+    }
+  }
+
+  &.v-timeline--variant-outlined {
+    .v-timeline-item {
+      .v-timeline-divider {
+        .v-timeline-divider__dot {
+          background: none !important;
+        }
+      }
+
+      .v-timeline-divider__after {
+        border: 1px dashed rgba(var(--v-border-color), var(--v-border-opacity));
+        background: none;
+      }
+
+      .v-timeline-divider__before {
+        background: none;
+      }
+    }
+  }
+}

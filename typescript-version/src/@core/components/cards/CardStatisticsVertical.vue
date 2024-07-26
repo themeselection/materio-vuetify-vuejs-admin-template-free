@@ -13,6 +13,12 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const isPositive = computed(() => Math.sign(props.change) === 1)
+
+const moreList = [
+  { title: 'Share', value: 'Share' },
+  { title: 'Refresh', value: 'Refresh' },
+  { title: 'Update', value: 'Update' },
+]
 </script>
 
 <template>
@@ -32,7 +38,10 @@ const isPositive = computed(() => Math.sign(props.change) === 1)
 
       <VSpacer />
 
-      <MoreBtn class="me-n3 mt-n1" />
+      <MoreBtn
+        class="me-n3 mt-n1"
+        :menu-list="moreList"
+      />
     </VCardText>
 
     <VCardText>
