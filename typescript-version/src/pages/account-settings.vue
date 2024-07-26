@@ -20,6 +20,7 @@ const tabs = [
     <VTabs
       v-model="activeTab"
       show-arrows
+      class="v-tabs-pill"
     >
       <VTab
         v-for="item in tabs"
@@ -34,7 +35,6 @@ const tabs = [
         {{ item.title }}
       </VTab>
     </VTabs>
-    <VDivider />
 
     <VWindow
       v-model="activeTab"

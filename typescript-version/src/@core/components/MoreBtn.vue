@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const props = defineProps<{
+interface Props {
   menuList?: unknown[]
   itemProps?: boolean
   iconSize?: string

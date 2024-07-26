@@ -13,10 +13,10 @@
     "postinstall": "npm run build:icons"
   },
   "dependencies": {
-    "@floating-ui/dom": "1.6.3",
+    "@floating-ui/dom": "1.6.8",
     "@vueuse/core": "^10.5.0",
     "@vueuse/math": "^10.5.0",
-    "apexcharts": "3.49.2",
+    "apexcharts": "3.51.0",
     "pinia": "^2.1.7",
     "prismjs": "^1.29.0",
     "roboto-fontface": "^0.10.0",
@@ -25,8 +25,8 @@
     "vue-prism-component": "^2.0.0",
     "vue-router": "^4.3.0",
     "vue3-apexcharts": "^1.5.2",
-    "vue3-perfect-scrollbar": "^1.6.1",
-    "vuetify": "3.6.1",
+    "vue3-perfect-scrollbar": "^2.0.0",
+    "vuetify": "3.6.13",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
@@ -35,13 +35,13 @@
     "@iconify-json/mdi": "^1.1.58",
     "@iconify/tools": "^4.0.0",
     "@iconify/utils": "^2.1.13",
-    "@iconify/vue": "4.1.1",
+    "@iconify/vue": "4.1.2",
     "@types/node": "^20.10.3",
     "@types/webfontloader": "^1.6.35",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.14.1",
     "@vitejs/plugin-vue": "^5.0.2",
-    "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "@vitejs/plugin-vue-jsx": "^4.0.0",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-import-resolver-typescript": "^3.6.1",
@@ -54,17 +54,17 @@
     "eslint-plugin-vue": "^9.19.2",
     "postcss-html": "^1.5.0",
     "postcss-scss": "^4.0.9",
-    "sass": "^1.69.4",
-    "stylelint": "16.2.1",
-    "stylelint-codeguide": "0.3.2",
+    "sass": "^1.76.0",
+    "stylelint": "16.7.0",
+    "stylelint-codeguide": "2.0.0",
     "stylelint-config-idiomatic-order": "10.0.0",
-    "stylelint-config-standard-scss": "13.0.0",
+    "stylelint-config-standard-scss": "13.1.0",
     "stylelint-use-logical-spec": "5.0.1",
     "tsx": "^4.7.0",
     "type-fest": "^4.8.3",
     "typescript": "^5.3.3",
-    "unplugin-auto-import": "^0.17.2",
-    "unplugin-vue-components": "^0.26.0",
+    "unplugin-auto-import": "^0.18.2",
+    "unplugin-vue-components": "^0.27.3",
     "vite": "^5.3.1",
     "vite-plugin-vue-layouts": "^0.11.0",
     "vite-plugin-vuetify": "2.0.3",
@@ -72,9 +72,11 @@
     "vue-tsc": "^2.0.22"
   },
   "resolutions": {
-    "stylelint-order": "6.0.3"
+    "stylelint-order": "6.0.3",
+    "sass": "1.76.0"
   },
   "overrides": {
-    "stylelint-order": "6.0.3"
+    "stylelint-order": "6.0.3",
+    "sass": "1.76.0"
   }
 }

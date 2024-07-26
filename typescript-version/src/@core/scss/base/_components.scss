@@ -166,7 +166,10 @@
 // loop for all colors bg
 @each $color-name in variables.$theme-colors-name {
   body .v-tabs.v-tabs-pill {
-    .v-slide-group-item--active.v-tab--selected.text-#{$color-name} {
+    .v-slide-group__content {
+      gap: 0.25rem;
+    }
+    .v-tab--selected.text-#{$color-name} {
       background-color: rgb(var(--v-theme-#{$color-name}));
       color: rgb(var(--v-theme-on-#{$color-name})) !important;
     }
