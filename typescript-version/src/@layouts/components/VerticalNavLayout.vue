@@ -99,61 +99,6 @@ export default defineComponent({
 })
 </script>
 
-<template>
-  <div
-    class="layout-wrapper"
-    :class="configStore._layoutClasses"
-  >
-    <component
-      :is="verticalNavAttrs.verticalNavWrapper ? verticalNavAttrs.verticalNavWrapper : 'div'"
-      v-bind="verticalNavAttrs.verticalNavWrapperProps"
-      class="vertical-nav-wrapper"
-    >
-      <VerticalNav
-        :is-overlay-nav-active="isOverlayNavActive"
-        :toggle-is-overlay-nav-active="toggleIsOverlayNavActive"
-        :nav-items="props.navItems"
-        v-bind="{ ...verticalNavAttrs.additionalVerticalNavAttrs }"
-      >
-        <template #nav-header>
-          <slot name="vertical-nav-header" />
-        </template>
-        <template #before-nav-items>
-          <slot name="before-vertical-nav-items" />
-        </template>
-      </VerticalNav>
-    </component>
-    <div class="layout-content-wrapper">
-      <header
-        class="layout-navbar"
-        :class="[{ 'navbar-blur': configStore.isNavbarBlurEnabled }]"
-      >
-        <div class="navbar-content-container">
-          <slot
-            name="navbar"
-            :toggle-vertical-overlay-nav-active="toggleIsOverlayNavActive"
-          />
-        </div>
-      </header>
-      <main class="layout-page-content">
-        <div class="page-content-container">
-          <slot />
-        </div>
-      </main>
-      <footer class="layout-footer">
-        <div class="footer-content-container">
-          <slot name="footer" />
-        </div>
-      </footer>
-    </div>
-    <div
-      class="layout-overlay"
-      :class="[{ visible: isLayoutOverlayVisible }]"
-      @click="() => { isLayoutOverlayVisible = !isLayoutOverlayVisible }"
-    />
-  </div>
-</template>
-
 <style lang="scss">
 @use "@configured-variables" as variables;
 @use "@layouts/styles/placeholders";
@@ -224,7 +169,7 @@ export default defineComponent({
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.25s ease-in-out;
-    will-change: opacity;
+    will-change: transform;
 
     &.visible {
       opacity: 1;
@@ -234,9 +179,7 @@ export default defineComponent({
 
   // Adjust right column pl when vertical nav is collapsed
   &.layout-vertical-nav-collapsed .layout-content-wrapper {
-    @media screen and (min-width: 1280px) {
-      padding-inline-start: variables.$layout-vertical-nav-collapsed-width;
-    }
+    padding-inline-start: variables.$layout-vertical-nav-collapsed-width;
   }
 
   // 👉 Content height fixed
