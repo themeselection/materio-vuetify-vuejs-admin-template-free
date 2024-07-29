@@ -68,7 +68,6 @@ Please [visit](https://demos.themeselection.com/materio-vuetify-vuejs-admin-temp
   - Multiple Column
 - Tables
 
-
 ## What's in Premium Version 💎
 
 | Materio Free Version                                                                             | Materio Premium Version                                                                        |
@@ -94,7 +93,7 @@ Please [visit](https://demos.themeselection.com/materio-vuetify-vuejs-admin-temp
 | -                                                                                                | Starter-kit                                                                                    |
 | -                                                                                                | Internationalization support in components                                                     |
 | Regular Support                                                                                  | Priority Support                                                                               |
-| Basic Documentation         
+| Basic Documentation
 
 ## Documentation 📜
 
@@ -113,16 +112,16 @@ Check out our live [Documentation](https://demos.themeselection.com/materio-vuet
 
 Contributions are always welcome and recommended! Here is how:
 
-* Fork the repository ([here is the guide](https://docs.github.com/en/get-started/quickstart/fork-a-repo)).
-* Clone to your machine `git clone https://github.com/YOUR_USERNAME/REPO_NAME` Make your changes
-* Create a pull request
+- Fork the repository ([here is the guide](https://docs.github.com/en/get-started/quickstart/fork-a-repo)).
+- Clone to your machine `git clone https://github.com/YOUR_USERNAME/REPO_NAME` Make your changes
+- Create a pull request
 
 ### Contribution Requirements 🧰
 
-* When you contribute, you agree to give a non-exclusive license to ThemeSelection to use that contribution in any context as we (ThemeSelection) see appropriate.
-* If you use content provided by another party, it must be appropriately licensed using an open-source license.
-* Contributions are only accepted through Github pull requests.
-* Finally, the contributed code must work in all supported browsers (see above for browser support).
+- When you contribute, you agree to give a non-exclusive license to ThemeSelection to use that contribution in any context as we (ThemeSelection) see appropriate.
+- If you use content provided by another party, it must be appropriately licensed using an open-source license.
+- Contributions are only accepted through Github pull requests.
+- Finally, the contributed code must work in all supported browsers (see above for browser support).
 
 ## Changelog 📆
 
@@ -137,6 +136,7 @@ For free products, enjoy community support via GitHub issues. Upgrade to Premium
 - Copyright © [ThemeSelection](https://themeselection.com/)
 - Licensed under [MIT](LICENSE)
 - All our free items are Open Source and licensed under MIT. You can use our free items for personal as well as commercial purposes. We just need an attribution from your end. Copy the below link and paste it at the footer of your web application or project.
+
    ```html
   <a href="https://themeselection.com/">ThemeSelection</a>
    ```
@@ -170,22 +170,22 @@ For free products, enjoy community support via GitHub issues. Upgrade to Premium
 
 **[ThemeSelection](https://themeselection.com/)** provides Selected high quality, modern design, professional and easy-to-use **Fully Coded Dashboard Templates & UI Kits** to create your applications faster!
 
-- [Bootstrap Admin Templates](https://themeselection.com/products/category/bootstrap-admin-templates/)
-- [VueJS Admin Templates](https://themeselection.com/products/category/vuejs-admin-templates/)
-- [Laravel Admin Templates](https://themeselection.com/products/category/laravel-admin-templates/)
+- [Bootstrap Admin Templates](https://themeselection.com/item/category/bootstrap-admin-template/)
+- [VueJS Admin Templates](https://themeselection.com/item/category/vuejs-admin-templates/)
+- [Laravel Admin Templates](https://themeselection.com/item/category/laravel-admin-templates/)
 - [Django Admin Templates](https://themeselection.com/item/category/django-admin-template/)
 - [React (NextJS) Admin Templates](https://themeselection.com/item/category/next-js-admin-template/)
 - [ASP.Net Core Admin Templates](https://themeselection.com/item/category/asp-net-dashboard/)
-- [Free UI Kits](https://themeselection.com/products/category/free-ui-kits/) 
+- [Free UI Kits](https://themeselection.com/item/category/free-ui-kits/)
 
-If you want to [Download Free Admin Templates](https://themeselection.com/item/category/download-free-admin-templates/) like Materio then do visit [ThemeSelection](https://themeselection.com/).
+If you want to [Download Free Admin Templates](https://themeselection.com/item/category/free-admin-templates/) like Materio then do visit [ThemeSelection](https://themeselection.com/).
 
 ## Useful Links 🎁
 
-* [Vue CheatSheet](https://vue-cheatsheet.themeselection.com/)
-* [Freebies](https://themeselection.com/item/category/freebies/)
-* [Download Free Admin Templates](https://themeselection.com/item/category/download-free-admin-templates/)
-* [Bootstrap 5 CheatSheet](https://bootstrap-cheatsheet.themeselection.com/)
+- [Vue CheatSheet](https://vue-cheatsheet.themeselection.com/)
+- [Freebies](https://themeselection.com/item/category/free-admin-templates/)
+- [Download Free Admin Templates](https://themeselection.com/item/category/free-admin-templates/)
+- [Bootstrap 5 CheatSheet](https://bootstrap-cheatsheet.themeselection.com/)
 
 ## Social Media :earth_africa:
 
