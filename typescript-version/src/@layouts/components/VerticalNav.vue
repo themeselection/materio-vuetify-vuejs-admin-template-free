@@ -43,6 +43,7 @@ const handleNavScroll = (evt: Event) => {
   <Component
     :is="props.tag"
     ref="refNav"
+    data-allow-mismatch
     class="layout-vertical-nav"
     :class="[
       {
