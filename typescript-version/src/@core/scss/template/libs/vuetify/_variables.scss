@@ -4,7 +4,7 @@ $font-family-custom: "Inter", sans-serif, -apple-system, blinkmacsystemfont, "Se
 @forward "../../../base/libs/vuetify/variables" with (
   $body-font-family: $font-family-custom !default,
   $border-radius-root: 6px,
-  
+
   $rounded: (
     "sm": 4px,
     "shaped": 25px 0,
@@ -36,7 +36,7 @@ $font-family-custom: "Inter", sans-serif, -apple-system, blinkmacsystemfont, "Se
       "weight": 500,
       "line-height": 2.375rem,
       "letter-spacing": normal,
-    ), 
+    ),
     "h5": (
       "size": 1.125rem,
       "weight": 500,
