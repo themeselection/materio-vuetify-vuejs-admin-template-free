@@ -25,7 +25,7 @@
     "vue-flatpickr-component": "11.0.5",
     "vue-prism-component": "^2.0.0",
     "vue-router": "^4.5.0",
-    "vue3-apexcharts": "^1.8.0",
+    "vue3-apexcharts": "1.5.2",
     "vue3-perfect-scrollbar": "^2.0.0",
     "vuetify": "3.7.5",
     "webfontloader": "^1.6.28"
