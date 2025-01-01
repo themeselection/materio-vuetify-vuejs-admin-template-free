@@ -4,6 +4,12 @@
 
 All notable changes to this template will be documented in this file
 
+## v2.3.0 (2025-01-01)
+
+### Updated
+
+- Updated Vue & Vuetify to the latest version
+  
 ## v2.2.2 (2024-07-29)
 
 ### Updated
